@@ -312,7 +312,7 @@
 <p>In order to maximize efficiency, each replica has a &quot;maximum waiting time&quot; (Delay functions), which is the maximum waiting time before accepting new blocks or voting on blocks. After this time, it will not wait. The length of this waiting time varies from person to person, and is different for each replica.</p>
 <p>If a replica does not receive messages for several consecutive rounds due to network latency, it is because its waiting time is too short. Before the message arrives, it does not wait. If the final confirmation fails, all honest replicas will wait a little longer until the final confirmation is received.</p>
 <p>At this time, replicas can appropriately increase the delay and wait a little longer. This makes it more likely to receive messages in the next round.</p>
-<p><img src="assets/IntroductiontoConsensusLayer/image-20230706132653764.png" alt="image-20230706132653764" /></p>
+<p><img src="assets/IntroductiontoConsensusLayer/image-20230711215857942.png" alt="image-20230711215857942" /></p>
 <h3 id="finalization"><a class="header" href="#finalization">Finalization</a></h3>
 <p>Because sometimes more than one block may be generated (when the leader does not respond, the second and the third may produce block to save time). This requires a finalization. The finalization stage will determine the only block that everyone has notarized. Then the blocks before the block that everyone agrees with will also be implicitly finalized, and other branches will become invalid.</p>
 <p><img src="assets/IntroductiontoConsensusLayer/IMG16.png" alt="IMG16" /></p>
