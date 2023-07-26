@@ -1813,7 +1813,7 @@ History repeats itself in a spiral ascent:</p>
 <p>Lastly, by comparing various thresholds (ρ) and the proportion of dishonest individuals (β), we identify the smallest subgroup sizes suitable for different scenarios. These sizes can be applied to practical protocols, ensuring that the probability of honest individuals in our drawn subgroup G is sufficiently high.</p>
 <p>Now let's talk about CDFhg and CDFbinom.</p>
 <h2 id="hypergeometric-cumulative-distribution-function-cdfhg"><a class="header" href="#hypergeometric-cumulative-distribution-function-cdfhg">Hypergeometric cumulative distribution function (CDFhg)</a></h2>
-<p>In this formula, we use CDFhg(x, n, M, N) to represent the cumulative distribution function of the hypergeometric distribution.</p>
+<p>In this formula, we use \(CDFhg(x, n, M, N)\) to represent the cumulative distribution function of the hypergeometric distribution.</p>
 <p>Here:</p>
 <ul>
 <li>N: Total number of people in group U</li>
@@ -1825,7 +1825,7 @@ History repeats itself in a spiral ascent:</p>
 <p>$$ Prob[G honest] = CDFhg(⌈n/2⌉ − 1, n, ⌊|U|/β⌋, |U|) $$</p>
 <p>This formula tells that: given the number of honest and dishonest people in a group U, we can calculate the probability of getting honest people when drawing a specific sized small group G.</p>
 <h2 id="binomial-cumulative-distribution-function-cdfbinom"><a class="header" href="#binomial-cumulative-distribution-function-cdfbinom">Binomial cumulative distribution function (CDFbinom)</a></h2>
-<p>When the size of group U approaches infinity, we can use the binomial distribution to approximate the hypergeometric distribution. The cumulative binomial distribution function is expressed as CDFbinom(x, n, p).</p>
+<p>When the size of group U approaches infinity, we can use the binomial distribution to approximate the hypergeometric distribution. The cumulative binomial distribution function is expressed as \(CDFbinom(x, n, p)\).</p>
 <p>Here:</p>
 <ul>
 <li>p: The success (honest people) probability for each draw</li>
@@ -1849,7 +1849,7 @@ History repeats itself in a spiral ascent:</p>
 <p>All the data uploaded to blockchains nowadays is out there for all to see. <strong>If you wanna peek into what an account's been up to or what they've got stored away, it's all laid bare.</strong> Now blockchain tech might beef up security and availability, but it also opens the door to privacy leaks 'cause everything gets copied to so many nodes. Encryption can help protect privacy, but managing keys gets kinda hairy.</p>
 <p>So Web3 users just ain't allowed to have no privacy, huh?</p>
 <br>
-<img src="3.ChainKey/assets/VETKeys/image-20230724134027881.png" style="zoom:60%; float: left; margin-right: 35px;" class="zoom-img" />
+<img src="3.ChainKey/assets/VETKeys/image-20230724134027881.png" style="zoom:65%; float: left; margin-right: 35px;" class="zoom-img" />
 <p>Privacy is definitely indispensable. All you need to do is encrypt it with the public key and then store it on the blockchain, right?</p>
 <p>A'ight, lemme just whip up a public-private key pair real quick. Encrypt with the public key, decrypt with the private key, bam, easy peasy. (Holla if you need an explainer on public-key cryptography).</p>
 <br>
@@ -1887,27 +1887,27 @@ History repeats itself in a spiral ascent:</p>
 <ol>
 <li>Setup phase:</li>
 </ol>
-<p>(1) Choose a bilinear group (G1,G2,GT,e): This is a set of groups G1, G2 and GT with special mathematical relationships. Some computations can be done through the pairing operation e() between these groups.</p>
-<p>(2) Choose a random generator P∈G1, where P is a base point in group G1. </p>
-<p>(3) Choose a random master secret key s ∈ Zp: s is a random number.</p>
-<p>(4) A hash function H: {0,1}* → G1: used to map identity information to group G1.</p>
+<p>(1) Choose a bilinear group \((G1,G2,GT,e)\): This is a set of groups \(G1\), \(G2\) and \(GT\) with special mathematical relationships. Some computations can be done through the pairing operation \(e()\) between these groups.</p>
+<p>(2) Choose a random generator \(P∈G1\), where \(P\) is a base point in group \(G1\). </p>
+<p>(3) Choose a random master secret key \(s ∈ Zp\): \(s\) is a random number.</p>
+<p>(4) A hash function \(H\): \({0,1}* → G1\): used to map identity information to group \(G1\).</p>
 <ol start="2">
 <li>Key Extraction phase: </li>
 </ol>
-<p>(1) For identity ID, compute H(ID) to get public key QID: QID = H(ID). QID ∈ G1*.</p>
-<p>(2) Use master secret key s and public key QID to compute decryption key SID = sQID. The decryption key generator center computes the user's private key based on their identity, and sends it to the corresponding user.</p>
+<p>(1) For identity ID, compute \(H1(ID)\) to get public key \(QID\): \(QID = H1(ID)\). \(QID ∈ G1*\).</p>
+<p>(2) Use master secret key s and public key \(QID\) to compute decryption key \(SID = sQID\). The decryption key generator center computes the user's private key based on their identity, and sends it to the corresponding user.</p>
 <ol start="3">
 <li>Encryption phase:</li>
 </ol>
-<p>(1) To encrypt message M for ID, choose a random number r, r ∈ Zq*.</p>
-<p>(2) Compute ciphertext C which contains two parts: C1 = rP, C2 = M⊕e(H(ID), P)r. So C = (rP, M⊕e(H(ID), P)r).</p>
-<p>Breaking it down: After choosing random r, first compute ciphertext component C1 = rP. Then compute gID = e(QID, Ppub) ∈ G2, where Ppub is a system parameter and e is the bilinear map. Next compute ciphertext component C2 = M ⊕ H2(grID), where M is the plaintext and H2 is a hash function. The ciphertext C is &lt;C1, C2&gt;.</p>
+<p>(1) To encrypt message \(M\) for ID, choose a random number \(r\), \(r ∈ Zq*\).</p>
+<p>(2) Compute ciphertext \(C\) which contains two parts: \(C1 = rP\), \(C2 = M⊕e(H2(ID), P)r\). So \(C = (rP, M⊕e(H2(ID), P)r)\).</p>
+<p>Breaking it down: After choosing random \(r\), first compute ciphertext component \(C1 = rP\). Then compute \(gID = e(QID, P) ∈ G2\), where \(P\) is a master public key and \(e\) is the bilinear map. Next compute ciphertext component \(C2 = M ⊕ H2(grID)\), where \(M\) is the plaintext and H2 is a hash function. The ciphertext \(C\) is \(&lt;C1, C2&gt;\).</p>
 <ol start="4">
 <li>Decryption phase:</li>
 </ol>
-<p>(1) Receive ciphertext C. </p>
-<p>(2) Use decryption key SID and C1 to compute pairing e(SID, C1), which can restore e(H(ID), P)r: e(SID, C1) = e(sQID, rP) = e(QID, P)r.</p>
-<p>(3) Then decrypt message M = C2⊕e(H(ID), P)r.</p>
+<p>(1) Receive ciphertext \(C\). </p>
+<p>(2) Use decryption key \(SID\) and \(C1\) to compute pairing \(e(SID, C1)\), which can restore \(e(H2(ID), P)r: e(SID, C1) = e(sQID, rP) = e(QID, P)r\).</p>
+<p>(3) Then decrypt message \(M = C2⊕e(H2(ID), P)r\).</p>
 </blockquote>
 <br>
 <p>If everyone had to generate their own key pairs, it'd be a hot mess tryna keep track of all those public keys to encrypt stuff. You'd have a ginormous pile of confusing keys for every person you encrypt messages with. But with IBE, folks just need to hold on to one master public key, then use someone's ID directly to encrypt messages with them - piece of cake.</p>
@@ -1944,8 +1944,8 @@ History repeats itself in a spiral ascent:</p>
 <p>VetIBE replaces the traditional IBE's third party Private Key Generator (PKG) with subnet nodes. It uses threshold cryptography to make IBE key derivation more decentralized and verifiable, avoiding a single point of failure.</p>
 <p>In regular IBE, the PKG derives a user's decryption key by multiplying the master private key with the hash of the user ID.</p>
 <blockquote>
-<p>dID = sQID. Here dID is the user's decryption key. sQID represents multiplying the master private key s with the point QID on the elliptic curve group G1.</p>
-<p>The decryption key dID is obtained by multiplying the master key s with the user public key QID on the elliptic curve group.</p>
+<p>\(dID = sQID\). Here \(dID\) is the user's decryption key. \(sQID\) represents multiplying the master private key \(s\) with the point \(QID\) on the elliptic curve group \(G1\).</p>
+<p>The decryption key \(dID\) is obtained by multiplying the master key s with the user public key \(QID\) on the elliptic curve group.</p>
 </blockquote>
 <br>
 <p>In vetIBE, the subnet as a whole takes the PKG's place. Nodes threshold sign the user ID, and the resulting signature when reaching the threshold is the decryption key for that ID. Multiple nodes jointly generate the master key, and use DKG to share splits of the master key. (This is also how subnets generate consensus and random numbers using BLS threshold signatures).</p>
@@ -1977,10 +1977,10 @@ History repeats itself in a spiral ascent:</p>
 </div>
 <blockquote>
 <p>The specific encryption process is:</p>
-<p>The user calls the interface, inputting the identity ID and plaintext message m.</p>
-<p>Invoke the hash function, perform hash operation on ID h = H1(id), obtaining value h.</p>
-<p>Choose a random number s, compute t = H2(s, M), where H2 is another hash function.</p>
-<p>Compute C1 = g2^t, C2 = s ⊕ H3(e(H1(id), mpk)^t) = s ⊕ H3(e(h, mpk)^t), C3 = M ⊕ H4(s). The ciphertext is C = (C1, C2, C3).</p>
+<p>The user calls the interface, inputting the identity ID and plaintext message \(m\).</p>
+<p>Invoke the hash function, perform hash operation on ID \(h = H1(id)\), obtaining value h.</p>
+<p>Choose a random number \(s\), compute \(t = H2(s, M)\), where H2 is another hash function.</p>
+<p>Compute \(C1 = g2^t\), \(C2 = s ⊕ H3(e(H1(id), mpk)^t) = s ⊕ H3(e(h, mpk)^t)\), \(C3 = M ⊕ H4(s)\). The ciphertext is \(C = (C1, C2, C3)\).</p>
 <p>With vetKD, now each subnet is a &quot;decentralized PKG&quot;!</p>
 </blockquote>
 <p>We call the derived keys vetKeys.</p>
@@ -2025,9 +2025,9 @@ History repeats itself in a spiral ascent:</p>
 <p>It's secure cuz both sides encrypt with the communication ID. This keeps it locked down:</p>
 <p>The communication ID is designed so only A and B can get the keys.</p>
 <p>Only ciphertext travels, third parties can't decrypt.</p>
-<p>Even if A or B's device gets hacked, the private key doesn't leak directly. Just re-derive through the subnet.</p>
-<p>Threshold protection in key derivation prevents leaks even if some nodes are compromised.</p>
-<p>So it ensures secure transmission while handling compromised devices - an upgrade over basic end-to-end encryption relying on local key storage alone. vetIBE leverages the blockchain for superior intrusion resistance.</p>
+<p>The way the keys get made has built-in protections, so even if some nodes get hacked, the secrets stay secret. </p>
+<p>Even if someone hacks device A or B, the private key won't leak directly, 'cause the user ID private key ain't stored locally. You just need a new comm ID, and you can re-generate the comm ID private key through the subnet.</p>
+<p>This keeps the transmission secure while also solving the issue of user devices being hacked. Compared to old school end-to-end encryption that just stores keys locally, the vetIBE system can get better hack resistance with the blockchain's help.</p>
 <br>
 <p>That covers vetIBE. The paper also mentions vetSIG, vetPRF, vetVRF - which combine into vetKD.</p>
 <p>I've blabbed enough already lol, so I'll give the quick lowdown on the others! Lemme know if the casual tone and humor lands or needs adjustment.</p>
@@ -2038,19 +2038,19 @@ History repeats itself in a spiral ascent:</p>
 <p>The steps are:</p>
 <ol>
 <li>
-<p>The user generates tpk, tsk, and sends tpk to the nodes.</p>
+<p>The user generates \(tpk\), \(tsk\), and sends \(tpk\) to the nodes.</p>
 </li>
 <li>
-<p>When a user wants the BLS signature of message m, they send m and tpk to the nodes.</p>
+<p>When a user wants the BLS signature of message \(m\), they send m and tpk to the nodes.</p>
 </li>
 <li>
-<p>Each node uses its sk share to compute a signature share σi of m, encrypts it with tpk, and sends eki to the user. </p>
+<p>Each node uses its sk share to compute a signature share \(σi\) of \(m\), encrypts it with \(tpk\), and sends \(eki\) to the user. </p>
 </li>
 <li>
-<p>The user receives t eki's, decrypts to obtain the signature shares, and recovers the full signature σ.</p>
+<p>The user receives t \(eki\)'s, decrypts to obtain the signature shares, and recovers the full signature \(σ\).</p>
 </li>
 <li>
-<p>The user uses σ as the signature of m relative to public key pk, thus achieving vetSIG.</p>
+<p>The user uses \(σ\) as the signature of \(m\) relative to public key \(pk\), thus achieving vetSIG.</p>
 </li>
 </ol>
 <br>
@@ -2059,19 +2059,19 @@ History repeats itself in a spiral ascent:</p>
 <p>The steps are:</p>
 <ol>
 <li>
-<p>The user generates tpk, tsk, and sends tpk.</p>
+<p>The user generates \(tpk\), \(tsk\), and sends \(tpk\).</p>
 </li>
 <li>
-<p>When a user wants to compute the PRF output for input x, they send x and tpk to the nodes.</p>
+<p>When a user wants to compute the PRF output for input \(x\), they send \(x\) and \(tpk\) to the nodes.</p>
 </li>
 <li>
-<p>Each node computes a BLS signature share of x, encrypts it, and sends to the user. </p>
+<p>Each node computes a BLS signature share of \(x\), encrypts it, and sends to the user. </p>
 </li>
 <li>
-<p>The user receives the encrypted shares, recovers the full signature σ.</p>
+<p>The user receives the encrypted shares, recovers the full signature \(σ\).</p>
 </li>
 <li>
-<p>The user computes y = H'(pk,x,σ) as the PRF output on x, thus achieving vetPRF.</p>
+<p>The user computes \(y = H'(pk,x,σ)\) as the PRF output on \(x\), thus achieving vetPRF.</p>
 </li>
 </ol>
 <br>
@@ -2080,13 +2080,13 @@ History repeats itself in a spiral ascent:</p>
 <p>The steps are:</p>
 <ol>
 <li>
-<p>Based on vetPRF, the user wants to prove correctness of y.</p>
+<p>Based on vetPRF, the user wants to prove correctness of \(y\).</p>
 </li>
 <li>
-<p>They send the signature σ as proof, along with y to the verifier.</p>
+<p>They send the signature \(σ\) as proof, along with \(y\) to the verifier.</p>
 </li>
 <li>
-<p>The verifier checks e(σ, g2) = e(H(x), pk) to verify correctness of y, thus achieving vetVRF.</p>
+<p>The verifier checks \(e(σ, g2) = e(H(x), pk)\) to verify correctness of \(y\), thus achieving vetVRF.</p>
 </li>
 </ol>
 <br>
@@ -2496,11 +2496,12 @@ $$</p>
 </ul>
 <p>The Ledger canister must be owned by an identity.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="contributors"><a class="header" href="#contributors">Contributors:</a></h2>
-<p><a href="https://github.com/NeutronStarPRO">NeutronStarPRO</a>, <a href="https://github.com/RyanLee0396">WoW</a>, <a href="https://github.com/Tuostarfish">tuo</a>, and you. Yes, you heard it right, I'm talking to you! The next one is you! 🫵 <a href="https://github.com/NeutronStarDAO">Come and join us now!</a></p>
+<p><a href="https://github.com/NeutronStarPRO">NeutronStarPRO</a>, <a href="https://github.com/RyanLee0396">WoW</a>, <a href="https://github.com/Tuostarfish">tuo</a>, <a href="https://github.com/xiaoyuanxun">xiaoyuanxun</a> and you. </p>
+<p>Yes, you! I'm talking to you! The next one is you! 🫵 <a href="https://github.com/NeutronStarDAO">Come and join us now!</a></p>
 <h2 id="acknowledgements"><a class="header" href="#acknowledgements">Acknowledgements</a></h2>
 <p>Thanks to Nash, Ryan, Tuo for contributing to early production.</p>
 <p>Thanks to Dfinty official, ICPL, DoraHacks, TinTinLand community, some early videos and materials are referenced from the WorkShops held by these communities.</p>
-<p>Special thanks to Neeboo, Elie, Ninegua, Ben Ji Zhai, Peter, wuhu, Anna Lai,  CoCo, LastMelody, and Bei De for their support and help. </p>
+<p>Special thanks to 0xkookoo, Neeboo, Elie, Ninegua, Ben Ji Zhai, Peter, wuhu, Anna Lai,  CoCo, LastMelody, and Bei De for their support and help. </p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="references"><a class="header" href="#references">References：</a></h2>
 <p>B-money https://en.bitcoin.it/wiki/B-money</p>
 <p>History of Blockchain Part 3: Wei Dai (1998) https://medium.com/the-capital/history-of-blockchain-part-3-wei-dai-1998-1195ab5a4e08</p>

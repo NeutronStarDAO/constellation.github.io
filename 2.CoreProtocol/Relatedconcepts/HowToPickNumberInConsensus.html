@@ -187,7 +187,7 @@
 <p>Lastly, by comparing various thresholds (ρ) and the proportion of dishonest individuals (β), we identify the smallest subgroup sizes suitable for different scenarios. These sizes can be applied to practical protocols, ensuring that the probability of honest individuals in our drawn subgroup G is sufficiently high.</p>
 <p>Now let's talk about CDFhg and CDFbinom.</p>
 <h2 id="hypergeometric-cumulative-distribution-function-cdfhg"><a class="header" href="#hypergeometric-cumulative-distribution-function-cdfhg">Hypergeometric cumulative distribution function (CDFhg)</a></h2>
-<p>In this formula, we use CDFhg(x, n, M, N) to represent the cumulative distribution function of the hypergeometric distribution.</p>
+<p>In this formula, we use \(CDFhg(x, n, M, N)\) to represent the cumulative distribution function of the hypergeometric distribution.</p>
 <p>Here:</p>
 <ul>
 <li>N: Total number of people in group U</li>
@@ -199,7 +199,7 @@
 <p>$$ Prob[G honest] = CDFhg(⌈n/2⌉ − 1, n, ⌊|U|/β⌋, |U|) $$</p>
 <p>This formula tells that: given the number of honest and dishonest people in a group U, we can calculate the probability of getting honest people when drawing a specific sized small group G.</p>
 <h2 id="binomial-cumulative-distribution-function-cdfbinom"><a class="header" href="#binomial-cumulative-distribution-function-cdfbinom">Binomial cumulative distribution function (CDFbinom)</a></h2>
-<p>When the size of group U approaches infinity, we can use the binomial distribution to approximate the hypergeometric distribution. The cumulative binomial distribution function is expressed as CDFbinom(x, n, p).</p>
+<p>When the size of group U approaches infinity, we can use the binomial distribution to approximate the hypergeometric distribution. The cumulative binomial distribution function is expressed as \(CDFbinom(x, n, p)\).</p>
 <p>Here:</p>
 <ul>
 <li>p: The success (honest people) probability for each draw</li>
