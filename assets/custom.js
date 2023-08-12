@@ -1,4 +1,23 @@
 var initAll = function () {
+    const btn1 = document.querySelector('.box1');
+    if (btn1) {
+        btn1.addEventListener('click', () => {
+            window.location.href = '/0.JourneytoWeb3/WhatistheBlockchain.html';
+        });
+    }
+    const btn2 = document.querySelector('.box2'); 
+    if (btn2) {
+        btn2.addEventListener('click', () => {
+            window.location.href = '/1.OverviewofIC/1.html';
+        });
+    }
+    const btn3 = document.querySelector('.box3');
+    if (btn3) {
+        btn3.addEventListener('click', () => {
+            window.location.href = '/0.JourneytoWeb3/JourneyoftheDreamWeaver.html';
+        });
+    }
+
     var path = window.location.pathname;
     if (path.endsWith("/print.html")) {
         return;
