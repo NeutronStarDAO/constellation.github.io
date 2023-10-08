@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Motoko - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🫙</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item expanded "><a href="../4.Canister/Motoko.html" class="active">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XCR</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><div>Threshold BLS Signatures</div></li><li class="chapter-item "><div>Threshold ECDSA Signatures</div></li><li class="chapter-item affix "><li class="part-title">Dapp Development🌟</li><li class="chapter-item "><div>Dapp</div></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <p>Motoko is ingeniously designed with clear goals to establish an easy-to-learn, easy-to-use, and powerful programming language tailored for application development on Internet Computer. It can be safely compiled to Wasm bytecode and deployed in Canisters.</p>
+<p>It borrows the strengths in design from languages like Java, C#, JavaScript, Swift, Pony, ML, Haskell, etc, to provide programmers with an accessible and usable development tool. Its syntax style is similar to JavaScript/TypeScript, yet more concise than JavaScript.</p>
+<br>
+<p>Motoko contains the foresight and vision of its designers for the future. After gaining a deep understanding, you may be amazed by its elegantly concise syntax design.</p>
+<p>Motoko pursues simplicity with understandable syntax to make it easy for average developers to get started. It perfectly supports the Actor model and is an excellent choice for writing distributed programs. It aligns closely with the execution models of WebAssembly and IC to maximize hardware performance. It also considers future extensibility needs by preserving compatibility.</p>
+<p>Motoko is a class-based object-oriented language where objects are closures. Classes can be Actors.</p>
+<p>Some other features:</p>
+<ul>
+<li>
+<p>Async construct for direct style asynchronous messaging programming.</p>
+</li>
+<li>
+<p>Structural type system, simple generics, and subtyping.</p>
+</li>
+<li>
+<p>Overflow checking numeric types, explicit conversions.</p>
+</li>
+</ul>
+<div class="center-image">
+    <img src="assets/Motoko/1.png" alt="1" style="zoom:50%;" />
+</div>
+<p>So come check out Motoko's <a href="https://github.com/dfinity/motoko">source code</a> and <a href="https://github.com/dfinity/motoko-base">base library</a>! You can further dive into <a href="https://internetcomputer.org/docs/current/motoko/main/overview">Motoko docs</a>.</p>
+<p>You can also directly deploy and test Motoko code through <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/">Motoko Playground</a> with just a browser webpage! It tremendously lowers the barrier of using Motoko and IC. Dfinity's Motoko team also frequently uses Playground to test simple Motoko code.</p>
+<p>Also, Motoko's <a href="https://github.com/dfinity/vessel">package manager Vessel</a> is a very important part of the Motoko ecosystem. With just a few lines of config code, it helps developers pull in third-party libraries into their projects, or publish their own libraries for others to use.</p>
+<p>Beyond the above, there is <a href="https://github.com/motoko-unofficial/awesome-motoko">more on Motoko in the community</a>.</p>
+<br>
+<h2 id="the-vision-of-internet-computer"><a class="header" href="#the-vision-of-internet-computer">The Vision of Internet Computer</a></h2>
+<p>To fully understand Motoko's design philosophy and goals, we first need a brief overview of the Internet Computer project that drives its inception. The DFINITY Foundation is actively pushing forward this ambitious project, with the ultimate goal of building a &quot;World Computer&quot;, a distributed computing platform that is sufficiently powerful and open to everyone, which will provide the foundation for humanity to enter a more free and open digital civilization era.</p>
+<p>In summary, the Internet Computer project aims to build a new kind of public computing infrastructure, similar to today's Internet, but with computing and data storage happening across many servers, instead of concentrated on servers in large data centers. This architectural difference brings tremendous decentralized advantages, making it inherently privacy-preserving, secure, and scalable.</p>
+<p>To realize this grand vision, Dfinity needs technical innovation across layers from low-level network protocols to software ecosystem. And as the cornerstone of this layered innovation, a programming language tailored for this new platform is needed to provide direct development support for builders. Motoko comes into being, actualizing and practicing the core ideas of Internet Computer at the language level, providing crucial support to build the software foundation for this new world.</p>
+<br>
+<h2 id="motokos-design-philosophy"><a class="header" href="#motokos-design-philosophy">Motoko's Design Philosophy</a></h2>
+<p>As a totally new built-from-scratch language, Motoko put some real thought into its overall design, with the goal of fully utilizing this language to develop for the brand spankin' new Internet Computer environment.</p>
+<p>Motoko is a strongly-typed, actor-based language, with built-in support for orthogonal persistence and asynchronous messaging. Its productivity and safety features include automatic memory management, generics, type inference, pattern matching, and arbitrary and fixed precision arithmetic. Messaging is transparent, using Internet Computer's Candid interface definition language and wire format, enabling typed high-level cross-language interoperability.</p>
+<p>Here are some of Motoko's core design philosophies:</p>
+<ul>
+<li>Actor-based: Motoko uses the Actor model as its core abstraction for concurrency and distributed programming. Actors are inherently concurrent and rock at asynchronous and parallel work. A Motoko program consists of multiple Actors. This model is fantastic for building distributed systems.</li>
+<li>Supports asynchronous messaging: Actors primarily interact by asynchronously passing messages. This communication style works great for networks, avoiding blocking and waiting.</li>
+<li>Built-in orthogonal persistence: Motoko greatly simplifies the complex problem of state persistence through language-level abstractions. Developers can ignore the details of saving and restoring state.</li>
+<li>Designed for safety: Motoko strengthens various checks and protections in its type system, runtime, and concurrency control, significantly improving program robustness and security.</li>
+<li>Multi-language interoperability: Motoko uses a universal interface definition language to enable safe interoperability between modules written in different languages.</li>
+<li>Compiles to WebAssembly: Leverages WebAssembly's advantages including portability, security, and efficiency.</li>
+</ul>
+<p>As you can see, these design decisions closely match the architectural characteristics and application demands of Internet Computer, making Motoko the ideal language for developing apps on this brand new distributed platform.</p>
+<h2 id="overview-of-motoko-language-features"><a class="header" href="#overview-of-motoko-language-features">Overview of Motoko Language Features</a></h2>
+<p>In addition to the overall design philosophy, Motoko as a general purpose programming language also incorporates many excellent features and ideas from contemporary language design.</p>
+<ul>
+<li>Static type system: Provides compile-time type checking to catch some errors.</li>
+<li>Automatic memory management: Compiler handles memory through reference counting garbage collection of unused objects.</li>
+<li>Generics: Supports generics for increased code reuse.</li>
+<li>Type inference: Compiler can infer most types, but type annotations sometimes needed.</li>
+<li>Pattern matching: Support pattern matching on different types of values.</li>
+<li>Immutability: Variables are immutable by default, use var to declare mutable variables.</li>
+<li>Optional types: Optional types provided instead of null values.</li>
+<li>Overflow checking: Runtime checks for integer overflows.</li>
+<li>Concurrency safety: Actor message handling is atomic, maintaining atomicity within a function call.</li>
+</ul>
+<p>As seen from the above language features, Motoko draws the essence from decades of programming language theory and practice, incorporating many modern features that aid reliability and productivity.</p>
+<h2 id="actor-model-and-asynchronous-handling"><a class="header" href="#actor-model-and-asynchronous-handling">Actor Model and Asynchronous Handling</a></h2>
+<p>Actors are a core abstraction in Motoko, representing concurrently executing entities. A Motoko program consists of multiple Actors that interact via asynchronous message passing, with no shared state. Each Actor has its own private mutable state. Sending a message to an Actor does not block the sender, the Actor handles messages concurrently based on its state.</p>
+<p>This message-passing based Actor model is great for building distributed systems. On Internet Computer, Actors compile to modules that can communicate across the network, called Canisters.</p>
+<p>To make asynchronous programming more convenient, and allow it to be expressed in sequential &quot;direct style&quot;, another idea from programming language history and research was adopted in Motoko over 40 years ago, and fortunately has become more popular recently: Futures (also called promises in some communities), implemented in Motoko as &quot;async values&quot;, values of type &quot;async&quot; produced by expressions prefixed with the &quot;async&quot; keyword. Notably function bodies can be async expressions, naturally superceding the more singular &quot;async function&quot; concept present in some other languages.</p>
+<p>With this, deductive styles can be async as long as their results are futures. Futures can be awaited to get their value, but again only inside another async expression, akin to async/await in other programming languages.</p>
+<h2 id="orthogonal-persistence-abstraction"><a class="header" href="#orthogonal-persistence-abstraction">Orthogonal Persistence Abstraction</a></h2>
+<p>For building distributed systems, saving and restoring state is a critical yet complex problem. Traditionally, developers have to handle checkpointing and recovery logic themselves. But Motoko provides &quot;orthogonal persistence&quot; abstraction at the language level, greatly reducing the work for developers.</p>
+<p>Orthogonal persistence refers to the separation of concerns between state persistence and business logic.</p>
+<p>Developers only need to focus on writing the application business logic, without worrying about saving and restoring state. This complex work is abstracted away, handled by the runtime in a transparent way.</p>
+<p>Thus, business logic and state persistence as two crossing concerns are separated. Developers only need to focus on the former and can concentrate on the application's own functionality.</p>
+<p>This abstraction allows developers to focus more on the application's business logic itself. The underlying platform transparently handles state persistence, restoring it when actors restart, without developers having to worry about those details.</p>
+<p>How does Motoko achieve orthogonal persistence? The key is it provides an abstraction of an &quot;everlasting runtime&quot;.</p>
+<p>For programmers, writing Motoko code feels like executing in an always-on runtime, where variables and state persist - no concept of program restarts.</p>
+<p>Under the hood, the platform transparently persists state, and automatically restores it when actors restart, making execution continue as if nothing happened.</p>
+<p>Technically, the platform tracks changes to actor mutable state, saving snapshots before each message handling, and restores on actor restarts. For immutable state, no special handling is needed.</p>
+<p>Orthogonal persistence brings the following benefits:</p>
+<ul>
+<li>Developers can focus more on business logic without worrying about state persistence.</li>
+<li>Avoids duplicate labor of writing checkpointing and recovery code.</li>
+<li>State persistence code is centralized and optimized for efficiency.</li>
+<li>Simplifies building complex distributed systems.</li>
+<li>Lowers the bar for new developers.</li>
+<li>Improves testability by confining tests to single runs.</li>
+</ul>
+<p>By providing the orthogonal persistence abstraction, Motoko greatly simplifies a key challenge in building distributed systems, a very clever language design innovation.</p>
+<h2 id="multi-language-interoperability"><a class="header" href="#multi-language-interoperability">Multi-Language Interoperability</a></h2>
+<p>Considering Internet Computer is an open environment where different teams may use their preferred languages, to enable smooth interoperation between modules written in different languages, Motoko adopts a universal interface description language Candid.</p>
+<p>Each canister describes its exposed interfaces and message types in Candid. The Motoko compiler can automatically map these to internal Motoko types. Thus, canisters developed in different languages can interact through these shared interfaces while retaining type safety.</p>
+<p>This cross-language interoperability mechanism is essential for an open distributed computing platform.</p>
+<h2 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h2>
+<p>The ultimate target Motoko compiler generates is WebAssembly (abbreviated Wasm). Choosing Wasm as the target is a deliberate decision by Motoko designers, mainly based on the following considerations:</p>
+<p><strong>What is WebAssembly</strong></p>
+<p>WebAssembly is a future-oriented universal low-level bytecode format designed to be portable, secure, and efficient. Initially for web apps but applicable more broadly.</p>
+<p>Wasm modules execute bytecode in a sandboxed environment agnostic of languages. The runtime uses a stack to execute instructions. Compared to VMs, Wasm is closer to hardware without language-specific optimizations.</p>
+<p><strong>Why Choose Wasm</strong></p>
+<p>Motoko chooses Wasm as compile target and canisters adopt Wasm mainly for:</p>
+<ul>
+<li><strong>Portability</strong>. Wasm runs on any platform supporting it, not dependent on specific languages or OS.</li>
+<li><strong>Security</strong>. Wasm's sandboxed execution guarantees code safety isolation. Critical for blockchains and decentralized apps.</li>
+<li><strong>Efficiency</strong>. Wasm has near-native execution efficiency, crucial for the performance-sensitive IC.</li>
+<li><strong>Asynchronicity</strong>. Wasm has built-in support for async calls, suitable for the Actor model.</li>
+<li><strong>Future-proofing</strong>. Wasm is evolving rapidly as an industry standard, pushed by major browser vendors, so choosing it is more future-proof.</li>
+</ul>
+<p>Choosing Wasm has advantages of:</p>
+<ul>
+<li>Ability to run cross-platform with excellent portability.</li>
+<li>Sandboxed execution providing security guarantees.</li>
+<li>Near-native execution efficiency critical for performance.</li>
+<li>Built-in async call mechanisms suiting the Actor model.</li>
+<li>As an evolving universal standard, Wasm has an optimistic future outlook.</li>
+<li>Directly compiling Motoko to IC's target runtime code, technical alignment.</li>
+</ul>
+<p>Motoko's choice of Wasm as the compilation target is a very prudent design decision, leveraging Wasm's strengths to ensure Motoko's cross-platform portability, security, and efficiency. Enabling write once, run anywhere. Also increasing its industry impact. It is an exemplary engineering choice.</p>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<p>Motoko is a brand new language meticulously built by Dfinity to provide programming language support for its radical Internet Computer project.</p>
+<p>Motoko adopts innovative concepts like the Actor model, built-in orthogonal persistence in its overall design, and incorporates excellent features like static type checking, automatic memory management in the language itself. Motoko conducts extensive innovation across dimensions in its design, with the goal of reducing developer cognitive load so they can focus on building applications atop this futuristic distributed platform.</p>
+<p>Although as a new language Motoko still has much work ahead, its ambitious vision is full of imagination for the future. Over time, Motoko will mature and eventually become a powerful tool for building the Internet Computer world.</p>
+<p>Now with an understanding of Motoko, <a href="./DeployCanister.html">go ahead and try deploying your own canister!</a></p>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../4.Canister/Canister.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../4.Canister/DeployCanister.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../4.Canister/Canister.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../4.Canister/DeployCanister.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "4.Canister/Motoko.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>
