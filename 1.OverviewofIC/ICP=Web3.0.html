@@ -1,0 +1,601 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ICP &#x3D; Web 3.0 - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item expanded "><a href="../1.OverviewofIC/ICP=Web3.0.html" class="active">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🫙</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.Canister/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XCR</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item "><a href="../7.ii/pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><div>Threshold BLS Signatures</div></li><li class="chapter-item "><div>Threshold ECDSA Signatures</div></li><li class="chapter-item affix "><li class="part-title">Dapp Development🌟</li><li class="chapter-item "><div>Dapp</div></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="icp--web-30"><a class="header" href="#icp--web-30">ICP = Web 3.0</a></h2>
+<h2 id="tldr"><a class="header" href="#tldr">TL;DR</a></h2>
+<p><em>Note: This article reflects the author's personal views at this stage. Some thoughts may contain factual errors and biases. They are shared solely for the purpose of discussion and I look forward to corrections from other readers.</em></p>
+<ul>
+<li><strong><a href="https://bitcoin.org/en/">BTC</a></strong> proposed electronic cash, pioneering the blockchain industry from 0 to 1.</li>
+<li><strong><a href="https://ethereum.org/en/">ETH</a></strong> introduced smart contracts, leading the blockchain industry from 1 to 100.</li>
+<li><strong><a href="https://internetcomputer.org/">ICP</a></strong> proposed Chainkey technology, driving the blockchain industry from 100 to 100,000,000.</li>
+</ul>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>On January 3, 2009, the first BTC block was mined, marking the start of a tumultuous 14-year development in the blockchain industry.</p>
+<p>Looking back over the past 14 years, the ingeniousness and greatness of BTC, the meteoric rise of Ethereum, the passionate crowdfunding of EOS, the inevitable conflict between PoS &amp; PoW, the interconnection of multiple chains by Polkadot - all of these awe-inspiring technologies and intriguing stories have made countless people in the industry bow in admiration.</p>
+<p>Currently, in the year 2023, what is the landscape of the entire blockchain industry? Here are my thoughts, please refer to the <a href="https://mirror.xyz/0xkookoo.eth/BF7jfmieDL4AxzQKRuyCF0MzZ7mmmrVlCuF5CRoAbAk">public chain landscape interpretation section in this article</a>.</p>
+<ul>
+<li>BTC, by introducing the electronic cash, stands unshakeable and legitimacy as a <strong>cornerstone</strong> of the industry.</li>
+<li>ETH, by introducing the programmability of smart contracts and the composability of the L2 ecosystem, blooms like a hundred flowers in the garden, establishing itself as the <strong>leader</strong> of the industry.</li>
+<li>Cosmos, Polkadot, and others, with their cross-chain interoperability, are attempting to unite the world under one banner.</li>
+<li>Various &quot;Ethereum killers&quot; keep emerging, each dominating in their small domains.</li>
+</ul>
+<p>But how will the entire blockchain industry develop in the next 10 years? Here are my thoughts:</p>
+<ul>
+<li><strong>Sovereignty</strong> is the only issue that blockchain needs to address, including asset sovereignty, data sovereignty, and speech sovereignty. Otherwise, there is no need for blockchain;</li>
+<li><strong>Immutability</strong> is a sufficient condition, but not a necessary condition. As long as you can ensure that my sovereignty is not damaged, I don't care if you tamper. What difference does it make if everyone's assets in the world are doubled in same proportion?</li>
+<li><strong>Complete decentralization</strong> is impossible to achieve. No matter how it is designed, there will always be &quot;gifted&quot; individuals/interest groups occupying more say, and there will always be people who choose not to participate. &quot;<strong>Decentralization with multiple centers</strong>&quot; is the final pattern;</li>
+<li><strong>Transparency</strong> is a must. Isn't this social experiment of all mankind for everyone to have a say and the right to protect their own sovereignty? Although there will always be lazy people, people willing to believe in more professional individuals, and people who choose to give up voting for maximum efficiency, this is also an active choice they make. They have the right but choose not to exercise it. As long as everything is transparent and there are no underhanded maneuvers, I am willing to accept even death. If I lose, it's because my skills are inferior. Survival of the fittest is also in line with market economy;</li>
+<li><strong>The control of decentralized code execution</strong> is the core, otherwise, it's just an unnecessary fuss. Public voting for a week, but in the end, the project team still deploys the malicious version of the code, even if it's not malicious, it's still making a mockery of everyone. You could say that half the world is made up of code now. If decentralized entities do not include control over code execution, then how would people, including governments, dare to let the blockchain industry grow?</li>
+<li><strong>Linear cost of infinite scalability</strong>. As blockchain becomes more and more closely integrated with real life, more and more people participate, and the demand grows larger and larger. The infrastructure cannot support infinite scalability, or if it is too expensive to expand, it is unacceptable.</li>
+</ul>
+<h2 id="why-icp"><a class="header" href="#why-icp">Why ICP</a></h2>
+<p>Let's start with a story. In 2009, Alibaba proposed the &quot;Remove IOE&quot; strategy, which later became a major milestone in the success of Alibaba's &quot;Double 11&quot; event.</p>
+<h3 id="remove-ioe"><a class="header" href="#remove-ioe">Remove IOE</a></h3>
+<p>The core content of the &quot;Remove IOE&quot; strategy is to get rid of IBM minicomputers, Oracle databases, and EMC storage devices, and to embed the essence of &quot;cloud computing&quot; into Alibaba's IT DNA. Where:</p>
+<ul>
+<li><strong>I</strong> stands for IBM p series minicomputers, running the AIX operating system (IBM's proprietary Unix system);</li>
+<li><strong>O</strong> stands for Oracle databases (RDBMS);</li>
+<li><strong>E</strong> stands for EMC mid-to-high-end SAN storage.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/1.png" alt="img" style="zoom:100%;" />
+<p>The reasons for removing IOE mainly include the following three points, but the first is the fundamental reason, and the latter two are more indirect:</p>
+<ul>
+<li><strong>Unable to meet demand</strong>, traditional IOE systems struggle to adapt to the high concurrency demands of internet companies and cannot support large-scale distributed computing architectures;</li>
+<li><strong>Costs are too high</strong>, maintaining IOE is too expensive, for example, IBM minicomputers cost 500,000, Oracle's annual guarantee is several hundred thousand, and so on;</li>
+<li><strong>Strong Dependency</strong>, IOE systems are highly dependent, &quot;held hostage&quot; by manufacturers such as IBM and Oracle, making it difficult to adapt flexibly according to their own needs.</li>
+</ul>
+<p>Why was the &quot;Remove IOE&quot; strategy proposed in 2009 and not earlier?</p>
+<ul>
+<li>Before that,
+<ul>
+<li>Alibaba's business scale and data volume had not yet reached a level that made the traditional IOE system difficult to adapt to, so there was no urgent need to remove IOE;</li>
+<li>Chinese domestic database products were not yet mature enough in terms of technology and quality to effectively replace IOE;</li>
+<li>Internet thinking and cloud computing concepts had not yet become widespread in China, and distributed architecture had not become a popular direction;</li>
+<li>Management and technical personnel may have needed a period of practical accumulation before they realized the problems that existed and the measures that had to be taken.</li>
+</ul>
+</li>
+<li>In 2009,
+<ul>
+<li>As Alibaba rapidly expanded its business, the IOE system struggled to support the scale, and cost issues became more apparent;</li>
+<li>Some open-source database products, such as MySQL, had reached a high level of maturity and could serve as replacements;</li>
+<li>Internet-level thinking and cloud computing began to spread widely and be applied in China, which facilitated the promotion of the &quot;Remove IOE&quot; concept;</li>
+<li>Former Microsoft tech guru, Wang Jian, joined Alibaba in 2008 with a global tech perspective, and deeply trusted by Jack Ma, he proposed &quot;Remove IOE&quot;.</li>
+</ul>
+</li>
+</ul>
+<p>However, &quot;Remove IOE&quot; is not simply about changing the software and hardware itself, replacing old software and hardware with new ones, but replacing old methods with new ones, and using cloud computing to completely change the IT infrastructure. In other words, this was driven by industry changes, not just a simple technology upgrade.</p>
+<h3 id="three-stages-of-a-business"><a class="header" href="#three-stages-of-a-business">Three stages of a business</a></h3>
+<p>The development of a business can be divided into 3 stages:</p>
+<ol>
+<li>Shaping the DNA and building the organizational culture, also called the <strong>Start-up stage</strong>, is about going from <strong>0 to 1</strong>.</li>
+<li>Rapid growth, or &quot;small steps, fast running&quot;, is called the <strong>Scale-up stage</strong>, about going from <strong>1 to 100</strong>.</li>
+<li>Infinite expansion, or broadening boundaries, is called the <strong>Scale-out stage</strong>, about going from <strong>100 to 100,000,000</strong>.</li>
+</ol>
+<p>Now, let's analyze the entire blockchain industry as if it is a single business.</p>
+<h3 id="start-up--blockchain-10--btc"><a class="header" href="#start-up--blockchain-10--btc">Start-up / Blockchain 1.0 / BTC</a></h3>
+<p>The innovation of Bitcoin lies in its solution to a problem that has perplexed computer scientists for decades: how to create a digital payment system that can operate without the need to trust any central authority.</p>
+<p>However, there are indeed some limitations in the design and development of BTC, which have provided market opportunities for subsequent blockchain projects such as Ethereum (ETH). Here are some of the main limitations:</p>
+<ul>
+<li><strong>Transaction Throughput and Speed</strong>: The block generation time of Bitcoin is about 10 minutes, and the size limit of each block leads to an upper limit on its transaction processing capacity. This means that during busy network times, transaction confirmation may take a long time, and higher transaction fees may be required.</li>
+<li><strong>Limited Smart Contract Functionality</strong>: Bitcoin is designed primarily as a digital currency, and the types of transactions it supports and the functionality of its scripting language are relatively limited. This limits Bitcoin's application in complex financial transactions and decentralized applications (DApps).</li>
+<li><strong>Difficulty in Upgrading and Improving</strong>: Due to Bitcoin's decentralized and conservative design principles, major upgrades and improvements usually require broad consensus from the community, which is difficult to achieve in practice. This also means that Bitcoin's progress is relatively slow.</li>
+<li><strong>Energy Consumption</strong>: Bitcoin's consensus mechanism is based on Proof of Work (PoW), which means that a lot of computing resources are used in the competition among miners, leading to a lot of energy consumption. This has been criticized in terms of environmental protection and sustainability. On this point, you can also pay attention to <a href="https://eprint.iacr.org/2020/1117">EcoPoW</a>, which somewhat alleviates this limitation.</li>
+</ul>
+<h3 id="scale-up--blockchain-20--eth"><a class="header" href="#scale-up--blockchain-20--eth">Scale-up / Blockchain 2.0 / ETH</a></h3>
+<p>Indeed, the current Layer 2 scaling solutions for Ethereum can be seen as a form of &quot;vertical scaling&quot;, which relies on the security and data availability guarantees of the underlying Layer 1. Although it seems like a 2-layer structure, it is ultimately limited by the processing capacity of Layer 1. Even if it is changed to a multi-layer structure and Layer 3 and Layer 4 are built, it just increases the complexity of the entire system and only delays a little time to expose the main issue. Moreover, according to the law of diminishing marginal returns, the more layers added, the more overhead will cause the scaling effect to be greatly reduced. This layered vertical expansion can be seen as a single-machine hardware upgrade, and this single machine refers to the entire ETH ecosystem.</p>
+<p>Moreover, as usage increases, user demand for low fees and high performance will also increase. As an application on Layer 1, the cost of Layer 2 can only be reduced to a certain extent and is ultimately subject to the basic cost and throughput of Layer 1. This is similar to the theory of demand curves in economics - as prices fall, the total demand will increase. Vertical scaling is difficult to fundamentally solve the scalability problem.</p>
+<p>Ethereum is a towering tree, and everyone relies on that root. Once the speed at which the root draws nutrients cannot keep up, people's needs will not be met;</p>
+<p><strong>Therefore, only horizontal expansion is more likely to be infinite.</strong></p>
+<p>Some people think that multi-chain and cross-chain is also a form of horizontal expansion,</p>
+<ul>
+<li>Take Polkadot as an example, it is a heterogeneous kingdom. Each country looks different, but you have to build a kingdom for everything (e.g. a DEX) you do;</li>
+<li>Cosmos is a homogenous kingdom, the meridians and bones of each country look the same, but the same, you have to establish a kingdom every time you build an application;</li>
+</ul>
+<p>However, from the perspective of Infra, the modes of these two are a bit strange. Every time you build an application, you have to construct a whole kingdom? Let's give an example to see how strange it is,</p>
+<ul>
+<li>I bought a Mac 3 months ago and developed a Gmail application on it;</li>
+<li>Now I want to develop a Youtube application, but I have to buy a new Mac to develop it, which is very strange.</li>
+</ul>
+<p>And both of these methods face the problem of high complexity of cross-chain communication when adding new chains, so they are not my first choice.</p>
+<h3 id="scale-out--blockchain-30--icp"><a class="header" href="#scale-out--blockchain-30--icp">Scale-out / Blockchain 3.0 / ICP</a></h3>
+<p>Indeed, to achieve scale-out, a complete set of underlying infrastructure is needed to support rapid horizontal expansion without reinventing the wheel.</p>
+<p>A typical example of supporting scale-out is cloud computing. The underlying templates such as &quot;VPC + subnet + network ACL + security group&quot; are exactly the same for everyone. All machines carry labels and types, and core components such as RDS, MQ, etc. at the upper layer support unlimited expansion. If more resources are needed, they can be quickly initiated with a click of a button.</p>
+<p>One of my leader once shared with me, if you want to understand what infrastructure and components Internet companies need, you just need to go to AWS and look at all the services they provide. That's the most complete and powerful combination.</p>
+<p>Similarly, let's take a high-level look at ICP to see why it meets the requirements for Scale-out.</p>
+<p>Here are a few concepts to clarify first:</p>
+<ul>
+<li><strong>Dfinity Foundation</strong>: It is a non-profit organization dedicated to promoting the development and application of decentralized computing technology. It is the developer and maintainer of the Internet Computer Protocol, aiming to realize the comprehensive development of decentralized applications through innovative technology and an open ecosystem.</li>
+<li><strong>Internet Computer (IC)</strong>: It is a high-speed blockchain network developed by Dfinity Foundation, specifically designed for decentralized applications. It uses a new consensus algorithm that can achieve high throughput and low latency transaction processing while supporting the development and deployment of smart contracts and decentralized applications.</li>
+<li><strong>Internet Computer Protocol (ICP)</strong>: It is the native token in the Internet Computer Protocol. It is a digital currency used to pay for network usage fees and reward nodes.</li>
+</ul>
+<h2 id="whats-icp"><a class="header" href="#whats-icp">What’s ICP</a></h2>
+<p>Let's dive into the more complex aspects of the topic. I'll do my best to keep the explanations as understandable as possible. If you want to discuss more detailed issues or have any questions, feel free to contact me. I'm here to make this complex topic more digestible for everyone.</p>
+<h3 id="architecture-overview"><a class="header" href="#architecture-overview">Architecture Overview</a></h3>
+<ul>
+<li>Let's break down the architecture of the Internet Computer (IC) into its various layers from the bottom up:
+<ul>
+<li><strong>P2P Layer</strong>: This layer is responsible for collecting and sending messages from users, other replicas within the subnet, and other subnets. It ensures that messages can be delivered to all nodes within the subnet, ensuring security, reliability, and resilience.</li>
+<li><strong>Consensus Layer</strong>: The main task of this layer is to sort the inputs, ensuring that all nodes within the same subnet process tasks in the same order. To achieve this goal, the consensus layer uses a new consensus protocol, which is designed to ensure security and liveness, and has the ability to resist DOS / SPAM attacks. After reaching consensus on the order of processing various messages within the same subnet, these blocks are passed to the message routing layer.</li>
+<li><strong>Message Routing Layer</strong>: Based on the tasks delivered from the consensus layer, it prepares the input queues for each Canister. After execution, it is also responsible for receiving the output generated by the Canister and forwarding it to local or other Canisters as needed. In addition, it is responsible for recording and verifying responses to user requests.</li>
+<li><strong>Execution Layer</strong>: This layer provides a runtime environment for Canisters, reads inputs in an orderly manner according to the scheduling mechanism, calls the corresponding Canister to complete tasks, and returns the updated state and generated output to the message routing layer. It utilizes the non-determinism brought by random numbers to ensure fairness and auditability of computation. In some cases, the behavior of Canisters needs to be unpredictable. For example, when performing encryption operations, random numbers are used to increase the security of encryption. In addition, the execution results of Canisters need to be random to prevent attackers from discovering vulnerabilities or predicting Canister behavior by analyzing the execution results of Canisters.</li>
+</ul>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/2.png" alt="4-layers of ICP" style="zoom:77%;" />
+<p>4-layers of ICP</p>
+<h3 id="key-components"><a class="header" href="#key-components">Key Components</a></h3>
+<img src="assets/ICP = Web 3.0/3.png" alt="img" style="zoom:37%;" />
+<ul>
+<li>Let's take a look at the components of the Internet Computer (IC) architecture:
+<ul>
+<li><strong>Subnet (Subnetwork)</strong>: Supports infinite expansion, each subnet is a small blockchain. Subnets communicate with each other through Chain Key technology. Since consensus has already been reached within the subnet, it only needs to be verified through Chain Key.</li>
+<li><strong>Replica</strong>: There can be many nodes in each subnet, and each node is a replica. The consensus mechanism in IC ensures that every replica in the same subnet will process the same input in the same order, making the final state of each replica the same. This mechanism is called Replicated State Machine.</li>
+<li><strong>Canister</strong>: A Canister is a type of smart contract. It is a computational unit that runs on the ICP network, can store data and code, and can communicate with other Canisters or external users. ICP provides a runtime environment for executing Wasm programs in Canisters and communicating with other Canisters and external users through message passing. It can be simply regarded as a Docker used for running code, and then you inject your own Wasm Code Image to run inside it.</li>
+<li><strong>Node</strong>: An independent server. Canisters still need a physical machine to run, and these physical machines are the actual machines in the server room.</li>
+<li><strong>Data Center</strong>: The nodes in the data center are virtualized into a replica (Replica) through the node software IC-OS, and some replicas are randomly selected from multiple data centers to form a subnet (Subnet). This ensures that even if a data center is hacked or hit by a natural disaster, the entire ICP network can still run normally. It's kind of like an upgraded version of Alibaba's &quot;Two Places, Three Centers&quot; disaster recovery high-availability solution. Data centers can be distributed all over the world, and even a data center could be set up on Mars in the future.</li>
+<li><strong>Boundary Nodes</strong>: Provide entrances and exits between the external network and IC subnets, and verify responses.</li>
+<li><strong>Principal</strong>: External user identifier, derived from the public key, used for access control.</li>
+<li><strong>Network Nervous System (NNS)</strong>: An algorithmic DAO for governance using staked ICP, used to manage IC.</li>
+<li><strong>Registry</strong>: A database maintained by NNS, containing the mapping relationship between entities (such as Replica, canister, Subnet), a bit like the working principle of DNS today.</li>
+<li><strong>Cycles</strong>: Local tokens, representing CPU quotas for paying for resources consumed during canister runtime.</li>
+</ul>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/4.png" alt="img" style="zoom:50%;" />
+<h3 id="key-innovative-technologies"><a class="header" href="#key-innovative-technologies">Key Innovative Technologies</a></h3>
+<img src="assets/ICP = Web 3.0/5.png" alt="img" style="zoom:37%;" />
+<ul>
+<li>Let's explore the Chain-key technology, a key component of the Internet Computer (IC) protocol:
+<ul>
+<li><strong>Threshold BLS signatures</strong>: ICP has implemented a threshold signature scheme. For each subnet, there is a publicly verifiable public key, and its corresponding private key is divided into multiple shares. Each share is held by a replica within the subnet, and only when replicas in the same subnet exceed the threshold number for message signing is it considered valid. In this way, messages sent between subnets and replicas are encrypted but quickly verifiable, ensuring both privacy and security. The BLS algorithm is a well-known threshold signature algorithm that can generate simple and efficient threshold signature protocols and its signature is unique, meaning that for a given public key and message, there is only one valid signature.</li>
+<li><strong>Non-interactive Distributed Key Generation (NIDKG)</strong>: To securely deploy the threshold signature scheme, Dfinity designed, analyzed, and implemented a new DKG protocol. This protocol runs on an asynchronous network and has high robustness (even if up to a third of the nodes in the subnet crash or are damaged, it can still succeed), while still providing acceptable performance. In addition to generating new keys, this protocol can also be used to reshare existing keys. This feature is crucial for the autonomous evolution of the IC topology, as subnet memberships change over time.
+<ul>
+<li><strong>Publicly Verifiable Secret Sharing scheme (PVSS Scheme)</strong>: The PVSS scheme is used in the Internet Computer protocol's white paper to implement the decentralized key generation (DKG) protocol, ensuring that node private keys are not leaked during the generation process.</li>
+<li><strong>Forward-secure public-key encryption scheme</strong>: A forward-secure public-key encryption scheme ensures that even if the private key is leaked, previous messages cannot be decrypted, thereby enhancing system security.</li>
+<li><strong>Key resharing protocol</strong>：A key sharing scheme based on threshold signatures, used to implement key management in the Internet Computer protocol. The main advantage of this protocol is that it can share existing keys with new nodes without creating new keys, thereby reducing the complexity of key management. Moreover, the protocol uses threshold signatures to secure key sharing, thereby enhancing the system's security and fault tolerance.</li>
+</ul>
+</li>
+<li><strong>PoUW</strong>: <a href="https://medium.com/dfinity/proof-of-useful-work-is-vastly-superior-to-other-consensus-mechanisms-ff18c37a3201">PoUW</a>, where U stands for Useful, improves performance and reduces wasted computation by nodes. Unlike PoW, which artificially creates difficult hash computations, PoUW focuses computational power as much as possible on serving users. The majority of resources (CPU, memory) are used for the execution of code within actual canisters.</li>
+<li><strong>Chain-evolution technology</strong>: A technology used for maintaining blockchain state machines, consisting of a series of techniques to ensure blockchain security and reliability. In the Internet Computer protocol, chain-evolution technology primarily includes the following two core technologies:
+<ol>
+<li><strong>Summary blocks</strong>: The first block of each epoch is a summary block, which contains some special data for managing different threshold signature schemes. A low-threshold scheme is used to generate random numbers, while a high-threshold scheme is used to authenticate the replicated state of subnets.</li>
+<li><strong>Catch-up packages (CUPs)</strong>: CUPs is a technology used for quickly synchronizing node states. They allow newly joined nodes to quickly get up to speed with the current state without having to rerun the consensus protocol.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/6.png" alt="img" style="zoom:40%;" />
+<p>My <strong>logical deduction</strong> for the entire IC (Internet Computer) underlying technology is as follows:</p>
+<ul>
+<li>In traditional public key cryptography, each node has its own pair of public and private keys. This means that if a node's private key is leaked or attacked, the security of the entire system will be threatened. However, the threshold signature scheme divides a key into multiple parts, which are distributed to different nodes. A signature can only be generated when a sufficient number of nodes cooperate. This way, even if some nodes are attacked or leaked, it will not pose a significant threat to the security of the entire system. Moreover, the threshold signature scheme can also improve the decentralization of the system, because it does not require a centralized institution to manage the keys, but instead distributes the keys among multiple nodes, thus avoiding single point of failure and centralization risks. Therefore, IC uses the threshold signature scheme to enhance the security and decentralization of the system, hoping to use threshold signatures to achieve a highly secure, scalable, and quickly verifiable general-purpose blockchain.</li>
+<li>The BLS is a famous threshold signature algorithm. It is the only signature scheme that can produce very simple and efficient threshold signature protocols. One advantage of BLS signatures is that they do not require the preservation of signature states. As long as the message content remains the same, the signature is fixed, which means that for a given public key and message, there is only one valid signature. This ensures extremely high scalability, hence ICP chose the BLS scheme.</li>
+<li>Because the threshold signature is used, there needs to be a distributor to distribute key fragments to different participants. However, this person who distributes the key fragments is a single point, which can easily lead to a single point of failure. Therefore, Dfinity designed a distributed key distribution technology, also known as NIDKG. During the initialization period of subnet creation, all participating Replicas non-interactively generate a public key A. For the corresponding private key B, each participant calculates and holds one of the derived secret shares through mathematical methods.</li>
+<li>To implement NIDKG, it is necessary to ensure that every participant in the distribution has not cheated. Therefore, each participant can not only get their own secret share but can also let others publicly verify whether their secret share is correct. This is a very important point in realizing distributed key generation.</li>
+<li>After NIDKG, if a certain secret share is held by a node for a long time, once the nodes are gradually eroded by hackers, the entire network may have problems. Therefore, it is necessary to continuously update the keys. However, key updates should not require all participating Replicas to gather together for interactive communication, but must also be conducted non-interactively. But because the public key A has already been registered in the NNS, other subnets will use this public key A for verification, so the subnet public key should preferably not change. But if the subnet public key does not change, how can the secret shares between the nodes be updated? Therefore, Dfinity designed a Key Resharing Protocol. Without creating a new public key, all Replicas holding the current version of the secret share non-interactively generate a new round of derived secret shares for the holders of the new version of the secret share. This way, it ensures that:
+<ul>
+<li>The new version of secret share is certified by all current legal secret share holders.</li>
+<li>The old version of secret share is no longer legal.</li>
+<li>Even if the new version of secret share is leaked in the future, the old version of secret share will not be leaked, because the polynomials between the two are completely unrelated and cannot be reverse engineered. This is also the forward security just introduced.</li>
+<li>It also guarantees efficient redistribution at any time when trusted nodes or access control changes, allowing access policies and controllers to be modified without the need to restart the system. This greatly simplifies the key management mechanism in many scenarios. For example, it is very useful in scenarios where subnet members change, because resharing will ensure that any new member has the appropriate secret share, and any replica that is no longer a member will no longer have a secret share. Moreover, if a small amount of secret share is leaked to the attacker in any period or even every period, these secret shares are also of no benefit to the attacker.</li>
+</ul>
+</li>
+<li>What if the subnet key at a certain moment in history is leaked? How to guarantee the immutability of historical data? Dfinity has adopted a forward-secure signature scheme. This ensures that even if the subnet key at a certain moment in history is leaked, the attacker cannot change the data of the historical block, thus preventing the threat of late-stage corruption attacks on the historical data of the blockchain. If this restriction is stronger, it can also ensure that information will not be eavesdropped on during transmission, because if the timestamps do not match, even if the key is cracked in a short time, past communications cannot be cracked.</li>
+<li>Traditional blockchain protocols require the storage of all block information from the genesis block onward. As the blockchain grows, this can lead to scalability issues, making it troublesome for many public chains to develop a light client. To solve this problem, the Internet Computer (IC) developed the Chain-evolution Technology. At the end of each epoch, all processed inputs and consensus-required information can be safely cleared from the memory of each replica. This greatly reduces the storage requirements of each replica, enabling IC to scale to support a large number of users and applications. In addition, the Chain-evolution technology includes the CUPs (Canister Update Protocol) technology, which allows newly joined nodes to quickly obtain the current state without having to rerun the consensus protocol. This significantly lowers the barriers and synchronization time for new nodes to join the IC network.</li>
+<li>In summary, all of IC's underlying technologies are interconnected, based on cryptography (from theory), and also fully consider industry challenges such as fast node synchronization (from practice). Truly, it is a comprehensive solution!</li>
+</ul>
+<h3 id="key-features"><a class="header" href="#key-features"><strong>Key Features</strong></a></h3>
+<ul>
+<li>In terms of features:
+<ul>
+<li><strong>Reverse Gas Model</strong>: Traditional blockchain systems generally require users to hold native tokens first, such as ETH or BTC, and then consume these tokens to pay for transaction fees. This increases the barrier to entry for new users and does not align with people's usage habits. Why should I have to own stocks in TikTok just to use the app? The Internet Computer (ICP) introduced a reverse gas model design, where users can directly use the ICP network, and the project side will cover the transaction fees. This reduces the usage threshold and aligns more closely with internet service habits, favoring a broader network effect and thus <strong>supporting the addition of more users</strong>.</li>
+</ul>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/7.png" alt="img" style="zoom:70%;" />
+<ul>
+<li><strong>Stable Gas</strong>：For other public chains on the market, to ensure the security of the chain and facilitate transfers, people will buy native tokens. Miners then strive to mine as much as possible, or people hoard native tokens, thus contributing computational power to the chain as in the case of Bitcoin, or providing pledge economic security as with Ethereum. It can be said that our demand for BTC/ETH actually comes from the Bitcoin/Ethereum public chains' requirements for computational power/pledges, which are essentially security requirements for the chain. Therefore, as long as the chain uses native tokens to pay for gas directly, it will become expensive in the future. Even if the native tokens are cheap now, they will become expensive once the chain's ecosystem gets established. However, the Internet Computer (ICP) is different. The gas consumed in the ICP blockchain is called Cycles, which are exchanged by consuming ICP. Cycles are stable under algorithmic adjustment, pegged to 1 SDR (Special Drawing Rights, which can be regarded as a stable unit calculated after integrating multiple national fiat currencies). Therefore, no matter how much the price of ICP increases in the future, the cost of doing anything on the ICP will remain the same as today (not considering inflation).</li>
+</ul>
+<img src="assets/ICP = Web 3.0/8.png" alt="img" style="zoom:31%;" />
+<ul>
+<li><strong>Wasm</strong>: WebAssembly (Wasm) is used as the standard for code execution. Developers can write code using a variety of popular programming languages (such as Rust, Java, C++, Motoko, etc.), thereb<strong>y supporting the participation of more developers</strong>.</li>
+<li><strong>Support for Running AI Models</strong>: Python language can also be compiled into Wasm. Python has one of the largest user bases in the world and is the primary language for AI, such as vector and large number calculations. Some people have already <a href="https://forum.dfinity.org/t/llama2-c-llm-running-in-a-canister/21991">run the Llama2 model on IC</a>. If the concept of AI + Web3 happens on ICP in the future, I wouldn't be surprised at all.</li>
+<li><strong>Web2 Speed Experience</strong>: Many applications on ICP have achieved astonishing results with millisecond-level queries and second-level updates. If you don't believe it, you can directly use <a href="https://oc.app/home">OpenChat</a>, a decentralized chat application that is entirely on-chain.</li>
+<li><strong>On-Chain Frontend</strong>: You've probably only heard of writing some parts of the backend as simple smart contracts and running them on-chain to ensure that data assets and core logic cannot be tampered with. However, the frontend also needs to be fully run on-chain for safety, as <a href="https://medium.com/beaver-smartcontract-security/defi-security-lecture-4-front-end-attack-44f32ca0cd68">frontend attacks</a> are a very typical and frequently occurring problem. Imagine you might think that Uniswap's code is very safe. The smart contract has been verified by so many people over so many years, the code is simple, there could be no problems. But what if Uniswap's frontend is hijacked one day? The contract you're interacting with is actually a malicious contract deployed by a hacker, and you might go bankrupt instantly. But if you store and deploy all frontend code in IC's Canister, at least IC's consensus ensures that the frontend code cannot be tampered with by hackers. This protection is more comprehensive, and IC can directly run and render the frontend without affecting the normal operation of the application. On IC, developers can directly build applications without traditional cloud services, databases, or payment interfaces, and there is no need to buy a frontend server or worry about databases, load balancing, network distribution, firewalls, etc. Users can directly access the frontend web pages deployed on ICP through a browser or mobile App, like the <a href="https://0xkookoo.icp.xyz/">personal blog I deployed on IC</a> before.</li>
+<li><strong>DAO-Controlled Code Upgrades</strong>: Many DeFi protocols now allow project owners to have complete control, initiating significant decisions such as suspending operations or selling funds without going through community voting and discussion. I believe everyone has witnessed or heard of such cases. In contrast, DAPP code in the ICP ecosystem runs in DAO-controlled containers. Even if a project party occupies a large proportion in voting, it still implements a public voting process, meeting the necessary conditions for blockchain transparency described at the beginning of this article. This process guarantee mechanism better reflects the will of the community, and relatively speaking, achieves <strong>a higher degree of governance</strong> compared to other public chain projects.</li>
+<li><strong>Automatic Protocol Upgrades</strong>: When it is necessary to upgrade the protocol, a new threshold signature scheme can be added in the summary block to implement automatic protocol upgrades. This method can ensure the security and reliability of the network, while avoiding the inconvenience and risks brought by hard forks. Specifically, the Chain Key technology in ICP can ensure the network's security and reliability by maintaining a blockchain state machine through a special signature scheme. At the start of each epoch, the network uses a low-threshold signature scheme to generate a random number, and then uses a high-threshold signature scheme to authenticate the replicated state of the subnet. This signature scheme can ensure the security and reliability of the network, while also implementing automatic protocol upgrades, thus <strong>avoiding the inconvenience and risks brought by hard forks</strong>.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/9.png" alt="Proposal Voting" style="zoom:80%;" />
+<p>Proposal Voting</p>
+<ul>
+<li>
+<p><strong>Fast Forwarding</strong>: This is a technology in the Internet Computer Protocol that quickly synchronizes the state of nodes. It allows newly joined nodes to quickly access the current state without having to rerun the consensus protocol. Specifically, the process of Fast Forwarding is as follows:</p>
+<ol>
+<li>The newly joined node obtains the Catch-up package (CUP) of the current epoch, which contains the Merkle tree root, summary block, and random number of the current epoch.</li>
+<li>The new node uses the state sync subprotocol to obtain the full state of the current epoch from other nodes, and uses the Merkle tree root in the CUP to verify the correctness of the state.</li>
+<li>The new node uses the random number in the CUP and the protocol messages of other nodes to run the consensus protocol, thereby quickly synchronizing to the current state.</li>
+</ol>
+<p>The advantage of Fast Forwarding is that it <strong>allows newly joined nodes to quickly access the current state</strong>, and they don't have to start from the beginning like some other public chains. This can speed up the synchronization and expansion of the network. At the same time, it can also reduce the amount of communication between nodes, thereby improving the efficiency and reliability of the network.</p>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/10.png" alt="fast forwarding" style="zoom:59%;" />
+<p>fast forwarding</p>
+<ul>
+<li>
+<p><strong>Decentralized Internet Identity</strong>: The identity system on IC really makes me feel that the DID problem can be completely solved, whether it is scalability or privacy. The identity system on IC currently has an implementation version called <a href="https://identity.ic0.app/">Internet Identity</a>, and a more powerful <a href="https://nfid.one/">NFID</a> developed based on it.</p>
+<p>Its <a href="https://medium.com/dfinity/internet-identity-the-end-of-usernames-and-passwords-ff45e4861bf7">principle</a> is as follows:</p>
+<ol>
+<li>At the time of registration, it generates a pair of public and private keys for the user. The private key is stored in the TPM security chip inside the user's device and will never be leaked, while the public key will be shared with services on the network.</li>
+<li>When the user wants to log in to a dapp, the dapp creates a temporary session key for the user. This session key will be signed by the user through the authorization of electronic signature, so that the dapp obtains the permission to verify the user's identity.</li>
+<li>After the session key is signed, the dapp can use this key to access network services on behalf of the user, and the user does not need to sign electronically every time. This is similar to representative authorization login in Web2.</li>
+<li>The session key has a short validity period. After it expires, the user needs to reauthorize the signature through biometric recognition to obtain a new session key.</li>
+<li>The user's private key is always stored in the local TPM security chip and will not leave the device. This ensures the security of the private key and the anonymity of the user.</li>
+<li>By using temporary session keys, different dapps cannot track user identities with each other. Achieve true anonymity and private access.</li>
+<li>Users can easily sync and manage their Internet Identity across multiple devices, but the devices themselves also require corresponding biometric or hardware key authorization.</li>
+</ol>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/11.png" alt="img" style="zoom:40%;" />
+<ul>
+<li>The advantages of Internet Identity are as follows:
+<ol>
+<li>No need to remember passwords. Use biometrics features such as fingerprint recognition to log in directly, without the need to set and remember complex passwords.</li>
+<li>Private keys do not leave the device, making it more secure. The private key is stored in the TPM security chip and cannot be stolen, solving the problem of username and password theft in Web2.</li>
+<li>Anonymous login, cannot be tracked. Unlike Web2, which uses email as a username that can be tracked across platforms, Internet Identity removes this tracking.</li>
+<li>Multi-device management is more convenient. You can log into the same account on any device that supports biometrics, rather than being restricted to a single device.</li>
+<li>Independence from central service providers, achieving true decentralization. This is unlike the Web2 model where usernames correspond to email service providers.</li>
+<li>Use a delegated authentication process, no need to sign again every time you log in, providing a better user experience.</li>
+<li>Supports logging in using dedicated security devices such as Ledger or Yubikey, enhancing security.</li>
+<li>Hide the user's actual public key, and privacy can be ensured by preventing the transaction record from being queried through the public key.</li>
+<li>Seamlessly compatible with Web3 blockchain, it can securely and efficiently log in and sign blockchain DApps or transactions.</li>
+<li>Advanced architecture, representing the organic integration of the advantages of Web2 and Web3, is the standard for future network accounts and logins.</li>
+</ol>
+</li>
+<li>In addition to providing a new user experience, the following technical measures are also taken to ensure its security:
+<ol>
+<li>Use the TPM security chip to store the private key. This chip is designed so that even developers cannot touch or extract the private key, preventing the private key from being stolen.</li>
+<li>Biometric authentication such as fingerprint or facial recognition and other two-factor authentication mechanisms require verification with the device, so only the user who holds the device can use this identity.</li>
+<li>The session key adopts a short-term expiration design to limit the time window for theft, and forces the destruction of the related ciphertext at the end of the session to reduce risk.</li>
+<li>Public key encryption technology encrypts data during transmission, and external listeners cannot know the user's private information.</li>
+<li>Does not rely on third-party identity providers. The PRIVATE KEY is generated and controlled by the user, not trusting third parties.</li>
+<li>Combined with the immutability brought by the IC blockchain consensus mechanism, it ensures the reliability of the entire system operation.</li>
+<li>Continuously updating and upgrading related cryptographic algorithms and security processes, such as adding more secure mechanisms such as multiple signatures.</li>
+<li>Open source code and decentralized design optimize transparency, which is conducive to community cooperation to enhance security.</li>
+</ol>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/12.png" alt="Internet Identity" style="zoom:50%;" />
+<p>Internet Identity</p>
+<h3 id="core-team"><a class="header" href="#core-team">Core Team</a></h3>
+<ul>
+<li>The <a href="https://dfinity.org/">team</a> consists of 200+ employees, all of whom are very elite talents. The team has published 1600+ papers, cited 100k+ times, and holds 250+ patents.
+<ul>
+<li>The founder, <a href="https://www.linkedin.com/in/thedwilliams/">Dominic Williams</a>, is a crypto-theorist and a serial entrepreneur.
+<ul>
+<li><strong>Academically speaking</strong>, his recent mathematical theories include Threshold Relay and PSC chains, Validation Towers and Trees, and USCID.</li>
+<li><strong>From a technical background</strong>, he has a deep background in technology R&amp;D and has been involved in the field of big data and distributed computing in his early years. This has laid a technical foundation for building the complex ICP network.</li>
+<li><strong>From an entrepreneurial perspective</strong>, he previously operated an MMO game using his distributed system, which hosted millions of users. In 2015, Dominic started Dfinity, and he is also the president and CTO of String Labs.</li>
+<li><strong>From a visionary perspective</strong>, he proposed the concept of a decentralized Internet more than 10 years ago. It is not easy to promote this grand project for a long time, and his design ideas are very forward-looking.</li>
+</ul>
+</li>
+<li>In terms of the technical team, Dfinity's strength is very strong. The Dfinity Foundation has/ha gathered a large number of top cryptography and distributed system experts, such as <a href="https://www.linkedin.com/in/jancamenisch/">Jan Camenisch</a>, <a href="https://inf.ethz.ch/people/person-detail.roscoe.html">Timothy Roscoe</a>, <a href="https://people.mpi-sws.org/~rossberg/">Andreas Rossberg</a>, <a href="https://www.linkedin.com/in/mariadubovitskaya/">Maria D.</a>, <a href="https://www.linkedin.com/in/victor-shoup-a3405284/">Victor Shoup</a>, etc. Even the &quot;L&quot; in the BLS encryption algorithm - <a href="https://www.linkedin.com/in/benjamin-lynn-51832a8/">Ben Lynn</a> is at Dfinity. This provides strong support for ICP's technical innovation. The success of a blockchain project cannot be separated from technology, and the gathering of top talents can bring about technological breakthroughs, which is also a key advantage of ICP.</li>
+</ul>
+</li>
+</ul>
+<img src="assets/ICP = Web 3.0/13.png" alt="Dfinity Foundation Team" style="zoom:33%;" />
+<p>Dfinity Foundation Team</p>
+<h3 id="fund-raising--tokenomics"><a class="header" href="#fund-raising--tokenomics">Fund-raising &amp; Tokenomics</a></h3>
+<p>If I discuss this part as well, the article will be too long. Therefore, I've decided to write a separate article later to analyze this in detail for everyone. This article focuses more on why ICP has great potential from the perspective of the development direction of the blockchain industry.</p>
+<img src="assets/ICP = Web 3.0/14.png" alt="img" style="zoom:50%;" />
+<h3 id="applications"><a class="header" href="#applications">Applications</a></h3>
+<ul>
+<li>All types of applications can be developed on ICP, including social platforms, content creator platforms, chat tools, games, and even metaverse games.</li>
+<li>Many people say that because it is difficult to achieve global state consistency on IC, it is naturally not suitable for DeFi. But I think this problem itself is wrong. It is not that <strong>global state consistency</strong> is difficult to achieve, but that <strong>global state consistency under low latency</strong> is difficult to achieve. If you can accept a minute's time, 10,000 machines worldwide can also achieve global consistency. Ethereum and BTC now have so many nodes, haven't they already been forced to achieve <strong>global state consistency under high latency</strong>, and therefore they currently can't achieve horizontal infinite expansion. IC solves the problem of <strong>horizontal infinite expansion</strong> by splitting subnets first. As for global state consistency under low latency, it can be achieved through <strong>strong consistency distributed consensus algorithms</strong>, <strong>well-designed network topology</strong>, <strong>high-performance distributed data synchronization</strong>, <strong>effective time stamp verification</strong>, and mature <strong>fault tolerance mechanisms</strong>. But to be honest, building a trading platform at the application level on IC is more difficult than what Wall Street people are doing now with high-performance trading platforms, and it's not just about achieving consistency across multiple data centers. However, the difficulty does not mean that it is completely impossible to do, but that many technical problems must be solved first, and a moderate state will eventually be found that ensures both security and an acceptable user experience. For example, ICLightHouse below.</li>
+<li><a href="https://iclight.house/">ICLightHouse</a> is an orderbook dex running fully on chain. What is the concept of fully on chain? How many technical difficulties need to be solved? On other public chains, people don't even dare to think about this, but on IC, at least it's doable and gives us hope.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/15.png" alt="img" style="zoom:50%;" />
+<ul>
+<li><a href="https://oc.app/home">OpenChat</a> is a decentralized chat application with an excellent user experience. I haven't seen a second such product in the entire blockchain industry. Many other teams have also attempted in this direction before, but they all ultimately failed due to various technical problems. The root cause is that users feel that the experience is not good, such as the speed is too slow, sending a message takes 10 seconds, and receiving someone else's message also takes 10 seconds. However, a small team of three people on ICP has created such a successful product. Just how smooth it is, you have to experience it for yourself. You're welcome to join the organization, where you can enjoy the collision of ideas and to a certain extent, the pleasure of free speech.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/16.png" alt="img" style="zoom:50%;" />
+<ul>
+<li><a href="https://mora.app/">Mora</a> is a platform for super creators, where everyone can create a planet and build their own personal brand. The content you output is always yours, and it can even support paid reading. It can be described as a decentralized knowledge planet, and I now read articles on it every day.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/17.png" alt="Mora - 0xkookoo" style="zoom:33%;" />
+<p>Mora - 0xkookoo</p>
+<ul>
+<li>OpenChat and Mora are products that I <strong>truly use almost every day</strong>. They give me a sense of comfort that is hard to leave, and if I were to describe it in two words, it would be freedom and fulfillment.</li>
+<li>There are already some teams developing gaming applications on IC. I think the narrative of fully-on-chain games may eventually be taken over by IC. As I said in the <a href="https://mirror.xyz/0xkookoo.eth/BF7jfmieDL4AxzQKRuyCF0MzZ7mmmrVlCuF5CRoAbAk">GameFi section of the article</a> I wrote earlier, playability and fun are things that the project team needs to consider, and playability is easier to achieve on IC. Looking forward to the masterpiece from <a href="https://yegk3-bqaaa-aaaae-aajza-cai.icp0.io/">Dragginz</a>.</li>
+</ul>
+<img src="assets/ICP = Web 3.0/18.png" alt="img" style="zoom:73%;" />
+<h3 id="summary"><a class="header" href="#summary">Summary</a></h3>
+<ul>
+<li>ICP is like the Earth, with Chainkey technology serving as the Earth's core. Its relationship with ICP is akin to the relationship between TCP/IP protocol and the current entire internet industry. Each Subnet is like a continent such as Asia, Africa, or Latin America. Of course, a Subnet could also be likened to the Pacific or Atlantic Ocean. Within these continents and oceans, there are various buildings and regions (Replicas and Nodes). Each area and building can grow plants (Canisters), and different animals live happily.</li>
+<li>ICP supports horizontal expansion. Each Subnet is autonomous and can communicate with other Subnets. No matter what type of application you have—be it social media, finance, or even the metaverse—you can achieve eventual consistency through this distributed network. It's easy to achieve a global ledger under synchronous conditions, but it's a significant challenge to achieve &quot;global state consistency&quot; under asynchronous conditions. Currently, <strong>only ICP has a chance to do this</strong>.</li>
+<li>Note that I'm not referring to &quot;worldwide state consistency,&quot; but &quot;global state consistency.&quot; &quot;Global state consistency&quot; requires all participating nodes to reach consensus on the order of all operations, ensure the final result is consistent, objectively consistent regardless of whether nodes encounter faults, ensure clock consistency, and provide immediate consistency as all operations are processed synchronously. This can be ensured within a single IC Subnet. However, if you want to guarantee &quot;worldwide state consistency,&quot; all Subnets physically all over the world as a whole need to achieve &quot;global state consistency&quot; regarding the same data and state. In practical implementation, this is impossible to achieve with low latency, which is also the bottleneck preventing public chains like ETH from scaling horizontally. Therefore, IC opts to reach consensus within a single Subnet, and other Subnets quickly verify the results to ensure no fraud has occurred, thereby achieving &quot;eventual global state consistency.&quot; This is essentially <strong>a combination of the decentralization of large public chains and the high throughput and low latency of consortium chains</strong>, all while enabling infinite <strong>horizontal expansion</strong> of Subnets through mathematically and cryptographically proven methods.</li>
+</ul>
+<p>In summary, according to my initial thoughts on the ultimate development direction of blockchain, which involves <strong>Sovereignty</strong>, <strong>Decentralized Multipoint Centralization</strong>, <strong>Transparency</strong>, <strong>Control over Code Execution</strong>, and <strong>Infinite Scalability with Linear Cost</strong>:</p>
+<ul>
+<li><strong>Sovereignty</strong>: This is the only problem blockchain needs to solve, including asset sovereignty, data sovereignty, and speech sovereignty. Otherwise, there's no need for blockchain.
+<ul>
+<li><em>IC has completely achieved this.</em></li>
+</ul>
+</li>
+<li><strong>Immutability</strong>: This is a sufficient condition, but not a necessary one. As long as you can ensure that my sovereignty is not compromised, I don't care about tampering. If everyone's assets in the world are tampered with and doubled proportionally, what's the difference?
+<ul>
+<li><em>IC has also achieved this.</em></li>
+</ul>
+</li>
+<li><strong>Decentralization</strong>: Complete decentralization is impossible. No matter how it's designed, there will always be &quot;gifted&quot; individuals or stakeholders with greater say. There will always be people who voluntarily choose not to participate. <strong>Decentralized multipoint centralization</strong> is the ultimate pattern.
+<ul>
+<li><em>IC is currently the best among all public chains. It manages to maintain a certain degree of decentralization while fully utilizing the advantages of centralized entities, thereby better facilitating network governance and operation.</em></li>
+</ul>
+</li>
+<li><strong>Transparency</strong>: This is a must. Isn't this grand social experiment involving all of humanity about giving everyone a voice and the ability to protect their own sovereignty? Some people may be lazy, some may prefer to trust professionals, and some may choose to give up voting for maximum efficiency. However, these are choices they actively make. They have the right but voluntarily choose not to exercise it. As long as everything is transparent and there's no underhanded manipulation, I'm willing to accept the outcomes. If I lose, it's because my skills were inferior. Survival of the fittest aligns with the market economy.
+<ul>
+<li><em>IC has completely achieved this.</em></li>
+</ul>
+</li>
+<li><strong>Control over Code Execution</strong>: This is the core. Without it, the rest is unnecessary. If a vote is publicly announced for a week, and in the end, the project team still deploys a malicious version of the code, or even if it's not malicious, it's still a mockery of everyone.
+<ul>
+<li><em>Currently, <strong>only IC</strong> has achieved this.</em></li>
+</ul>
+</li>
+<li><strong>Infinite Scalability with Linear Cost</strong>: As blockchain becomes more and more intertwined with real life, more and more people are participating, and the demand is growing. If the infrastructure cannot support unlimited scalability, or if it's too expensive to expand, it's unacceptable.
+<ul>
+<li><em>Currently, <strong>only IC</strong> has achieved this.</em></li>
+</ul>
+</li>
+</ul>
+<p>Based on these facts and my analytical thinking, I believe that <strong>ICP = Web 3.0</strong>.</p>
+<p>This article is just to discuss why ICP might be the innovation driver for Web/Blockchain 3.0 from the perspective of the future development direction of the blockchain industry. Admittedly, there are some issues with ICP's tokenomics design, and its ecosystem has not yet exploded. At present, ICP still needs to continue its efforts to reach the ultimate Blockchain 3.0 I envision.</p>
+<p>However, don't worry, this task is inherently difficult. Even the Dfinity Foundation has prepared a 20-year roadmap. Only two years after the mainnet launch, it has already achieved great accomplishments. Currently, it's also bridging the BTC and ETH ecosystems using cryptographic methods. I believe that it will reach greater heights in three years.</p>
+<img src="assets/ICP = Web 3.0/19.png" alt="img" style="zoom:50%;" />
+<h2 id="future"><a class="header" href="#future">Future</a></h2>
+<ul>
+<li>ICP has already completed the infrastructure construction from bottom to top, and applications from top to bottom are beginning to emerge. My recent direct impression is that ICP has more and more cards to play, preparing for the next bull market.</li>
+<li>ICP represents a paradigm shift, not just a simple technical upgrade. It signifies the transition from standalone computing to distributed computing, and even more so, from standalone systems to distributed systems. The concept of decentralized cloud computing can provide many small companies with a one-stop development experience right from the start.</li>
+<li>According to the product value formula by Yu Jun: <strong>Product Value = (New Experience - Old Experience) - Migration Cost</strong>, in the future, as long as some people find that the experience gain of joining the ICP ecosystem outweighs the migration cost, more people, including project parties and users will join. This will make the scale effect of &quot;cloud computing&quot; more evident. Once the &quot;chicken or egg&quot; problem is solved, the positive flywheel of ICP will be established.</li>
+<li>Of course, everyone's definition of experience is subjective, so some people will choose to join early, while others will join later. Those who join earlier bear greater risks, but they usually also receive greater average benefits.</li>
+<li></li>
+</ul>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../1.OverviewofIC/1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../2.CoreProtocol/P2Player.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../1.OverviewofIC/1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../2.CoreProtocol/P2Player.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "1.OverviewofIC/ICP&#x3D;Web3.0.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>
