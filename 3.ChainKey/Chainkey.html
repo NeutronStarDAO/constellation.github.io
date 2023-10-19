@@ -179,13 +179,15 @@
 <div class="center-image">
     <img src="assets/Chainkey/image-20230925163327385.jpg" alt="img" style="zoom:67%;" />
 </div>
-<p>Chain-key cryptography refers to the suite of cryptogenic protocols embedded in Internet Computer lower-level systems. It is the complete set of cryptographic protocols that Internet Computers rely on for runtime operations, including threshold BLS signatures, non-interactive key distribution (NIDKG), non-interactive zero-knowledge proofs (NIZK), Threshold ECDSA signatures, and verifiable encrypted threshold keys (VETKeys).</p>
+<p>Chain-key cryptography refers to the suite of cryptogenic protocols embedded in Internet Computer lower-level systems. It is the complete set of cryptographic protocols that Internet Computers rely on for runtime operations, including threshold BLS signatures, non-interactive key distribution (NIDKG), non-interactive zero-knowledge proofs (NIZK), Threshold ECDSA signatures, verifiable encrypted threshold keys (VETKeys) and so on.</p>
 <p>The most important among these is threshold BLS signatures.</p>
 <h2 id="threshold-bls-signatures"><a class="header" href="#threshold-bls-signatures">Threshold BLS signatures</a></h2>
-<p>What is threshold BLS signatures? ฅʕ•̫͡•ʔฅ</p>
+<p>What is threshold BLS signatures? <code>ฅʕ•̫͡ •ʔฅ</code> </p>
 <p>It is the most important, fundamental, and core component of cryptographic key chains. Subnet operations rely on threshold BLS signatures to achieve consensus, provide message authentication to users, generate random beacons on which consensus depends, and sign catch-up packages, among other tasks. </p>
 <p>To give an example, a threshold BLS signature is like a &quot;DAO&quot; - any place the subnet needs to sign something requires enough replicas in the subnet to &quot;agree&quot; (sign) before it can go through. When enough replicas agree, that represents consensus and the majority rules.</p>
+<blockquote>
 <p>In traditional asymmetric cryptography, we can generate a public and private key pair; the public key is shared openly while the private key is kept secret. The public key encrypts information, the private key decrypts it. The private key signs information, the public key verifies it. You can learn more about asymmetric cryptography here.</p>
+</blockquote>
 <p>As I explained with <a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">consensus</a> earlier, when a replica in a subnet creates a block proposal, if everyone agrees the block looks good, they will each sign it with their private key to indicate their approval.</p>
 <p>If every replica generated their own key pair, managing the keys would be complex and inefficient 🥲. Even more importantly, if users wanted to verify chain contents, they'd have to download hundreds of GBs to check everything themselves 😭. That's just unfriendly.</p>
 <div class="center-image">
