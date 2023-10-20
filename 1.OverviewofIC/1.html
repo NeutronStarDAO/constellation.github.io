@@ -199,6 +199,7 @@
     <img src="assets/1/image-20230218171944539.png" style="zoom:95%;" />
 </div>
 <p><a href="https://dashboard.internetcomputer.org/">Here</a> you can see the real-time statistics of the IC network. While the number of the subnet keeps growing, the performance of the network will also get higher. (TPS is unlimited!)</p>
+<p>Currently (June 2023), each shard contains 1000 entries, meaning a subnet can process 1000 update calls per second (Actual data is slightly less than 1000 msgs/sec, around 970/sec). Each subnet does around 970 updates/sec, 4000 queries/node.</p>
 <h2 id="the-new-era-of-software-development"><a class="header" href="#the-new-era-of-software-development">The new era of software development</a></h2>
 <p>The Internet Computer (IC) is a brand new blockchain design built on the Internet Computer Protocol. Its core part is divided into 4 layers, running on nodes of each subnet. By running the core protocol, the nodes of a subnet implement a blockchain-based replicated state machine that progresses independently of other subnets (but communicates asynchronously with them). IC adopts a multi-subnet shards structure, which overcomes the performance bottlenecks of traditional blockchains while maintaining decentralization. This architecture allows IC to generate subnets (shards) indefinitely, allowing IC to scale almost limitlessly.</p>
 <div class="center-image">

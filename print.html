@@ -1071,6 +1071,7 @@ History repeats itself in a spiral ascent:</p>
     <img src="1.OverviewofIC/assets/1/image-20230218171944539.png" style="zoom:95%;" />
 </div>
 <p><a href="https://dashboard.internetcomputer.org/">Here</a> you can see the real-time statistics of the IC network. While the number of the subnet keeps growing, the performance of the network will also get higher. (TPS is unlimited!)</p>
+<p>Currently (June 2023), each shard contains 1000 entries, meaning a subnet can process 1000 update calls per second (Actual data is slightly less than 1000 msgs/sec, around 970/sec). Each subnet does around 970 updates/sec, 4000 queries/node.</p>
 <h2 id="the-new-era-of-software-development"><a class="header" href="#the-new-era-of-software-development">The new era of software development</a></h2>
 <p>The Internet Computer (IC) is a brand new blockchain design built on the Internet Computer Protocol. Its core part is divided into 4 layers, running on nodes of each subnet. By running the core protocol, the nodes of a subnet implement a blockchain-based replicated state machine that progresses independently of other subnets (but communicates asynchronously with them). IC adopts a multi-subnet shards structure, which overcomes the performance bottlenecks of traditional blockchains while maintaining decentralization. This architecture allows IC to generate subnets (shards) indefinitely, allowing IC to scale almost limitlessly.</p>
 <div class="center-image">
@@ -2505,8 +2506,8 @@ $$</p>
 A_{i(t-1)} = g_{2}^{a_{i(t-1)}} 
 $$</p>
 <p>Then put these \(A_{i}\) as public parameters into the dealing \(d\).</p>
-<p>So \(A_{i0},\ ...,\ A_{i(t-1)}\) correspond to the coefficients of the Shamir secret sharing polynomial \(a(x\)) used to generate the dealing. They are part of dealing d, used to verify the correctness of the secret sharing.</p>
-<p>When the threshold number of dealings are collected, the public polynomial \(a(x\)) of all replicas can be recovered using Lagrangian interpolation, where \(a(0\)) is the public key of the subnet.</p>
+<p>So \(A_{i0},\ ...,\ A_{i(t-1)}\) correspond to the coefficients of the Shamir secret sharing polynomial \(a(x)\) used to generate the dealing. They are part of dealing d, used to verify the correctness of the secret sharing.</p>
+<p>When the threshold number of dealings are collected, the public polynomial \(a(x)\) of all replicas can be recovered using Lagrangian interpolation, where \(a(0)\) is the public key of the subnet.</p>
 <div class="center-image">
 <img src="3.ChainKey/assets/Chainkey/image-20230825213313484.png" alt="img" style="zoom:35%;" /> 
 </div>
