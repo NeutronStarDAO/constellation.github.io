@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Fetch Module - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item "><a href="../1.OverviewofIC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🧰</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.Canister/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item "><a href="../6.InternetServices/RandomNumberOnChain.html">Random Number On Chain</a></li><li class="chapter-item "><a href="../6.InternetServices/TEE.html">TEE</a></li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item "><a href="../7.ii/pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><a href="../8.CryptographyInIC/BasicCryptography.html">Introduction to basic cryptography</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/SecretSharing.html">Secret Sharing</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/BLS.html">Threshold BLS Signatures</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/HashAlgorithm.html">Hash Algorithm</a></li><li class="chapter-item affix "><li class="part-title">Developing DApp🌟</li><li class="chapter-item "><a href="../9.DevelopingDApp/CommonDfxCommands.html">Common dfx Commands</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/InstallDevelopmentEnvironment.html">Install Development Environment</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/1.GettingStartedwithDApp.html">Getting Started with DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/2.DesigningDApp.html">Designing DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/3.DevelopingProton.html">Developing Proton</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/4.UserModule.html">User Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/5.PostModule.html">Post Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/6.FeedModule.html">Feed Module</a></li><li class="chapter-item expanded "><a href="../9.DevelopingDApp/7.FetchModule.html" class="active">Fetch Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/8.SharedTypes.html">Shared Types</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/9.Completion.html">Completion!</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="fetch"><a class="header" href="#fetch">Fetch</a></h2>
+<p>The Fetch module is responsible for notifying relevant users. There are a total of 4 Canisters:</p>
+<div class="center-image">
+<img src="assets/7.FetchModule/image-20240128104854006.png" alt="img" style="zoom:50%;" />
+</div>
+<p>The functionality of the Root Fetch Canister is relatively simple; it is responsible for creating and managing all types of Fetch Canisters. The Post Fetch Canister is responsible for notifying followers about post updates. Comment Fetch Canister and Like Fetch Canister handle the notification of comments and likes.</p>
+<p>Since the code in this module has high redundancy, we will only detail the code for Root Fetch Canister, Post Fetch Canister, and Like Fetch Canister.</p>
+<br>
+<h3 id="rootfetchmo"><a class="header" href="#rootfetchmo">rootFetch.mo</a></h3>
+<div class="center-image">
+<img src="assets/7.FetchModule/image-20240128223418061.png" alt="image-20240128223418061" style="zoom:50%;" />
+</div>
+<p>First, define types and variables.</p>
+<pre><code class="language-js">actor class RootFetch(
+    userCanister: Principal,
+) = this {
+
+    type RootFeedActor = Types.RootFeedActor;
+    type PostFetchActor = Types.PostFetchActor;
+    type CommentFetchActor = Types.CommentFetchActor;
+    type LikeFetchActor = Types.LikeFetchActor;
+
+    stable let T_CYCLES = 1_000_000_000_000;
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+    stable var postFetchCanisterIndex: Nat = 0;
+    stable var commentFetchCanisterIndex: Nat = 0;
+    stable var likeFetchCanisterIndex: Nat = 0;
+
+    // Create three TrieMaps to store posts, comments, and likes.
+    // This makes it easy to manage and retrieve relevant data, such as finding comments or likes for a post.
+
+    // Its type is an array of tuples, each tuple containing a natural number (Nat) and a Principal.
+    stable var postFetchMapEntries: [(Nat, Principal)] = [];
+    // Build a Map from the values of the postFetchMapEntries array, using Nat.equal for key equality and Hash.hash for hashing.
+    let postFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(postFetchMapEntries.vals(), Nat.equal, Hash.hash);
+
+    stable var commentFetchMapEntries: [(Nat, Principal)] = [];
+    let commentFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(commentFetchMapEntries.vals(), Nat.equal, Hash.hash);
+    
+    stable var likeFetchMapEntries: [(Nat, Principal)] = [];
+    let likeFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(likeFetchMapEntries.vals(), Nat.equal, Hash.hash);    
+};
+</code></pre>
+<br>
+<p>After creating the Root Fetch Canister, we establish relationships between user feeds, posts, comments, and likes by creating child Canisters in the initialization function.</p>
+<pre><code class="language-js">public shared({caller}) func init(
+    _rootFeedCanister: Principal,
+    _initPostFetchCanister: Principal,
+    _initCommentFetchCanister: Principal,
+    _initLikeFetchCanister: Principal
+): async () {
+    rootFeedCanister := _rootFeedCanister;
+
+    // Define three maps to store different types of fetch canisters.
+    postFetchMap.put(postFetchCanisterIndex, _initPostFetchCanister);
+    commentFetchMap.put(commentFetchCanisterIndex, _initCommentFetchCanister);
+    likeFetchMap.put(likeFetchCanisterIndex, _initLikeFetchCanister);
+
+    // Also define three index variables for generating a unique index for each fetch canister.
+    postFetchCanisterIndex += 1;
+    commentFetchCanisterIndex += 1;
+    likeFetchCanisterIndex += 1;
+
+    // Create four actor objects using the actor function.
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(_rootFeedCanister));
+    let _postFetchActor: PostFetchActor = actor(Principal.toText(_initPostFetchCanister));
+    let _commentFetchActor: CommentFetchActor = actor(Principal.toText(_initCommentFetchCanister));
+    let _likeFetchActor: LikeFetchActor = actor(Principal.toText(_initLikeFetchCanister));
+    let _allUserFeedCanister = await rootFeedActor.getAllUserFeedCanister();
+
+    // Call the initUserToFeed method for the three Fetch Canisters, passing in the list of user feed canisters to initialize the relationship between users and feeds in these Fetch Canisters.
+    // Use assert to confirm that all three initUserToFeed calls are executed successfully.
+    assert(await _postFetchActor.initUserToFeed(_allUserFeedCanister));
+    assert(await _commentFetchActor.initUserToFeed(_allUserFeedCanister));
+    assert(await _likeFetchActor.initUserToFeed(_allUserFeedCanister));
+};
+</code></pre>
+<p>Next is the function to create the Post Fetch Canister:</p>
+<p>Create a new Post Fetch Canister and store the newly created Canister ID in the Map.
+It also interacts with the Root Feed Canister.</p>
+<pre><code class="language-js">public shared({caller}) func createPostFetchCanister(): async Principal {
+    // Add 4T Cycles to each Canister
+    Cycles.add(4 * T_CYCLES);
+    // Call the constructor of the PostFetch module to create a new PostFetch Canister
+    let _canister = await PostFetch.PostFetch();
+    // Get the Canister ID of the newly created Canister
+    let _canisterId = Principal.fromActor(_canister);
+    // Put the Principal of the new Canister into the postFetchMap
+    postFetchMap.put(postFetchCanisterIndex, _canisterId);
+    // Increment the index
+    postFetchCanisterIndex += 1;
+
+    // postFetch: initUserToFeed
+    // Use assert to check if rootFeedCanister is not anonymous
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    // Convert rootFeedCanister to text using Principal.toText, then create a RootFeedActor using the actor keyword
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    // Use assert to check and ensure calling the initUserToFeed method of _canister, passing the Principal list of all user Feed Canisters
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    // Return the Canister ID of the newly created Canister
+    _canisterId
+};
+
+// Create Fetch Canisters responsible for notifying comments and likes, similar to creating Post Fetch Canister:
+
+public shared({caller}) func createCommentFetchCanister(): async Principal {
+    Cycles.add(4 * T_CYCLES);
+    let _canister = await CommentFetch.CommentFetch(
+        userCanister
+    );
+    let _canisterId = Principal.fromActor(_canister);
+    commentFetchMap.put(commentFetchCanisterIndex, _canisterId);
+    commentFetchCanisterIndex += 1;
+
+    // initUserToFeed
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    _canisterId
+};
+
+public shared({caller}) func createLikeFetchCanister(): async Principal {
+    Cycles.add(4 * T_CYCLES);
+    let _canister = await LikeFetch.LikeFetch(
+        userCanister
+    );
+    let _canisterId = Principal.fromActor(_canister);
+    likeFetchMap.put(likeFetchCanisterIndex, _canisterId);
+    likeFetchCanisterIndex += 1;
+
+    // initUserToFeed
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    _canisterId
+};
+
+// Finally, we write query functions to query various Fetch Canisters.
+
+public query func getAllPostFetchCanister(): async [Principal] {
+    // Get all Canister IDs from the Map
+    Iter.toArray(postFetchMap.vals())
+    // Iter.toArray is a function that converts an iterator to an array, turning all Canister IDs in the Map into an array
+};
+
+public query func getAllCommentFetchCanister(): async [Principal] {
+    Iter.toArray(commentFetchMap.vals())
+};
+
+public query func getAllLikeFetchCanister(): async [Principal] {
+    Iter.toArray(likeFetchMap.vals())
+};
+</code></pre>
+<h3 id="postfetchmo"><a class="header" href="#postfetchmo">postFetch.mo</a></h3>
+<p>Post Fetch is responsible for notifying a user's posts to their followers.</p>
+<div class="center-image">
+<img src="assets/7.FetchModule/image-20240128232529601.png" alt="img" style="zoom:50%;" />
+</div>
+<p>The content in postFetch.mo will be translated in the next response.</p>
+<pre><code class="language-js">import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+
+actor class PostFetch() = this {
+
+    // Internal maintenance of a notification table: records the post IDs to be notified for each user.
+    // Define notifyMapEntries as an array of tuples, each tuple containing a Principal and an array of Text [Text].
+    // The stable keyword ensures that the data of this variable will be saved even in the case of contract upgrades.
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+
+    // Notification function: post ID, poster, forwarder, followers, Cycles
+    // When receiveNotify is called, it takes an array of Principals and a post ID.
+    public shared({caller}) func receiveNotify(to: [Principal], postId: Text): async () {
+        for(_user in to.vals()) {
+            Debug.print(
+                &quot;Canister PostFetch, Func receiveNotify, &quot;
+                # &quot;to : &quot; # Principal.toText(_user) # &quot; ,&quot;
+                # &quot;postId : &quot; # postId
+            );
+        };
+        // Each Principal represents a user. The function iterates through each user in the array and checks if there is a record for the user in notifyMap.
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    // If not, create a new one containing only the current post ID.
+                    notifyMap.put(_follower, [postId]);
+                };
+                // If yes, append the current post ID to the array of post IDs for this user.
+                case(?_postIdArray) {
+                    notifyMap.put(_follower, Array.append(_postIdArray, [postId]));
+                };
+            };
+        };
+    };
+
+    // Provide a way to query the current state of notifyMap by converting TrieMap entries to an array and returning it.
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+    // userToFeed
+
+    // User relationship management
+    // Define a new TrieMap that saves the relationship between each user's principal id and their Feed Canister id.
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+    
+    // Initialize userToFeed
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    // Add new relationships
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    // Query the existing hash table
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+
+    public query({caller}) func whoami(): async Principal { caller };
+
+    // Timer
+
+    type FeedActor = Types.FeedActor;
+
+    // Notify followers' Feed in batches using the ignore call based on the algorithm.
+    // Callback function triggered by the timer
+    func notify(): async () {
+        // Debug.print(&quot;postFetch notify !&quot;);
+        let _notifyMap = notifyMap;
+        // Check each entry in notifyMap, for each user
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            // Try to get the corresponding Feed canister from userToFeed
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                // If the Feed canister is found, create a notification
+                // and call the batchReceiveFeed function to pass all pending post IDs
+                case(?_feedId) {
+                    // Debug.print(&quot;Notify feed canister &quot; # Principal.toText(_feedId));
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveFeed(_postIdArray);
+                    // Remove the entry for this user from notifyMap to avoid duplicate notifications
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    // Define a recurring timer cycleTimer that calls the notify function periodically (every 2 seconds).
+    // The purpose of the notify function is to notify users that their Feed has been updated.
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    // System functions, as mentioned earlier, won't go into details here.
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+};
+</code></pre>
+<br>
+<h3 id="likefetchmo"><a class="header" href="#likefetchmo">likeFetch.mo</a></h3>
+<p>Like Fetch Canister is similar to the Post Fetch Canister, with only one procedural difference. Like Fetch Canister queries followers based on the owner of the post and then notifies the followers. In contrast, Post Fetch Canister only notifies based on the direct list of followers provided by the post author.</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Types &quot;./types&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+
+actor class LikeFetch(
+    userCanister: Principal
+) = this {
+
+    // Define type aliases
+    type UserActor = Types.UserActor;
+    type PostImmutable = Types.PostImmutable;
+    type Repost = Types.Repost;
+
+    // Use a stable variable notifyMapEntries to store notifications (tuples of Principal and an array of Text).
+    // Initialize a TrieMap as the actual notification Map.
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+    
+    // Receive notification for a post
+    // First, obtain the followers list of the owner of the post from the user's actor,
+    // and then call the _storeNotify function to store notifications for followers and reposters.
+    public shared({caller}) func receiveNotify(post: PostImmutable): async () {
+        // Retrieve followers of the user who posted this post
+        let userActor: UserActor = actor(Principal.toText(userCanister));
+        let postUserFollowers = await userActor.getFollowersList(post.user);
+
+        // Notify followers
+        _storeNotify(postUserFollowers, post.postId);
+
+        // Notify users who reposted the post
+        _storeNotify(
+            Array.map&lt;Repost, Principal&gt;(
+                post.repost,
+                func (x: Repost): Principal {
+                    x.user
+                }
+            ), 
+            post.postId
+        );
+    };
+
+    public shared({caller}) func receiveRepostUserNotify(to: [Principal], postId: Text): async () {
+        _storeNotify(to, postId);
+    };
+
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+    // Store notifications
+    // It checks if the specified Principal already has a notification list.
+    // If not, it creates a new list and adds the post ID; if yes, it appends the post ID to the existing list.
+    private func _storeNotify(to: [Principal], postId: Text) {
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    notifyMap.put(_follower, [postId]);
+                };
+                case(?_postIdArray) {
+                    let _newPostIdArray = Array.append(_postIdArray, [postId]);
+                    notifyMap.put(_follower, _newPostIdArray);
+                };
+            };
+        };
+    };
+// userToFeed
+
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+    
+    public query({caller}) func whoami(): async Principal { caller };
+
+// Timer
+
+    type FeedActor = Types.FeedActor;
+
+    func notify(): async () {
+        // Debug.print(&quot;likeFetch notify !&quot;);
+        let _notifyMap = notifyMap; 
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                case(?_feedId) {
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveLike(_postIdArray);
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+
+};
+</code></pre>
+<br>
+<h3 id="commentfetchmo"><a class="header" href="#commentfetchmo">commentFetch.mo</a></h3>
+<p>Comment Fetch Canister is the same as the Like Fetch Canister, so there's no need to repeat the explanation.</p>
+<p>Here is the commentFetch.mo source file:</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Types &quot;./types&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+
+actor class CommentFetch(
+    userCanister: Principal
+) = this {
+    
+    type UserActor = Types.UserActor;
+    type PostImmutable = Types.PostImmutable;
+    type Repost = Types.Repost;
+
+    // A list where each element is a tuple containing a Principal and an array of Text strings.
+    // This list is used to initialize notifyMap, which is a TrieMap structure for efficiently storing and retrieving key-value pairs.
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+    
+    public shared({caller}) func receiveNotify(post: PostImmutable): async () {
+        // Retrieve followers of the user who posted this post
+        let userActor: UserActor = actor(Principal.toText(userCanister));
+        let postUserFollowers = await userActor.getFollowersList(post.user);
+
+        // Notify followers
+        _storeNotify(postUserFollowers, post.postId);
+
+        // Notify users who reposted the post
+        _storeNotify(
+            Array.map&lt;Repost, Principal&gt;(
+                post.repost,
+                func (x: Repost): Principal {
+                    x.user
+                }
+            ), 
+            post.postId
+        );
+    };
+
+    public shared({caller}) func receiveRepostUserNotify(to: [Principal], postId: Text): async () {
+        _storeNotify(to, postId);
+    };
+
+    private func _storeNotify(to: [Principal], postId: Text) {
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    notifyMap.put(_follower, [postId]);
+                };
+                case(?_postIdArray) {
+                    notifyMap.put(_follower, Array.append(_postIdArray, [postId]));
+                };
+            };
+        };
+    };
+
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+// userToFeed
+
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+    
+    public query({caller}) func whoami(): async Principal { caller };
+
+// Timer
+
+    type FeedActor = Types.FeedActor;
+
+    func notify(): async () {
+        // Debug.print(&quot;commentFetch notify !&quot;);
+        let _notifyMap = notifyMap; 
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                case(?_feedId) {
+                    // Debug.print(&quot;commentFetch Notify feed canister &quot; # Principal.toText(_feedId));
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveComment(_postIdArray);
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+};
+</code></pre>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.DevelopingDApp/6.FeedModule.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.DevelopingDApp/8.SharedTypes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.DevelopingDApp/6.FeedModule.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.DevelopingDApp/8.SharedTypes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.DevelopingDApp/7.FetchModule.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

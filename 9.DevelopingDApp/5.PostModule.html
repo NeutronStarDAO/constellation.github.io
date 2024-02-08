@@ -1,0 +1,1229 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Post Module - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item "><a href="../1.OverviewofIC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🧰</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.Canister/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item "><a href="../6.InternetServices/RandomNumberOnChain.html">Random Number On Chain</a></li><li class="chapter-item "><a href="../6.InternetServices/TEE.html">TEE</a></li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item "><a href="../7.ii/pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><a href="../8.CryptographyInIC/BasicCryptography.html">Introduction to basic cryptography</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/SecretSharing.html">Secret Sharing</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/BLS.html">Threshold BLS Signatures</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/HashAlgorithm.html">Hash Algorithm</a></li><li class="chapter-item affix "><li class="part-title">Developing DApp🌟</li><li class="chapter-item "><a href="../9.DevelopingDApp/CommonDfxCommands.html">Common dfx Commands</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/InstallDevelopmentEnvironment.html">Install Development Environment</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/1.GettingStartedwithDApp.html">Getting Started with DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/2.DesigningDApp.html">Designing DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/3.DevelopingProton.html">Developing Proton</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/4.UserModule.html">User Module</a></li><li class="chapter-item expanded "><a href="../9.DevelopingDApp/5.PostModule.html" class="active">Post Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/6.FeedModule.html">Feed Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/7.FetchModule.html">Fetch Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/8.SharedTypes.html">Shared Types</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/9.Completion.html">Completion!</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="post"><a class="header" href="#post">Post</a></h2>
+<p>Users publish and retrieve posts through the Feed, and all posts are stored in a Bucket. The notification fetching feature is handled through Fetch. </p>
+<p>The next thing we have to implement is the Post module. However, we need types like Post, Like, Comment, and interactions with other Canisters. Moreover, these types are also needed in Feed and Fetch. </p>
+<p>Therefore, for types that need to be globally shared, we can place them outside the module folder: </p>
+<pre><code class="language-plaintext">src
+  ├── feed
+  ├── fetch
+  ├── post
+  ├── user
+  ├── types.mo  👈
+  └── utils.mo
+</code></pre>
+<p>When using them, reference the contents of types.mo into the types.mo inside the module folder and then import them into other files.</p>
+<br>
+<p>For example, define the Post type representing posts that users publish and place it in types.mo outside the module folder. You can see more details in <a href="./8.%E5%85%B1%E4%BA%AB%E7%B1%BB%E5%9E%8B.html">8. Shared Types</a>. A post includes various information such as post ID, publisher, post index, publication time, content, likes, comments, and more.</p>
+<pre><code class="language-motoko">public type Post = {
+    postId: PostId;
+    feedCanister: Principal;
+    index: Nat;
+    user: UserId;
+    content: Text;
+    var repost: [Repost];
+    var like: [Like];
+    var comment: [Comment];
+    createdAt: Time;
+};
+</code></pre>
+<img src="assets/5.PostModule/image-20231120173647549-1707384149072-60.png" alt="img" style="zoom:39%;" />
+<p>According to the previous design, the Post module has two Canisters: Root Post and Bucket.</p>
+<p>Root Post is responsible for coordinating all Buckets:</p>
+<ul>
+<li>Create a sufficient number of Buckets (always keep 5 available).</li>
+<li>Query all Buckets, available Buckets, and full Buckets.</li>
+</ul>
+<br>
+<p>Bucket is the place directly storing post content:</p>
+<ul>
+<li>Store posts.</li>
+<li>Query the total number of posts, query a single post by post ID, query multiple posts, and get the latest posts.</li>
+<li>After receiving new comments, notify through CommentFetch.</li>
+<li>Also maintain the addresses of two sub-modules, providing functions for updating and querying these two Canisters.</li>
+<li>The Bucket uses the <code>checkBucketMemory</code> function to check the number of posts. When approaching the threshold, notify the Root Post module to recreate the Bucket.</li>
+</ul>
+<br>
+<h3 id="managing-canisters-rootpostmo"><a class="header" href="#managing-canisters-rootpostmo">Managing Canisters: rootPost.mo</a></h3>
+<p>Take a look at the Root Post Canister. Root Post needs to manage Buckets, and we can use a <code>TrieMap</code> to record three different states of Buckets: <code>buckets</code> stores all created Buckets, <code>availableBuckets</code> stores available Buckets, and <code>unavailableBuckets</code> stores Buckets that are already full.</p>
+<p>Since 5 Canisters need to be created after deploying the Canister, we also need an initialization function and later functions to add new Buckets. When creating a Bucket, we also need to tell the Bucket the Canister ID of the Comment Fetch and Like Fetch in the system. Therefore, in Root Post, we need to record and save Comment Fetch and Like Fetch.</p>
+<p>Finally, there are functions to query all Buckets, query available Buckets, and query full Buckets.</p>
+<br>
+<p>First, define some stable variables and mappings to save Buckets.</p>
+<p>In Motoko, the <code>stable</code> keyword is used to define stable variables. The values of these variables should persist during the Canister upgrade process. This is a unique feature of Motoko, using the stable memory of the Internet Computer Protocol (ICP) to maintain data persistence during Canister upgrades. Stable memory can accommodate up to 400 GiB of data, regardless of the language used, whether it's Motoko, Rust, or any other language. Stable memory is a feature that allows IC to store data for an extended period.</p>
+<p>With the definition of these stable variables and mappings, the state, total number, and other information of multiple Buckets can be persistently stored. They can continue to be used after Canister upgrades, achieving persistent management of Buckets.</p>
+<pre><code class="language-js">stable let T_CYCLES = 1_000_000_000_000; // Predefine 1T Cycles for later use
+stable let BUCKET_MAX_POST_NUMBER: Nat = 5000; // Record the maximum number of posts each Bucket can store
+stable var bucketIndex: Nat = 0; // Record the number of Buckets already created
+
+// Define an array to save information about all created Buckets
+stable var bucketsEntries: [(Nat, Principal)] = [];
+// buckets is a map created based on bucketsEntries, where the key is the index, and the value is the principal of the Bucket
+let buckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(bucketsEntries.vals(), Nat.equal, Hash.hash);
+
+// availableBucketsEntries and availableBuckets are used to record currently available Buckets
+stable var availableBucketsEntries: [(Nat, Principal)] = [];
+let availableBuckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(availableBucketsEntries.vals(), Nat.equal, Hash.hash);
+
+// unavailableBucketsEntries and unavailableBuckets are used to record currently unavailable Buckets
+stable var unavailableBucketsEntries: [(Nat, Principal)] = [];
+let unavailableBuckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(unavailableBucketsEntries.vals(), Nat.equal, Hash.hash);
+</code></pre>
+<br>
+<p>The <code>_createBucket()</code> function creates a Canister:</p>
+<p>Using the <code>Bucket</code> function of the <code>Bucket.Bucket</code> object, it creates a new <code>Bucket</code> actor, passing the principal (ID) of the Root Post Canister, <code>commentFetchCanister</code>, and <code>likeFetchCanister</code> as parameters.</p>
+<pre><code class="language-js">// Logic to create a Bucket
+private func _createBucket(): async Principal {
+    // Add 4T Cycles to each Bucket
+    Cycles.add(4 * T_CYCLES);
+    let newBucket = await Bucket.Bucket(
+        Principal.fromActor(this),
+        commentFetchCanister,
+        likeFetchCanister
+    );
+
+    // Save the principal of the newly created Bucket to the 'buckets' mapping, with the key as the current 'bucketIndex'
+    buckets.put(bucketIndex, Principal.fromActor(newBucket));
+    // Also save it to the 'availableBuckets' mapping, indicating that this Bucket is currently available
+    availableBuckets.put(bucketIndex, Principal.fromActor(newBucket));
+
+    // Increment 'bucketIndex' by 1, indicating an increase in the number of created Buckets
+    bucketIndex += 1;
+    
+    // Return the principal of the newly created Bucket
+    Principal.fromActor(newBucket)
+};
+</code></pre>
+<p>This way, the <code>_createBucket()</code> function can create a new <code>Bucket</code> actor and save its principal to two mapping tables, indicating the created and available states.</p>
+<p>It encapsulates the specific logic for creating a Bucket and is called by the <code>createBucket()</code> public function. It uses <code>bucketIndex</code> to identify each Bucket and increments this index after creation.</p>
+<p>It provides an easy way to create Buckets in batches, specifying their states and facilitating the management of multiple Buckets.</p>
+<br>
+<p>Next, continue building functions to create and manage multiple Buckets.</p>
+<pre><code class="language-js">// Start by creating 5 Buckets and adding them to the 'buckets' and 'availableBuckets' mapping tables
+public shared({caller}) func init(): async {
+    var i = 0;
+    label l loop {
+        if(i &gt;= 5) break l;
+
+        Cycles.add(4 * T_CYCLES);
+        let newBucket = await Bucket.Bucket(
+            Principal.fromActor(this),
+            commentFetchCanister,
+            likeFetchCanister
+        );
+
+        buckets.put(bucketIndex, Principal.fromActor(newBucket));
+        availableBuckets.put(bucketIndex, Principal.fromActor(newBucket));
+        bucketIndex += 1;
+
+        i += 1;
+    };
+};
+
+// Add previously created Buckets in bulk to 'buckets' and 'availableBuckets'
+public shared({caller}) func addAvailBucket(bucketArray: [Principal]): async () {
+    for(_bucket in bucketArray.vals()) {
+        buckets.put(bucketIndex, _bucket);
+        availableBuckets.put(bucketIndex, _bucket);
+        bucketIndex += 1;
+    };
+};
+
+// Return the current number of created Buckets
+public query func getBucketIndex(): async Nat { bucketIndex };
+
+// Public function to create a Bucket, internally calls _createBucket()
+public shared({caller}) func createBucket(): async Principal {
+    await _createBucket()
+};
+</code></pre>
+<p>Now our Canister can manage the creation and addition of Buckets. The creation and lifecycle of all Buckets can be centrally managed.</p>
+<br>
+<p>Later, we need to write query functions:</p>
+<pre><code class="language-js">// Query available Buckets
+public query func getAvailableBucket(): async ?Principal {
+    if(availableBuckets.size() == 0) return null;
+    availableBuckets.get(Nat.rem(Option.unwrap(Nat.fromText(Int.toText(Time.now()))), availableBuckets.size()))
+};
+
+// Query all Buckets
+public query func getAllBuckets(): async [Principal] {
+    Iter.toArray(buckets.vals())
+};
+
+// Query all available Buckets
+public query func getAllAvailableBuckets(): async [Principal] {
+    Iter.toArray(availableBuckets.vals())
+};
+
+// Query all Buckets that are already full
+public query func getAllUnavailableBuckets(): async [Principal] {
+    Iter.toArray(unavailableBuckets.vals())
+};
+</code></pre>
+<br>
+<p>When creating a Bucket, we also need to tell the Bucket system the Canister IDs of the Comment Fetch and Like Fetch, so in the Root Post we also need to record and save the Comment Fetch and Like Fetch:</p>
+<pre><code class="language-js">// Persistently save the principal id of the commentFetch canister
+stable var commentFetchCanister = _commentFetchCanister;
+
+// Externally query the currently saved commentFetch canister id  
+public query func getCommentFetchCanister(): async Principal {
+  commentFetchCanister
+};
+
+// Authorize specific caller to update the saved commentFetch canister id
+public shared({caller}) func updateCommentFetchCanister**(
+  newCommentFetchCanister: Principal  
+): async () {
+  commentFetchCanister := newCommentFetchCanister; 
+};
+</code></pre>
+<p>Now the principal ID of the likeFetch canister can be persistently saved, flexibly updated via the update function, and externally queried.</p>
+<pre><code class="language-js">// Persistently save the principal id of the likeFetch canister
+stable var likeFetchCanister = _likeFetchCanister;
+
+// Externally query the currently saved likeFetch canister id
+public query func getLikeFetchCanister(): async Principal {
+  likeFetchCanister
+};
+
+// Authorize specific caller to update the saved likeFetch canister id  
+public shared({caller}) func updateLikeFetchCanister**(
+  newLikeFetchCanister: Principal
+): async () {
+  likeFetchCanister := newLikeFetchCanister;
+}; 
+</code></pre>
+<br>
+<p>Finally there are two system functions <code>preupgrade()</code> and <code>postupgrade()</code>, used to save and reset the entries of buckets, availableBuckets and unavailableBuckets before and after the Canister upgrade.</p>
+<pre><code class="language-js">system func preupgrade() {
+  bucketsEntries := Iter.toArray(buckets.entries());
+  availableBucketsEntries := Iter.toArray(availableBuckets.entries());
+  unavailableBucketsEntries := Iter.toArray(unavailableBuckets.entries());
+};
+
+system func postupgrade() {
+  bucketsEntries := [];
+  availableBucketsEntries := []; 
+  unavailableBucketsEntries := [];
+};
+</code></pre>
+<p>The <code>preupgrade()</code> function is called before the Canister upgrade, it saves all the entries in buckets, availableBuckets and unavailableBuckets to the corresponding arrays bucketsEntries, availableBucketsEntries and unavailableBucketsEntries. </p>
+<p>The <code>postupgrade()</code> function is called after the Canister upgrade, it clears the bucketsEntries, availableBucketsEntries and unavailableBucketsEntries arrays, effectively resetting the data in buckets, availableBuckets and unavailableBuckets.</p>
+<p>Thus, by saving and resetting entries before and after the upgrade, the data in buckets, availableBuckets and unavailableBuckets is not lost after the Canister upgrade.</p>
+<p><code>preupgrade</code> and <code>postupgrade</code> are defined as system functions, automatically called by the Runtime, developers don't need to call them.</p>
+<p>This code implements data migration for Canister upgrades, by saving and resetting state before and after the upgrade, ensuring the transparency of the Canister upgrade.</p>
+<br>
+<div class="center-image">
+<img src="assets/5.Post模块/image-20240130131002611.png" alt="image-20240130131002611" style="zoom:39%;" />
+</div>
+<p>The complete rootPost.mo file is as follows:</p>
+<pre><code class="language-js">import Hash &quot;mo:base/Hash&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Types &quot;./types&quot;;
+import Bucket &quot;./bucket&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Cycles &quot;mo:base/ExperimentalCycles&quot;;
+import Time &quot;mo:base/Time&quot;;
+import Int &quot;mo:base/Int&quot;;
+import Option &quot;mo:base/Option&quot;;
+import IC &quot;mo:ic&quot;;
+
+actor class RootPost(
+    _commentFetchCanister: Principal,
+    _likeFetchCanister: Principal
+) = this {
+
+    stable let T_CYCLES = 1_000_000_000_000;
+    stable let BUCKET_MAX_POST_NUMBER: Nat = 5000;
+    stable var bucketIndex: Nat = 0;
+
+    stable var bucketsEntries: [(Nat, Principal)] = [];
+    let buckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(bucketsEntries.vals(), Nat.equal, Hash.hash);
+
+    stable var availableBucketsEntries: [(Nat, Principal)] = [];
+    let availableBuckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(availableBucketsEntries.vals(), Nat.equal, Hash.hash);
+
+    stable var unavailableBucketsEntries: [(Nat, Principal)] = [];
+    let unavailableBuckets = TrieMap.fromEntries&lt;Nat, Principal&gt;(unavailableBucketsEntries.vals(), Nat.equal, Hash.hash);
+
+    // Start by creating 5 Buckets
+    public shared({caller}) func init(): async () {
+        var i = 0;
+        label l loop {
+            if(i &gt;= 5) break l;
+
+            Cycles.add(4 * T_CYCLES);
+            let newBucket = await Bucket.Bucket(
+                Principal.fromActor(this),
+                commentFetchCanister,
+                likeFetchCanister
+            );
+
+            buckets.put(bucketIndex, Principal.fromActor(newBucket));
+            availableBuckets.put(bucketIndex, Principal.fromActor(newBucket));
+            bucketIndex += 1;
+
+            i += 1;
+        };
+    };
+
+    public shared({caller}) func addAvailBucket(bucketArray: [Principal]): async () {
+        for(_bucket in bucketArray.vals()) {
+            buckets.put(bucketIndex, _bucket);
+            availableBuckets.put(bucketIndex, _bucket);
+            bucketIndex += 1;
+        };
+    };
+
+    public query func getBucketIndex(): async Nat { bucketIndex };
+
+    public shared({caller}) func createBucket(): async Principal {
+        await _createBucket()
+    };
+
+    private func _createBucket(): async Principal {
+        Cycles.add(4 * T_CYCLES);
+        let newBucket = await Bucket.Bucket(
+            Principal.fromActor(this),
+            commentFetchCanister,
+            likeFetchCanister
+        );
+
+        buckets.put(bucketIndex, Principal.fromActor(newBucket));
+        availableBuckets.put(bucketIndex, Principal.fromActor(newBucket));
+
+        bucketIndex += 1;
+
+        Principal.fromActor(newBucket)
+    };
+
+    public shared({caller}) func reCreateBucket(): async () {
+        for((_key, _bucket) in availableBuckets.entries()) {
+            if(_bucket == caller) {
+                ignore await _createBucket();
+                availableBuckets.delete(_key);
+                unavailableBuckets.put(_key, _bucket);
+            };
+        };
+    };
+
+    // Query available buckets
+    public query func getAvailableBucket(): async ?Principal {
+        if(availableBuckets.size() == 0) return null;
+        availableBuckets.get(Nat.rem(Option.unwrap(Nat.fromText(Int.toText(Time.now()))), availableBuckets.size()))
+    };
+
+    // Query all Buckets
+    public query func getAllBuckets(): async [Principal] {
+        Iter.toArray(buckets.vals())
+    };
+
+    public query func getAllAvailableBuckets(): async [Principal] {
+        Iter.toArray(availableBuckets.vals())
+    };
+
+    // Query the full Bucket
+    public query func getAllUnavailableBuckets(): async [Principal] {
+        Iter.toArray(unavailableBuckets.vals())
+    };
+
+// ==================== CommentFetchCanister ====================
+
+    stable var commentFetchCanister = _commentFetchCanister;
+    
+    public query func getCommentFetchCanister(): async Principal { commentFetchCanister };
+
+    public shared({caller}) func updateCommentFetchCanister(
+        newCommentFetchCanister: Principal
+    ): async () {
+        commentFetchCanister := commentFetchCanister;
+    };
+
+
+// ==================== LikeFetchCanister ====================
+
+    stable var likeFetchCanister = _likeFetchCanister;
+    
+    public query func getLikeFetchCanister(): async Principal { likeFetchCanister };
+
+    public shared({caller}) func updateLikeFetchCanister(
+        newLikeFetchCanister: Principal
+    ): async () {
+        likeFetchCanister := newLikeFetchCanister;
+    };
+
+    system func preupgrade() {
+        bucketsEntries := Iter.toArray(buckets.entries());
+        availableBucketsEntries := Iter.toArray(availableBuckets.entries());
+        unavailableBucketsEntries := Iter.toArray(unavailableBuckets.entries());
+    };
+
+    system func postupgrade() {
+        bucketsEntries := [];
+        availableBucketsEntries := [];
+        unavailableBucketsEntries := [];
+    };
+}
+</code></pre>
+<pre><code class="language-js">### Storing Posts: bucket.mo
+
+Bucket is a Canister for storing posts, and each Bucket can store a certain number of posts. It supports functions for storing, querying, updating posts, and notifying the Fetch Canister.
+
+The Bucket needs to provide functions for querying the number of posts, querying a single post by post ID, querying multiple posts, and getting the latest posts.
+
+After receiving new comments or likes, the Bucket also needs to communicate with the Comment Fetch Canister and Like Fetch Canister.
+
+When the number of posts stored in the Bucket is approaching the threshold, Root Post will create a new Bucket.
+
+This is the beginning of the `Bucket` module, where posts are actually stored. The `actor class` keyword indicates that this is an Actor class that can be called externally. The parameters `(rootPostCanister, _commentFetchCanister, _likeFetchCanister)` indicate that this Actor class needs to be initialized with the IDs of these three Canisters.
+
+```js
+actor class Bucket(
+    rootPostCanister: Principal,
+    _commentFetchCanister: Principal,
+    _likeFetchCanister: Principal
+) = this {
+    // ...
+};
+</code></pre>
+<p>Overall, this Bucket is used to receive various operations (new comments, likes, etc.) to update posts. All data is stored in an immutable form, allowing for efficient querying and sharing.</p>
+<p>First, define some types, variables, and data structures.</p>
+<pre><code class="language-js">// Define several type aliases
+type FeedActor = Types.FeedActor;
+type PostImmutable = Types.PostImmutable;
+type NewComment = Types.NewComment;
+type NewLike = Types.NewLike;
+type NewRepost = Types.NewRepost;
+type CommentFetchActor = Types.CommentFetchActor;
+type LikeFetchActor = Types.LikeFetchActor;
+type RootPostActor = Types.RootPostActor;
+
+stable let BUCKET_MAX_POST_NUMBER: Nat = 5000; // Maximum number of posts each Bucket can store
+stable let FLOOR_BUCKET_MAX_POST_NUMBER: Nat = BUCKET_MAX_POST_NUMBER - 50; // A lower threshold
+stable let installer = msg.caller;
+
+// postId -&gt; PostImmutable
+// The main data is stored in feedMap, which is a mapping from post ID to PostImmutable
+stable var feedMapEntries: [(Text, PostImmutable)] = [];
+// Stored in a TrieMap, using Text for hashing and comparison
+let feedMap = TrieMap.fromEntries&lt;Text, PostImmutable&gt;(feedMapEntries.vals(), Text.equal, Text.hash);
+</code></pre>
+<p><code>TrieMap</code> is an efficient key-value storage structure. Using <code>TrieMap</code>, it maintains post information, providing functions for storing, batch storing, updating comments, updating likes, updating reposts, etc. The definitions of <code>feedMapEntries</code> and <code>feedMap</code> are used to store post data, one in array form and the other in TrieMap form.</p>
+<br>
+<p>Storing Posts:</p>
+<p>The <code>storeFeed()</code> function is used to store a single post. It is <code>public shared</code>, so it can be called by external callers.</p>
+<pre><code class="language-js">public shared({caller}) func storeFeed(post: PostImmutable): async Bool {
+    ignore checkBucketMemory();
+    _storeFeed(post);
+};
+</code></pre>
+<p><code>batchStoreFeed()</code> is used to store multiple posts in batches, internally using a loop to call <code>_storeFeed()</code> for each post.</p>
+<pre><code class="language-js">public shared({caller}) func batchStoreFeed(posts: [PostImmutable]): async () {
+    for(post in posts.vals()) {
+        ignore _storeFeed(post);
+    };
+};
+</code></pre>
+<p><code>updatePostRepost()</code> is used to update the repost information of a post. It calls <code>_updatePostRepost()</code> to perform the actual update and asserts to ensure the update is successful.</p>
+<pre><code class="language-js">public shared({caller}) func updatePostRepost(postId: Text, newRepost: NewRepost): async Bool {
+    assert(_updatePostRepost(postId, newRepost));
+    true
+};
+</code></pre>
+<p><code>_storeFeed()</code> and <code>_updatePostRepost()</code> are private functions, representing the internal logic for storing and updating.</p>
+<br>
+<p>Next are functionalities for updating post comments and likes:</p>
+<p>The <code>updatePostComment</code> function is used to update the comment information of a post. It takes the post ID and new comment as parameters. Internally, it calls the <code>_updatePostComment</code> function to actually perform the comment update.</p>
+<p>After a successful update, the updated post object is returned from <code>_updatePostComment</code>. Then, it notifies the <code>CommentFetchActor</code> to update the comment cache.</p>
+<p>The <code>updatePostLike</code> function is used to update the like information of a post. It takes the post ID and new like as parameters. Internally, it calls <code>_updatePostLike</code> to perform the like update.</p>
+<p>After a successful update, it similarly returns the updated post object and notifies the <code>LikeFetchActor</code> to update the like cache.</p>
+<pre><code class="language-js">```js
+// Update Post Comment Information
+// The caller parameter indicates that only the requester with a valid identity in the request can call the function
+public shared({caller}) func updatePostComment(postId: Text, newComment: NewComment): async Bool {
+    switch(_updatePostComment(postId, newComment)) {
+        case(null) { return false; };
+        case(?_post) {
+            // Notify commentFetch
+            let commentFetchActor: CommentFetchActor = actor(Principal.toText(commentFetchCanister));
+            ignore commentFetchActor.receiveNotify(_post);
+        };
+    };
+    // Return a Bool value indicating whether the update was successful
+    true
+};
+
+public shared({caller}) func updatePostLike(postId: Text, newLike: NewLike): async Bool {
+    switch(_updatePostLike(postId, newLike)) {
+        case(null) { return false; };
+        case(?_post) {
+            // Notify likeFetch
+            let likeFetchActor: LikeFetchActor = actor(Principal.toText(likeFetchCanister));
+            ignore likeFetchActor.receiveNotify(_post);
+        };     
+    };
+    true
+};
+</code></pre>
+<p>We encapsulate the functions for manipulating posts through private functions. External callers only need to call the public update functions and don't need to be concerned with the internal storage and update logic. Private functions can encapsulate state management, making the code more modular and maintainable.</p>
+<br>
+<p>The <code>_updatePostComment</code> function is used to update the comments of a post. It retrieves the original post from <code>feedMap</code>, updates the <code>comment</code> field with the new comment <code>newComment</code>, and puts it back into <code>feedMap</code>.</p>
+<p><code>feedMap</code> is a hash table for storing posts, where the key is <code>postId</code> and the value is <code>PostImmutable</code> records.</p>
+<pre><code class="language-js">private func _updatePostComment(postId: Text, newComment: NewComment): ?PostImmutable {
+    switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?post) {
+            let _newPost = {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                repost = post.repost;
+                content = post.content;
+                like = post.like;
+                comment = newComment;
+                createdAt = post.createdAt;
+            };
+            feedMap.put(postId, _newPost);
+            ?_newPost
+        };
+    };
+};
+</code></pre>
+<br>
+<p><code>_updatePostLike</code> similarly updates the <code>like</code> field of a post.</p>
+<pre><code class="language-js">private func _updatePostLike(postId: Text, newLike: NewLike): ?PostImmutable {
+    switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?post) {
+            let _newPost = {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                repost = post.repost;
+                content = post.content;
+                like = newLike;
+                comment = post.comment;
+                createdAt = post.createdAt;
+            };
+            feedMap.put(postId, _newPost);
+            ?_newPost              
+        };
+    };
+};
+</code></pre>
+<br>
+<p><code>_updatePostRepost</code> updates the <code>repost</code> field of a post.</p>
+<pre><code class="language-js">private func _updatePostRepost(postId: Text, newRepost: NewRepost): Bool {
+    switch(feedMap.get(postId)) {
+        case(null) { return false; };
+        case(?post) {
+            feedMap.put(postId, {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                content = post.content;
+                repost = newRepost;
+                like = post.like;
+                comment = post.comment;
+                createdAt = post.createdAt;
+            });
+            true
+        };
+    };
+};
+</code></pre>
+<br>
+<p>Using the <code>immutable</code> data structure <code>PostImmutable</code> ensures data consistency and avoids accidental modifications.</p>
+<pre><code class="language-js">// Save the new post to feedMap
+// Check if postId already exists, and save only if it doesn't to avoid duplication
+private func _storeFeed(post: PostImmutable): Bool {
+    ignore Utils.checkPostId(post.postId);
+    switch(feedMap.get(post.postId)) {
+        case(?_post) {
+            // Debug.print(&quot;This post has been stored&quot;);
+            return false;
+        };
+        case(null) {
+            feedMap.put(post.postId, post);
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>The <code>checkBucketMemory</code> function checks if the current Bucket is approaching its capacity limit, and if so, notifies the Root Post Actor to create a new Bucket.</p>
+<pre><code class="language-js">func checkBucketMemory(): async () {
+    if(feedMap.size() &gt; FLOOR_BUCKET_MAX_POST_NUMBER) {
+        let rootPostActor: RootPostActor = actor(Principal.toText(rootPostCanister));
+        ignore rootPostActor.reCreateBucket();
+    }
+};
+</code></pre>
+<br>
+<pre><code class="language-js">// Update Post Comment Information
+// The `caller` parameter indicates that only the requester with a valid identity in the request can call the function
+public shared({caller}) func updatePostComment(postId: Text, newComment: NewComment): async Bool {
+    switch(_updatePostComment(postId, newComment)) {
+        case(null) { return false; };
+        case(?_post) {
+            // Notify Comment Fetch
+            let commentFetchActor: CommentFetchActor = actor(Principal.toText(commentFetchCanister));
+            ignore commentFetchActor.receiveNotify(_post);
+        };
+    };
+    // Return a Bool value indicating whether the update was successful
+    true
+};
+
+public shared({caller}) func updatePostLike(postId: Text, newLike: NewLike): async Bool {
+    switch(_updatePostLike(postId, newLike)) {
+        case(null) { return false; };
+        case(?_post) {
+            // Notify Like Fetch
+            let likeFetchActor: LikeFetchActor = actor(Principal.toText(likeFetchCanister));
+            ignore likeFetchActor.receiveNotify(_post);
+        };     
+    };
+    true
+};
+</code></pre>
+<p>We encapsulate the functions for manipulating posts through private functions. External callers only need to call the public update functions and don't need to be concerned with the internal storage and update logic. Private functions can encapsulate state management, making the code more modular and maintainable.</p>
+<br>
+<p>The <code>_updatePostComment</code> function is used to update the comments of a post. It retrieves the original post from <code>feedMap</code>, updates the <code>comment</code> field with the new comment <code>newComment</code>, and puts it back into <code>feedMap</code>.</p>
+<p><code>feedMap</code> is a hash table for storing posts, where the key is <code>postId</code> and the value is <code>PostImmutable</code> records.</p>
+<pre><code class="language-js">private func _updatePostComment(postId: Text, newComment: NewComment): ?PostImmutable {
+    switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?post) {
+            let _newPost = {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                repost = post.repost;
+                content = post.content;
+                like = post.like;
+                comment = newComment;
+                createdAt = post.createdAt;
+            };
+            feedMap.put(postId, _newPost);
+            ?_newPost
+        };
+    };
+};
+</code></pre>
+<br>
+<p><code>_updatePostLike</code> similarly updates the <code>like</code> field of a post.</p>
+<pre><code class="language-js">private func _updatePostLike(postId: Text, newLike: NewLike): ?PostImmutable {
+    switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?post) {
+            let _newPost = {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                repost = post.repost;
+                content = post.content;
+                like = newLike;
+                comment = post.comment;
+                createdAt = post.createdAt;
+            };
+            feedMap.put(postId, _newPost);
+            ?_newPost              
+        };
+    };
+};
+</code></pre>
+<br>
+<p><code>_updatePostRepost</code> updates the <code>repost</code> field of a post.</p>
+<pre><code class="language-js">private func _updatePostRepost(postId: Text, newRepost: NewRepost): Bool {
+    switch(feedMap.get(postId)) {
+        case(null) { return false; };
+        case(?post) {
+            feedMap.put(postId, {
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                content = post.content;
+                repost = newRepost;
+                like = post.like;
+                comment = post.comment;
+                createdAt = post.createdAt;
+            });
+            true
+        };
+    };
+};
+</code></pre>
+<br>
+<p>Using the <code>immutable</code> data structure <code>PostImmutable</code> ensures data consistency and avoids accidental modifications.</p>
+<pre><code class="language-js">// Save the new post to feedMap
+// Check if postId already exists, and save only if it doesn't to avoid duplication
+private func _storeFeed(post: PostImmutable): Bool {
+    ignore Utils.checkPostId(post.postId);
+    switch(feedMap.get(post.postId)) {
+        case(?_post) {
+            // Debug.print(&quot;This post has been stored&quot;);
+            return false;
+        };
+        case(null) {
+            feedMap.put(post.postId, post);
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>The <code>checkBucketMemory</code> function checks if the current Bucket is approaching its capacity limit, and if so, notifies the Root Post Actor to create a new Bucket.</p>
+<pre><code class="language-js">func checkBucketMemory(): async () {
+    if(feedMap.size() &gt; FLOOR_BUCKET_MAX_POST_NUMBER) {
+        let rootPostActor: RootPostActor = actor(Principal.toText(rootPostCanister));
+        ignore rootPostActor.reCreateBucket();
+    }
+};
+</code></pre>
+<br>
+<p>We need a function to query the total number of posts:</p>
+<pre><code class="language-js">// Query how many posts there are in total
+public query func getPostNumber(): async Nat {
+    feedMap.size()
+};
+</code></pre>
+<br>
+<p>There is also a function to get the specific content of posts, implementing the ability to quickly retrieve several posts at once.</p>
+<p>This functionality is used in the Feed Canister to fetch posts:</p>
+<p>When several people that a user follows post new content, the IDs of these posts are sent to Fetch. Eventually, these IDs are sent to another Feed. At this point, Feed receives many post IDs at once and needs to send these IDs to the Bucket to get the content of these posts all at once.</p>
+<pre><code class="language-js">// Query several posts by ID (can pass in 7 IDs to return the content of 7 posts at once)
+public query func getPosts(postIdArray: [Text]): async [PostImmutable] { // Receives a Text array postIdArray as a parameter
+    // Create a Buffer to store the query results, with a size equal to the size of postIdArray
+    let result = Buffer.Buffer&lt;PostImmutable&gt;(postIdArray.size());
+    // Iterate over each ID in postIdArray
+    for(postId in postIdArray.vals()) {
+        // For each ID, look it up in feedMap and add it to the result Buffer if found
+        switch(feedMap.get(postId)) {
+            case(null) {};
+            case(?post) { result.add(post); };
+        };
+    };
+    // After the iteration, convert the Buffer to an array using toArray() and return
+    Buffer.toArray&lt;PostImmutable&gt;(result)
+};
+</code></pre>
+<p>We use Buffer to avoid the overhead of concatenating arrays multiple times. The query function can be called externally, encapsulating the data query. It returns an array type, making it convenient for the caller to handle the query results.</p>
+<p>This allows for batch querying of the content of multiple posts.</p>
+<br>
+<p>After batch precision querying posts by ID, two more functions related to querying are needed: a function to individually query a post by ID and a function to query the latest n posts.</p>
+<pre><code class="language-js">public query func getPost(postId: Text): async ?PostImmutable {
+    switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?post) { return ?post; }; 
+    };
+};
+
+// Query the latest n posts
+public query func getLatestFeed(n: Nat): async [PostImmutable] {
+    let feedArray = Iter.toArray(
+        Iter.sort&lt;PostImmutable&gt;(
+        feedMap.vals(),
+        func (x: PostImmutable, y: PostImmutable): Order.Order {
+            if(x.createdAt &gt; y.createdAt) return #less
+            else if(x.createdAt &lt; y.createdAt) return #greater
+            else return #equal
+    }));
+    if(n &lt;= feedArray.size()) {
+        Array.subArray(feedArray, 0, n)
+    } else {
+        Array.subArray(feedArray, 0, feedArray.size())
+    }
+};
+</code></pre>
+<p>Finally, there are two system functions related to upgrades, managed by the <code>preupgrade</code> and <code>postupgrade</code> functions, to handle the state of the Bucket.</p>
+<br>
+<p>The complete file for <code>bucket.mo</code> is as follows: </p>
+<pre><code class="language-js">import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Order &quot;mo:base/Order&quot;;
+import Text &quot;mo:base/Text&quot;;
+import Hash &quot;mo:base/Hash&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Buffer &quot;mo:base/Buffer&quot;;
+import Utils &quot;../utils&quot;;
+
+shared(msg) actor class Bucket(
+    rootPostCanister: Principal,
+    _commentFetchCanister: Principal,
+    _likeFetchCanister: Principal
+) = this {
+    
+    type FeedActor = Types.FeedActor;
+    type PostImmutable = Types.PostImmutable;
+    type NewComment = Types.NewComment;
+    type NewLike = Types.NewLike;
+    type NewRepost = Types.NewRepost;
+    type CommentFetchActor = Types.CommentFetchActor;
+    type LikeFetchActor = Types.LikeFetchActor;
+    type RootPostActor = Types.RootPostActor;
+
+    stable let BUCKET_MAX_POST_NUMBER: Nat = 5000;
+    stable let FLOOR_BUCKET_MAX_POST_NUMBER: Nat = BUCKET_MAX_POST_NUMBER - 50;
+
+    stable let installer = msg.caller;
+
+    // postId -&gt; PostImmutable
+    stable var feedMapEntries: [(Text, PostImmutable)] = [];
+    let feedMap = TrieMap.fromEntries&lt;Text, PostImmutable&gt;(feedMapEntries.vals(), Text.equal, Text.hash);
+
+    // Store post
+    public shared({caller}) func storeFeed(post: PostImmutable): async Bool {
+        ignore checkBucketMemory();
+        _storeFeed(post);
+    };
+
+    public shared({caller}) func batchStoreFeed(posts: [PostImmutable]): async () {
+        for(post in posts.vals()) {
+            ignore _storeFeed(post);
+        };
+    };
+
+    public shared({caller}) func updatePostRepost(postId: Text, newRepost: NewRepost): async Bool {
+        assert(_updatePostRepost(postId, newRepost));
+        true
+    };
+
+    // Update post comment information
+    public shared({caller}) func updatePostComment(postId: Text, newComment: NewComment): async Bool {
+        switch(_updatePostComment(postId, newComment)) {
+            case(null) { return false; };
+            case(?_post) {
+                // Notification commentFetch
+                let commentFetchActor: CommentFetchActor = actor(Principal.toText(commentFetchCanister));
+                ignore commentFetchActor.receiveNotify(_post);
+            };
+        };
+        true
+    };
+
+    public shared({caller}) func updatePostLike(postId: Text, newLike: NewLike): async Bool {
+        switch(_updatePostLike(postId, newLike)) {
+            case(null) { return false; };
+            case(?_post) {
+                // Notification likeFetch
+                let likeFetchActor: LikeFetchActor = actor(Principal.toText(likeFetchCanister));
+                ignore likeFetchActor.receiveNotify(_post);
+            };     
+        };
+        true
+    };
+
+    func checkBucketMemory(): async () {
+        if(feedMap.size() &gt; FLOOR_BUCKET_MAX_POST_NUMBER) {
+            let rootPostActor: RootPostActor = actor(Principal.toText(rootPostCanister));
+            ignore rootPostActor.reCreateBucket();
+        }
+    };
+
+    private func _updatePostComment(postId: Text, newComment: NewComment): ?PostImmutable {
+        switch(feedMap.get(postId)) {
+            case(null) { return null; };
+            case(?post) {
+                let _newPost = {
+                    postId = post.postId;
+                    feedCanister = post.feedCanister;
+                    index = post.index;
+                    user = post.user;
+                    repost = post.repost;
+                    content = post.content;
+                    like = post.like;
+                    comment = newComment;
+                    createdAt = post.createdAt;
+                };
+                feedMap.put(postId, _newPost);
+                ?_newPost
+            };
+        };
+    };
+
+    private func _updatePostLike(postId: Text, newLike: NewLike): ?PostImmutable {
+        switch(feedMap.get(postId)) {
+            case(null) { return null; };
+            case(?post) {
+                let _newPost = {
+                    postId = post.postId;
+                    feedCanister = post.feedCanister;
+                    index = post.index;
+                    user = post.user;
+                    repost = post.repost;
+                    content = post.content;
+                    like = newLike;
+                    comment = post.comment;
+                    createdAt = post.createdAt;
+                };
+                feedMap.put(postId, _newPost);
+                ?_newPost              
+            };
+        };
+    };
+
+    private func _updatePostRepost(postId: Text, newRepost: NewRepost): Bool {
+        switch(feedMap.get(postId)) {
+            case(null) { return false; };
+            case(?post) {
+                feedMap.put(postId, {
+                    postId = post.postId;
+                    feedCanister = post.feedCanister;
+                    index = post.index;
+                    user = post.user;
+                    content = post.content;
+                    repost = newRepost;
+                    like = post.like;
+                    comment = post.comment;
+                    createdAt = post.createdAt;
+                });
+                true              
+            };
+        };
+    };
+
+    private func _storeFeed(post: PostImmutable): Bool {
+        ignore Utils.checkPostId(post.postId);
+        switch(feedMap.get(post.postId)) {
+            case(?_post) {
+                // Debug.print(&quot;This post has been stored&quot;);
+                return false;
+            };
+            case(null) {
+                feedMap.put(post.postId, post);
+                return true;
+            };
+        };
+    };
+
+// ==================== Query ====================
+
+    public query func getPostNumber(): async Nat {
+        feedMap.size()
+    };
+
+    public query func getPosts(postIdArray: [Text]): async [PostImmutable] {
+       let result = Buffer.Buffer&lt;PostImmutable&gt;(postIdArray.size());
+       for(postId in postIdArray.vals()) {
+        switch(feedMap.get(postId)) {
+            case(null) {};
+            case(?post) { result.add(post); };
+        };
+       };
+       Buffer.toArray&lt;PostImmutable&gt;(result)
+    };
+
+    public query func getPost(postId: Text): async ?PostImmutable {
+        switch(feedMap.get(postId)) {
+            case(null) { return null; };
+            case(?post) { return ?post; }; 
+        };
+    };
+
+    public query func getLatestFeed(n: Nat): async [PostImmutable] {
+        let feedArray = Iter.toArray(
+            Iter.sort&lt;PostImmutable&gt;(
+            feedMap.vals(),
+            func (x: PostImmutable, y: PostImmutable): Order.Order {
+                if(x.createdAt &gt; y.createdAt) return #less
+                else if(x.createdAt &lt; y.createdAt) return #greater
+                else return #equal
+        }));
+        if(n &lt;= feedArray.size()) {
+            Array.subArray(feedArray, 0, n)
+        } else {
+            Array.subArray(feedArray, 0, feedArray.size())
+        }
+    };
+
+// ==================== CommentFetchCanister ====================
+
+    stable var commentFetchCanister = _commentFetchCanister;
+    
+    public query func getCommentFetchCanister(): async Principal { commentFetchCanister };
+
+    public shared({caller}) func updateCommentFetchCanister(
+        newCommentFetchCanister: Principal
+    ): async () {
+        commentFetchCanister := commentFetchCanister;
+    };
+
+
+// ==================== LikeFetchCanister ====================
+
+    stable var likeFetchCanister = _likeFetchCanister;
+    
+    public query func getLikeFetchCanister(): async Principal { likeFetchCanister };
+
+    public shared({caller}) func updateLikeFetchCanister(
+        newLikeFetchCanister: Principal
+    ): async () {
+        likeFetchCanister := newLikeFetchCanister;
+    };
+
+    system func preupgrade() {
+        feedMapEntries := Iter.toArray(feedMap.entries());
+    };
+
+    system func postupgrade() {
+        feedMapEntries := [];
+    };
+}
+</code></pre>
+<p>The next module is <a href="./6.FeedModule.html">the Feed module</a>. </p>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.DevelopingDApp/4.UserModule.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.DevelopingDApp/6.FeedModule.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.DevelopingDApp/4.UserModule.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.DevelopingDApp/6.FeedModule.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.DevelopingDApp/5.PostModule.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

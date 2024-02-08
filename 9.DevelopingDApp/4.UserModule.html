@@ -1,0 +1,812 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>User Module - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item "><a href="../1.OverviewofIC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🧰</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.Canister/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item "><a href="../6.InternetServices/RandomNumberOnChain.html">Random Number On Chain</a></li><li class="chapter-item "><a href="../6.InternetServices/TEE.html">TEE</a></li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item "><a href="../7.ii/pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><a href="../8.CryptographyInIC/BasicCryptography.html">Introduction to basic cryptography</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/SecretSharing.html">Secret Sharing</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/BLS.html">Threshold BLS Signatures</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/HashAlgorithm.html">Hash Algorithm</a></li><li class="chapter-item affix "><li class="part-title">Developing DApp🌟</li><li class="chapter-item "><a href="../9.DevelopingDApp/CommonDfxCommands.html">Common dfx Commands</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/InstallDevelopmentEnvironment.html">Install Development Environment</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/1.GettingStartedwithDApp.html">Getting Started with DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/2.DesigningDApp.html">Designing DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/3.DevelopingProton.html">Developing Proton</a></li><li class="chapter-item expanded "><a href="../9.DevelopingDApp/4.UserModule.html" class="active">User Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/5.PostModule.html">Post Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/6.FeedModule.html">Feed Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/7.FetchModule.html">Fetch Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/8.SharedTypes.html">Shared Types</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/9.Completion.html">Completion!</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <p>Let's take a look at the User module.</p>
+<h2 id="user"><a class="header" href="#user">User</a></h2>
+<p>The User module is responsible for Proton's user-related functionalities.</p>
+<p>The functionalities we need are: follow user, unfollow user, get following list, get followers list, create and update user profiles, as well as user search functionality.</p>
+<br>
+<p>To implement the functionality of users following each other, we first need to store the follow relationships between users. We can use a directed graph as the data structure.</p>
+<p>For the user-following functionality, we can model it as a directed graph:</p>
+<ul>
+<li><div class="home-box">
+      <div class="box">1️⃣
+          <a href="4.UserModule.html#Define user profiles: types.mo">
+              <div>
+                  typse.mo
+              </div>
+              <div>
+                  Define type aliases
+              </div>
+          </a>
+      </div>
+      <div class="box">2️⃣
+          <a href="4.UserModule.html#有向图digraphmo">
+              <div>
+                  digraph.mo
+              </div>
+              <div>
+                  Directed graph
+              </div>
+          </a>
+      </div>
+      <div class="box">3️⃣
+          <a href="4.UserModule.html#存储用户信息databasemo">
+              <div>
+                  database.mo
+              </div>
+              <div>
+                  Store user profiles
+              </div>
+          </a>
+      </div>
+      <div class="box">4️⃣
+          <a href="4.UserModule.html#集成所有功能mainmo">
+              <div>
+                  main.mo
+              </div>
+              <div>
+                  Manage users
+              </div>
+          </a>
+      </div>
+  </div>
+</li>
+<li>If user A follows user B, a directed edge (arrow) is drawn from node A to node B.</li>
+<li>This forms a directed graph representing the follow relationships between users.</li>
+</ul>
+<div class="center-image">
+<img src="assets/4.UserModule/image-20240121085153960.png" alt="img" style="zoom:35%;" />
+</div>
+<p>A directed graph can visually represent the follow relationships between users, making it easy to understand and implement related algorithms.</p>
+<p>Graph algorithms can also be used to analyze social relationships, such as finding the shortest path between nodes or checking who among the users you follow is followed by them.</p>
+<br>
+<h3 id="define-user-profiles-typesmo"><a class="header" href="#define-user-profiles-typesmo">Define user profiles: types.mo</a></h3>
+<p>Before the directed graph, we need to define some type aliases to list the information in user profiles. In Motoko, use the <code>type</code> keyword to create type aliases, giving a new name to a type to make the code more straightforward and understandable.</p>
+<p>Referring to the previous <a href="">LinkedUp</a>, define in a separate module and import it in the file using the module.</p>
+<p>Now, let's define the vertices of the directed graph (users) and user profiles.</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;; // Import relevant content from the Motoko base library
+import Time &quot;mo:base/Time&quot;;
+
+module {
+
+    public type Vertex = Principal;
+    public type UserId = Principal;
+    public type Time = Time.Time;
+
+    public type NewProfile = {
+        name: Text;
+        biography: Text;
+        company: Text;
+        education: Text;
+        imgUrl: Text;
+        feedCanister: ?Principal;
+    };
+
+    public type Profile = {
+        id: UserId;
+        name: Text;
+        biography: Text;
+        company: Text;
+        education: Text;
+        imgUrl: Text;
+        feedCanister: ?Principal;
+    };
+
+};
+</code></pre>
+<p>Import statement:</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+</code></pre>
+<p>This line of code means importing a module from Motoko's standard library, specifically the <code>Principal</code> module, which is related to identity and can be considered as the ID of users or services on the IC.</p>
+<h3 id="directed-graph-digraphmo"><a class="header" href="#directed-graph-digraphmo">Directed Graph: digraph.mo</a></h3>
+<p>Now, let's create the digraph.mo file and define a class <code>Digraph</code> to represent the follow relationships between users.</p>
+<p>Write down the types defined earlier:</p>
+<pre><code class="language-js">module {
+  type Vertex = Types.Vertex;
+}；
+</code></pre>
+<p><code>vertexList</code> stores all the vertices, and <code>edgeList</code> stores all the directed edges, representing the follow relationships:</p>
+<pre><code class="language-js">type Vertex = Types.Vertex;
+
+public class Digraph() {
+    var vertexList: [Vertex] = []; // Vertices
+    var edgeList: [(Vertex, Vertex)] = []; // Directed edges
+}；
+</code></pre>
+<p><code>addVertex</code> is used to add vertices (users), and <code>addEdge</code> is used to add edges (follow relationships), using <code>assert</code> to ensure the uniqueness of edges:</p>
+<pre><code class="language-js">type Vertex = Types.Vertex;
+
+public class Digraph() {
+    var vertexList: [Vertex] = []; // Vertices
+    var edgeList: [(Vertex, Vertex)] = []; // Directed edges
+
+    // The public keyword indicates that this function is accessible to anyone
+    // If private, it can only be called by code within the Canister, not publicly accessible
+    public func addVertex(vertex: Vertex) {
+      vertexList := Array.append&lt;Vertex&gt;(vertexList, [vertex]);
+    };
+
+    // Add a directed edge from fromVertex to toVertex
+    public func addEdge(fromVertex: Vertex, toVertex: Vertex) {
+      // Check if it already exists
+      assert(Array.find&lt;(Vertex, Vertex)&gt;(edgeList, func((x, y): (Vertex, Vertex)): Bool {
+        x == fromVertex and y == toVertex
+      }) == null);
+      edgeList := Array.append&lt;(Vertex, Vertex)&gt;(edgeList, [(fromVertex, toVertex)]);
+    };
+
+}；
+</code></pre>
+<br>
+<p><code>getForwardAdjacent</code> and <code>getReverseAdjacent</code> are used to get forward and reverse adjacent vertices, representing the user's following list and followers list, implemented by iterating through the edge list:</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Types &quot;./types&quot;;
+
+module {
+
+  type Vertex = Types.Vertex;
+
+  public class Digraph() {
+
+    var vertexList: [Vertex] = []; // Vertices
+    var edgeList: [(Vertex, Vertex)] = []; // Directed edges
+
+    public func addVertex(vertex: Vertex) {
+      vertexList := Array.append&lt;Vertex&gt;(vertexList, [vertex]);
+    };
+
+    // Add a directed edge from fromVertex to toVertex
+    public func addEdge(fromVertex: Vertex, toVertex: Vertex) {
+      // Check if it already exists
+      assert(Array.find&lt;(Vertex, Vertex)&gt;(edgeList, func((x, y): (Vertex, Vertex)): Bool {
+        x == fromVertex and y == toVertex
+      }) == null);
+      edgeList := Array.append&lt;(Vertex, Vertex)&gt;(edgeList, [(fromVertex, toVertex)]);
+    };
+
+    // Get vertices adjacent to the forward edge, i.e., get someone's following list
+    public func getForwardAdjacent(vertex: Vertex): [Vertex] {
+      var adjacencyList: [Vertex] = [];
+      for ((fromVertex, toVertex) in Iter.fromArray&lt;(Vertex, Vertex)&gt;(edgeList)) {
+        if (fromVertex == vertex) {
+          adjacencyList := Array.append&lt;Vertex&gt;(adjacencyList, [toVertex]);
+        };
+      };
+      adjacencyList
+    };
+    
+    // Get vertices adjacent to the reverse edge, i.e., get someone's followers list
+    public func getReverseAdjacent(vertex: Vertex): [Vertex] {
+      var adjacencyList: [Vertex] = [];
+      for ((fromVertex, toVertex) in Iter.fromArray&lt;(Vertex, Vertex)&gt;(edgeList)) {
+        if (toVertex == vertex) {
+          adjacencyList := Array.append&lt;Vertex&gt;(adjacencyList, [fromVertex]);
+        };
+      };
+      adjacencyList
+    };
+
+  };
+  
+};
+</code></pre>
+<p>Now, with the directed graph storing user relationships, we also need a place to store user profiles.</p>
+<br>
+<h3 id="storing-user-information-databasemo"><a class="header" href="#storing-user-information-databasemo">Storing User Information: database.mo</a></h3>
+<p>Let's create another file specifically for storing user profiles: database.mo.</p>
+<p>Define a storage class <code>Directory</code> for user information, using <code>HashMap</code> to store user IDs and their corresponding profiles:</p>
+<pre><code class="language-js">public class Directory() {
+    let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+};
+</code></pre>
+<blockquote>
+<p>A hash table, also known as a hash map, is a data structure that allows direct access to data based on key values. A hash table calculates a function (known as a hash function) for a key value, mapping the queried data to a position for access, thus speeding up the search for a specific key value.</p>
+<p>The working principle of a hash table can be explained with an intuitive example:</p>
+<p>Suppose there is a dictionary with a large amount of information about Chinese characters. To quickly find a specific character, a table is created initially arranged alphabetically by the pinyin letters of each character (similar to the &quot;Pinyin Check Character Table&quot; at the beginning of the dictionary). This establishes a kind of functional relationship between each character and its pinyin letters. When searching for a character, it is only necessary to locate the first letter, the second letter, the third letter, and so on, in this table. Most of the time, it's even possible to determine the accurate position of the character in the dictionary without searching through every letter of its pinyin. In this example, &quot;finding the nth letter of the pinyin&quot; is analogous to the hash function's rule, and the &quot;Pinyin Check Character Table&quot; can be understood as a kind of hash table.</p>
+</blockquote>
+<p>There are also some functions to implement the functionalities of creating user profiles, updating user profiles, retrieving individual user profiles, retrieving multiple user profiles, and searching for users based on keywords.</p>
+<p>The <code>createOne</code> and <code>updateOne</code> functions are used to create and update user profiles by calling the <code>put</code> function to add user IDs and profiles to the HashMap.</p>
+<pre><code class="language-js">public class Directory() {
+  let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+  
+  public func createOne(userId: UserId, profile: NewProfile) {
+    hashMap.put(userId, makeProfile(userId, profile));
+  };
+
+  public func updateOne(userId: UserId, profile: NewProfile) {
+    hashMap.put(userId, makeProfile(userId, profile));
+  };
+  
+  // Other functions...
+}
+</code></pre>
+<p>The <code>findOne</code> function is used to retrieve an individual user profile by calling the <code>get</code> function from the HashMap.</p>
+<pre><code class="language-js">public func findOne(userId: UserId): ?Profile {
+  hashMap.get(userId)
+};
+</code></pre>
+<p>The <code>findMany</code> function is used to retrieve multiple user profiles by iterating through the list of user IDs and calling the <code>getProfile</code> function.</p>
+<pre><code class="language-js">public func findMany(userIds: [UserId]): [Profile] {
+  func getProfile(userId: UserId): Profile {
+    Option.unwrap&lt;Profile&gt;(hashMap.get(userId))
+  };
+  Array.map&lt;UserId, Profile&gt;(userIds, getProfile)
+};
+</code></pre>
+<p>The <code>findBy</code> function is used to search for users based on keywords, iterating through the user profiles in the HashMap and finding matching profiles.</p>
+<pre><code class="language-js">public func findBy(term: Text): [Profile] {
+  var profiles: [Profile] = [];
+  for ((id, profile) in hashMap.entries()) {
+    if (includesText(profile.name, term)) {
+      profiles := Array.append&lt;Profile&gt;(profiles, [profile]);
+    };
+  };
+  profiles
+};
+</code></pre>
+<p>The auxiliary function <code>makeProfile</code> is used to create an instance of a user profile, and <code>includesText</code> is used to determine if one string contains another.</p>
+<pre><code class="language-js">func makeProfile(userId: UserId, profile: NewProfile): Profile {
+  {
+    id = userId;
+    name = profile.name;
+    biography = profile.biography;
+    company = profile.company;
+    education = profile.education;
+    imgUrl = profile.imgUrl;
+    feedCanister = profile.feedCanister;
+  }
+};
+
+func includesText(string: Text, term: Text): Bool {
+  let stringArray = Iter.toArray&lt;Char&gt;(string.chars());
+  let termArray = Iter.toArray&lt;Char&gt;(term.chars());
+
+  var i = 0;
+  var j = 0;
+
+  while (i &lt; stringArray.size() and j &lt; termArray.size()) {
+    if (stringArray[i] == termArray[j]) {
+      i += 1;
+      j += 1;
+      if (j == termArray.size()) { return true; }
+    } else {
+      i += 1;
+      j := 0;
+    }
+  };
+  false
+};
+</code></pre>
+<p>database.mo: </p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Hash &quot;mo:base/Hash&quot;;
+import HashMap &quot;mo:base/HashMap&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Time &quot;mo:base/Time&quot;;
+import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import TrieSet &quot;mo:base/TrieSet&quot;;
+
+module {
+  
+  type NewProfile = Types.NewProfile;
+  type Profile = Types.Profile;
+  type UserId = Types.UserId;
+  type Time = Time.Time;
+
+  public class Directory() {
+
+    let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+
+    public func createOne(userId: UserId, profile: NewProfile) {
+      hashMap.put(userId, makeProfile(userId, profile));
+    };
+
+    public func updateOne(userId: UserId, profile: NewProfile) {
+      hashMap.put(userId, makeProfile(userId, profile));
+    };
+
+    public func findOne(userId: UserId): ?Profile {
+      hashMap.get(userId)
+    };
+
+    public func findMany(userIds: [UserId]): [Profile] {
+      func getProfile(userId: UserId): Profile {
+        Option.unwrap&lt;Profile&gt;(hashMap.get(userId))
+      };
+      Array.map&lt;UserId, Profile&gt;(userIds, getProfile)
+    };
+
+    public func findBy(term: Text): [Profile] {
+      var profiles: [Profile] = [];
+      for ((id, profile) in hashMap.entries()) {
+        if (includesText(profile.name, term)) {
+          profiles := Array.append&lt;Profile&gt;(profiles, [profile]);
+        };
+      };
+      profiles
+    };
+
+    // Helpers
+
+    func makeProfile(userId: UserId, profile: NewProfile): Profile {
+      {
+        id = userId;
+        name = profile.name;
+        biography = profile.biography;
+        company = profile.company;
+        education = profile.education;
+        imgUrl = profile.imgUrl;
+        feedCanister = profile.feedCanister;
+      }
+    };
+
+    func includesText(string: Text, term: Text): Bool {
+      let stringArray = Iter.toArray&lt;Char&gt;(string.chars());
+      let termArray = Iter.toArray&lt;Char&gt;(term.chars());
+
+      var i = 0;
+      var j = 0;
+
+      while (i &lt; stringArray.size() and j &lt; termArray.size()) {
+        if (stringArray[i] == termArray[j]) {
+          i += 1;
+          j += 1;
+          if (j == termArray.size()) { return true; }
+        } else {
+          i += 1;
+          j := 0;
+        }
+      };
+      false
+    };
+  };
+
+  func isEq(x: UserId, y: UserId): Bool { x == y };
+};
+
+</code></pre>
+<br>
+<h3 id="integrating-all-functions-mainmo"><a class="header" href="#integrating-all-functions-mainmo">Integrating All Functions: main.mo</a></h3>
+<p>After completing types.mo, digraph.mo, and database.mo, the final step is to integrate the aforementioned modules using the actor and implement all functionalities.</p>
+<div class="center-image">
+    <img src="assets/4.UserModule/image-20240117170030924.png" alt="img" style="zoom:33%;" />
+</div>
+<p>The Digraph class implements a directed graph data structure for storing relationships between users. The Database class implements a database for user profiles.</p>
+<img src="assets/4.UserModule/image-20240208211521682.png" alt="image-20240208211521682" style="zoom:50%;" />
+<p>Now, we use the User actor class to implement the main functionalities of the user module. The User class represents a user in the social network, including functions such as following other users, retrieving the list of followers, obtaining the list of followers, creating and updating user profiles, and searching for users.</p>
+<p>Relationships between modules:</p>
+<img src="assets/4.UserModule/image-20240121114437945.png" alt="image-20240121114437945" style="zoom:33%;" />
+<p>The User actor relies on the Digraph and Database classes to implement the underlying data structures.</p>
+<br>
+<p>In Motoko, an <code>actor</code> is a special type that can be thought of as a small machine or service capable of executing code. Each actor has a unique Principal ID, and it can be considered an entry point for a microservice in a service-oriented architecture.</p>
+<pre><code class="language-js">actor class Feed(...) = this { ... }
+</code></pre>
+<p>Here, we see an <code>actor class</code>, which is a special form of an <code>actor</code> that can accept parameters to create new <code>actor</code> instances. This is similar to classes in object-oriented programming.</p>
+<p>According to the previous design, the functionalities we want to implement are summarized as follows:</p>
+<ul>
+<li>Allow one user to follow another user, updating the directed graph's edges and notifying the followed user's Feed Canister to update the followers' list.</li>
+<li>Query the following list and followers list of a specific user through the directed graph.</li>
+<li>Add and update a user's profile.</li>
+<li>Query user profiles.</li>
+</ul>
+<img src="assets/4.UserModule/image-20240208211810805.png" alt="image-20240208211810805" style="zoom:67%;" />
+<p>Here is the English translation:</p>
+<br>
+<p>We create a <code>rootFeedCanister</code> to record the Root Feed Canister.</p>
+<p>The <code>init</code> function is used to initialize the user's root Feed Canister.</p>
+<p>The <code>getRootFeedCanister</code> function is used to retrieve the user's root Feed Canister.</p>
+<pre><code class="language-js">// Define UserActor
+actor class User() = this {
+    
+    // Use a variable to represent the Root Feed Canister (used to store user feed data)
+    // Principal.fromText is used here, so import the module above: import Principal
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+
+    // Initialization function, set Root Feed Canister
+    public shared({caller}) func init(_rootFeedCanister: Principal) {
+        rootFeedCanister := _rootFeedCanister;
+    };
+
+    // Query Root Feed Canister
+    // The query keyword indicates a query function, used to query data
+    // The response is very fast, does not go through consensus, and does not change the Canister state
+    public query func getRootFeedCanister(): async Principal {
+        rootFeedCanister
+    };
+}
+</code></pre>
+<p>Public, private, and shared functions:</p>
+<p>Functions in Motoko can be <code>public</code> (public), <code>private</code> (private), similar to access control in other programming languages. <code>shared</code> functions are a special type of public function that can communicate between different actors.</p>
+<pre><code class="language-js">public shared({caller}) func init(...) { ... }
+</code></pre>
+<p>This function can be called by an external actor, and <code>{caller}</code> is a pattern match used to obtain the identity of the caller.</p>
+<br>
+<p>The <code>follow</code> function is used for a user to follow another user, involving updating the follower's Feed Canister and updating the directed graph.</p>
+<pre><code class="language-js">// Function for a user to follow another user
+public shared({caller}) func follow(user: Vertex): async () {
+    // Check if Root Feed Canister is anonymous
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    
+    // Create a RootFeedActor instance based on Root Feed Canister
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    
+    // Iterate through all user Feed Canisters in Root Feed Actor
+    for((_, _feedCanister) in (await rootFeedActor.getAllUserFeedCanister()).vals()) {
+        
+        // Create a FeedActor instance based on Feed Canister
+        let feedActor: FeedActor = actor(Principal.toText(_feedCanister));
+        
+        // Ignore the return value when calling followers, the list of followers is in the Feed Canister
+        ignore feedActor.updateFollowers(Array.append(
+            graph.getReverseAdjacent(user),
+            [caller]
+        ));
+    };
+    // Add an edge in the graph, indicating that the user is following another user
+    graph.addEdge(caller, user);
+};
+</code></pre>
+<p>The <code>shared</code> keyword is used to declare a function or type as shared. This means that they can be shared and used between different actors.</p>
+<p>If you declare a <code>public shared</code> function in one actor, this function can be called by other actors and modify their state through asynchronous message passing.</p>
+<p><a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/actors.md"><code>public shared func oneway() { };</code></a> is an example of a function with no return type that can modify the actor's state and returns <code>()</code> regardless of success.</p>
+<p>Motoko also defines a series of shared types. Only shared types can be used as parameters and return values for public shared functions. These shared types include all primitive types (except the <code>Error</code> type), the <code>Option</code> type, tuple types, immutable array types, object types, etc. For example, <a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/async-data/shared-types.md"><code>Nat</code></a> and <a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/async-data/shared-types.md"><code>Text</code></a> are shared types.</p>
+<br>
+<p>The <code>getFollowingList</code> and <code>getFollowersList</code> functions retrieve the user's following list and followers list.</p>
+<p>The <code>createProfile</code> and <code>updateProfile</code> functions create and update user profiles.</p>
+<p>The <code>getProfile</code> function retrieves the user's profile.</p>
+<p>The <code>searchProfile</code> function searches for users based on keywords.</p>
+<p>Overall, this is how it looks:</p>
+<img src="assets/4.UserModule/image-20240208212802310.png" alt="image-20240208212802310" style="zoom:50%;" />
+<p>The complete <code>main.mo</code> file is as follows:</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Digraph &quot;./digraph&quot;;
+import Database &quot;./database&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Types &quot;./types&quot;;
+
+// Define UserActor
+actor class User() = this {
+    
+    // Use a variable to represent the Root Feed Canister (used to store user feed data)
+    // Principal.fromText is used here, so import the module above: import Principal
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+
+    // Initialization function, set Root Feed Canister
+    public shared({caller}) func init(_rootFeedCanister: Principal) {
+        rootFeedCanister := _rootFeedCanister;
+    };
+
+    // Query Root Feed Canister
+    // The query keyword indicates a query function, used to query data
+    // The response is very fast, does not go through consensus, and does not change the Canister state
+    public query func getRootFeedCanister(): async Principal {
+        rootFeedCanister
+    };
+
+// ==================== Follow Info ====================
+
+    // Define type aliases
+    type Vertex = Types.Vertex;
+    type RootFeedActor = Types.RootFeedActor;
+    type FeedActor = Types.FeedActor;
+
+    // Create a directed graph instance
+    var graph: Digraph.Digraph = Digraph.Digraph();
+
+    // Function for a user to follow another user
+    public shared({caller}) func follow(user: Vertex): async () {
+        // Check if Root Feed Canister is anonymous
+        assert(not Principal.isAnonymous(rootFeedCanister));
+        
+        // Create a RootFeedActor instance based on Root Feed Canister
+        let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+        
+        // Iterate through all user Feed Canisters in Root Feed Actor
+        for((_, _feedCanister) in (await rootFeedActor.getAllUserFeedCanister()).vals()) {
+            
+            // Create a FeedActor instance based on Feed Canister
+            let feedActor: FeedActor = actor(Principal.toText(_feedCanister));
+            
+            // Ignore the return value when calling followers, the list of followers is in the Feed Canister
+            ignore feedActor.updateFollowers(Array.append(
+                graph.getReverseAdjacent(user),
+                [caller]
+            ));
+        };
+        // Add an edge in the graph, indicating that the user is following another user
+        graph.addEdge(caller, user);
+    };
+
+    // Get the user's following list
+    public query({caller}) func getFollowingList(user: Vertex): async [Vertex] {
+        graph.getForwardAdjacent(user)
+    };
+
+    // Get the followers list
+    public query({caller}) func
+
+ getFollowersList(user: Vertex): async [Vertex] {
+        graph.getReverseAdjacent(user)
+    };
+
+// ==================== Profiles ====================
+
+    // Define type aliases
+    type NewProfile = Types.NewProfile;
+    type Profile = Types.Profile;
+    type UserId = Types.UserId;
+
+    // Create a database instance to store user profiles
+    var directory: Database.Directory = Database.Directory();
+
+    // Create a user profile
+    public shared({caller}) func createProfile(profile: NewProfile): async () {
+        directory.createOne(caller, profile);
+    };
+
+    // Update a user's profile
+    public shared({caller}) func updateProfile(profile: NewProfile): async () {
+        directory.updateOne(caller, profile);
+    };
+
+    // Get a user's profile based on user ID
+    public query func getProfile(userId: UserId): async ?Profile {
+        directory.findOne(userId)
+    };
+
+    // Search for user profiles based on a search term
+    public query func searchProfile(term: Text): async [Profile] {
+        directory.findBy(term)
+    };
+
+}
+</code></pre>
+<p>Now, the User module is complete with basic social network functionalities. It maintains relationships between users using a directed graph, stores and queries user profiles using a database, and updates user activities through the Root Feed Canister.</p>
+<p>Next, we'll move on to building <a href="./5.PostModule.html">the Post module</a>. </p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.DevelopingDApp/3.DevelopingProton.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.DevelopingDApp/5.PostModule.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.DevelopingDApp/3.DevelopingProton.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.DevelopingDApp/5.PostModule.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.DevelopingDApp/4.UserModule.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

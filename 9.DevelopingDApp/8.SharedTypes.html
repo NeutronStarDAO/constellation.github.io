@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Shared Types - Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽Constellation Book🛸</a></li><li class="chapter-item affix "><li class="part-title">Journey of the Dream Weaver🔍</li><li class="chapter-item "><a href="../0.JourneytoWeb3/JourneyoftheDreamWeaver.html">Journey of the Dream Weaver</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.JourneytoWeb3/NavigatingtheFrontiersofTomorrow.html">Future Has Come</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/ThingsaboutCryptoPunks.html">Things About Crypto Punks</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatistheBlockchain.html">What is Blockchain?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/WhatisEthereum.html">What is Ethereum?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Whathappenedtomyprivacyontheinternet.html">What Happened to My Privacy on the Internet?</a></li><li class="chapter-item "><a href="../0.JourneytoWeb3/Bitcoin.html">Bitcoin</a></li></ol></li><li class="chapter-item "><li class="part-title">Overview of IC📡</li><li class="chapter-item "><a href="../1.OverviewofIC/1.html">Internet Computer</a></li><li class="chapter-item "><a href="../1.OverviewofIC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">Core Protocol⭐</li><li class="chapter-item "><a href="../2.CoreProtocol/P2Player.html">Peer-to-peer Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/IntroductiontoConsensusLayer.html">Consensus Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Messageroutinglayer.html">Message Routing Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/executionLayer.html">Execution Layer</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/Introduction.html">Related Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/HowToPickNumberInConsensus.html">How to Pick the Number of Consensus Committee?</a></li><li class="chapter-item "><a href="../2.CoreProtocol/Relatedconcepts/P2PLayerAndMaliciousAttack.html">How Does P2P Layer Reduce Malicious Attack?</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain Key Cryptography🪄</li><li class="chapter-item "><a href="../3.ChainKey/Chainkey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.ChainKey/VETkeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">Network Nervous System⚙️</li><li class="chapter-item "><a href="../5.NNS/NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.NNS/DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.NNS/EconomicModel.html">Economic Model</a></li><li class="chapter-item affix "><li class="part-title">Canister🧰</li><li class="chapter-item "><a href="../4.Canister/Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.Canister/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.Canister/DeployCanister.html">Deploy Your Canister</a></li><li class="chapter-item "><a href="../4.Canister/XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">Blockchain Web Services🎯</li><li class="chapter-item "><a href="../6.InternetServices/RandomNumberOnChain.html">Random Number On Chain</a></li><li class="chapter-item "><a href="../6.InternetServices/TEE.html">TEE</a></li><li class="chapter-item affix "><li class="part-title">Internet Identity🔑</li><li class="chapter-item "><a href="../7.ii/ii.html">Internet Identity</a></li><li class="chapter-item "><a href="../7.ii/pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">Cryptography in IC🔒</li><li class="chapter-item "><a href="../8.CryptographyInIC/BasicCryptography.html">Introduction to basic cryptography</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/SecretSharing.html">Secret Sharing</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/BLS.html">Threshold BLS Signatures</a></li><li class="chapter-item "><a href="../8.CryptographyInIC/HashAlgorithm.html">Hash Algorithm</a></li><li class="chapter-item affix "><li class="part-title">Developing DApp🌟</li><li class="chapter-item "><a href="../9.DevelopingDApp/CommonDfxCommands.html">Common dfx Commands</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/InstallDevelopmentEnvironment.html">Install Development Environment</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/1.GettingStartedwithDApp.html">Getting Started with DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/2.DesigningDApp.html">Designing DApp</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/3.DevelopingProton.html">Developing Proton</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/4.UserModule.html">User Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/5.PostModule.html">Post Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/6.FeedModule.html">Feed Module</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/7.FetchModule.html">Fetch Module</a></li><li class="chapter-item expanded "><a href="../9.DevelopingDApp/8.SharedTypes.html" class="active">Shared Types</a></li><li class="chapter-item "><a href="../9.DevelopingDApp/9.Completion.html">Completion!</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../Glossary.html">Glossary</a></li><li class="chapter-item affix "><a href="../Contributors.html">Contributors</a></li><li class="chapter-item affix "><a href="../References.html">References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-English" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <p>The types needed in the entire system are defined here.</p>
+<p>The complete types.mo file:</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+import Time &quot;mo:base/Time&quot;;
+
+module {
+
+// ==================== Feed ====================
+
+    public type UserId = Principal;
+    public type Time = Time.Time;
+    public type PostId = Text; // Post ID = BucketCanisterID + UserId + Incremental
+
+    public type Post = {
+        postId: PostId; // Post ID
+        feedCanister: Principal;
+        index: Nat; // Post Index
+        user: UserId; // Publisher
+        content: Text;
+        var repost: [Repost]; // Reposters
+        var like: [Like];
+        var comment: [Comment];
+        createdAt: Time; // Publication time
+    };
+
+    public type PostImmutable = {
+        postId: PostId; // Post ID
+        feedCanister: Principal;
+        index: Nat; // Post Index
+        user: UserId; // Publisher
+        content: Text;
+        repost: [Repost]; // Reposters
+        like: [Like];
+        comment: [Comment];
+        createdAt: Time; // Publication time
+    };
+
+    public type Comment = {
+        user: UserId;
+        content: Text;
+        createdAt: Time;
+    };
+
+    public type NewComment = [Comment];
+
+    public type Like = {
+        user: UserId;
+        createdAt: Time;
+    };
+
+    public type Repost = {
+        user: UserId;
+        createdAt: Time;
+    };
+
+    public type NewRepost = [Repost];
+
+    public type NewLike = [Like];
+
+    public type RootFeedActor = actor {
+        getAllUserFeedCanister: shared query () -&gt; async [(Principal, Principal)];
+    };
+
+    public type FeedActor = actor {
+        getPosts: shared query () -&gt; async [PostImmutable];
+        receiveFeed: shared (Text) -&gt; async Bool;
+        batchReceiveFeed: shared ([Text]) -&gt; async ();
+        batchReceiveComment: shared ([Text]) -&gt; async ();
+        batchReceiveLike: shared ([Text]) -&gt; async ();
+        createComment: shared (Principal, Nat, Text) -&gt; async ();
+        deleteComment: shared (Principal, Nat, Nat) -&gt; async ();
+        createLike: shared (Principal, Nat) -&gt; async ();
+        deleteLike: shared (Principal, Nat) -&gt; async ();
+        updateFollowers: shared ([Principal]) -&gt; async ();
+    };
+
+// ==================== Post ====================
+
+    public type RootPostActor = actor {
+        getAvailableBucket: shared query () -&gt; async ?Principal;
+        getAllBuckets: shared query () -&gt; async [Principal];
+        getAllAvailableBuckets: shared query () -&gt; async [Principal];
+        getAllUnavailableBuckets: shared query () -&gt; async [Principal];
+        reCreateBucket: shared () -&gt; async ();
+    };
+
+// ==================== Bucket ====================
+
+    public type BucketActor = actor {
+        storeFeed: shared (PostImmutable) -&gt; async Bool;
+        updatePostComment: shared (Text, NewComment) -&gt; async Bool;
+        updatePostLike: shared (Text, NewLike) -&gt; async Bool;
+        updatePostRepost: shared (Text, NewRepost) -&gt; async Bool;
+        getPosts: shared query ([Text]) -&gt; async [PostImmutable];
+        getPost: shared query (Text) -&gt; async ?PostImmutable;
+    };
+
+// ==================== Fetch ====================
+
+    public type RootFetchActor = actor {
+        createPostFetchCanister: shared () -&gt; async Principal;
+        createCommentFetchCanister: shared () -&gt; async Principal;
+        createLikeFetchCanister: shared () -&gt; async Principal;
+        getAllPostFetchCanister: shared query () -&gt; async [Principal];
+        getAllCommentFetchCanister: shared query () -&gt; async [Principal];
+        getAllLikeFetchCanister: shared query () -&gt; async [Principal];
+    };
+
+    public type PostFetchActor = actor {
+        receiveNotify: shared ([Principal], Text) -&gt; async ();
+        addUserToFeedEntry: shared ((Principal, Principal)) -&gt; async Bool;
+        initUserToFeed: shared ([(Principal, Principal)]) -&gt; async Bool;
+    };
+
+    public type CommentFetchActor = actor {
+        receiveNotify: shared (PostImmutable) -&gt; async ();
+        receiveRepostUserNotify: shared ([Principal], Text) -&gt; async ();
+        addUserToFeedEntry: shared ((Principal, Principal)) -&gt; async Bool;
+        initUserToFeed: shared ([(Principal, Principal)]) -&gt; async Bool;
+    };
+
+    public type LikeFetchActor = actor {
+        receiveNotify: shared (PostImmutable) -&gt; async ();
+        receiveRepostUserNotify: shared ([Principal], Text) -&gt; async ();
+        addUserToFeedEntry: shared ((Principal, Principal)) -&gt; async Bool;
+        initUserToFeed: shared ([(Principal, Principal)]) -&gt; async Bool;
+    };
+
+// ==================== User ====================
+
+    public type Vertex = Principal;
+
+    public type UserActor = actor {
+        getFollowersList: shared query (Vertex) -&gt; async [Vertex];
+    };
+
+}
+</code></pre>
+<p>utils.mo file provides some helper functions for handling posts.</p>
+<p>The <code>checkPostId</code> function extracts the bucket ID, user ID, and post index from the post ID.</p>
+<ul>
+<li>Parameters: <code>postId</code> - The unique identifier of the post (composed of <code>BucketCanisterID + UserId + Incremental</code>).</li>
+<li>Return value: A tuple containing the extracted <code>bucket</code> (bucket ID), <code>user</code> (user ID), and <code>postIndex</code> (post index) from the post ID.</li>
+</ul>
+<p>The <code>_convertPostToImmutable</code> function is used to convert a mutable post to an immutable post.</p>
+<ul>
+<li>Parameters: <code>post</code> - Mutable post (Post).</li>
+<li>Return value: A function that converts a mutable post to an immutable post (PostImmutable).</li>
+</ul>
+<p>The <code>_isRepostUser</code> function checks if a specified user is one of the repost users for a given post.</p>
+<ul>
+<li>Parameters: <code>post</code> - Immutable post (PostImmutable), <code>user</code> - User ID to check if it is a repost user.</li>
+<li>Return value: Returns true if the specified user is one of the repost users for the post; otherwise, returns false.</li>
+</ul>
+<pre><code class="language-js">import Iter &quot;mo:base/Iter&quot;;
+import Text &quot;mo:base/Text&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+import Types &quot;./types&quot;;
+
+module {
+    type Post = Types.Post;
+    type PostImmutable = Types.PostImmutable;
+
+    public func checkPostId(postId: Text): (Principal, Principal, Nat) {
+        let words = Iter.toArray(Text.split(postId, #char '#'));
+        let bucket = Principal.fromText(words[0]);
+        let user = Principal.fromText(words[1]);
+        let postIndex = Option.unwrap(Nat.fromText(words[2]));
+        // Debug.print(&quot;(bucket, user, index): (&quot; # words[0] # &quot;,&quot; # words[1] # &quot;,&quot; # words[2] # &quot;)&quot;);
+        (bucket, user, postIndex)
+    };
+
+    public func _convertPostToImmutable(post: Post): PostImmutable {
+      {
+        postId = post.postId;
+        index = post.index;
+        feedCanister = post.feedCanister;
+        user = post.user;
+        repost = post.repost;
+        content = post.content;
+        like =
+
+ post.like;
+        comment = post.comment;
+        createdAt = post.createdAt;
+      }
+    };
+
+    public func _isRepostUser(post: PostImmutable, user: Principal): Bool {
+        for (_repostUser in post.repost.vals()) {
+            if (_repostUser.user == user) {
+                return true;
+            };
+        };
+        false
+    };
+
+}
+</code></pre>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.DevelopingDApp/7.FetchModule.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.DevelopingDApp/9.Completion.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.DevelopingDApp/7.FetchModule.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.DevelopingDApp/9.Completion.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.DevelopingDApp/8.SharedTypes.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>
