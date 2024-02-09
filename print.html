@@ -2322,9 +2322,7 @@ History repeats itself in a spiral ascent:</p>
 <p><strong>Verified connections</strong>: The underlying transport component of the P2P layer establishes secure TLS and TCP-based connections between replicas in a subnet. Replicas use private keys to authenticate each other to ensure that only replicas in the same subnet can communicate. This reduces the risk of unauthorized replicas injecting malicious traffic into the subnet.</p>
 <p><strong>Monitoring and resending requests</strong>: The P2P layer continuously monitors connection quality and received artefacts. If a replica encounters an artefact issue, such as lost or invalid data, it can request the peer replica to resend the artefact. This mechanism helps recover from issues that malicious replicas may cause.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="chain-key-cryptography"><a class="header" href="#chain-key-cryptography">Chain-key cryptography</a></h2>
-<div class="center-image">
-    <img src="3.ChainKey/assets/Chainkey/image-20230925163327385.jpg" alt="img" style="zoom:67%;" />
-</div>
+<img src="3.ChainKey/assets/Chainkey/chainkey.jpg" alt="chainkey" style="zoom:50%;" />
 <p>Chain-key cryptography refers to the suite of cryptogenic protocols embedded in Internet Computer lower-level systems. It is the complete set of cryptographic protocols that Internet Computers rely on for runtime operations, including threshold BLS signatures, non-interactive key distribution (NIDKG), non-interactive zero-knowledge proofs (NIZK), Threshold ECDSA signatures, verifiable encrypted threshold keys (VETKeys) and so on.</p>
 <p>The most important among these is threshold BLS signatures.</p>
 <h2 id="threshold-bls-signatures"><a class="header" href="#threshold-bls-signatures">Threshold BLS signatures</a></h2>
