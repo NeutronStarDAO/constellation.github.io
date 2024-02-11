@@ -367,7 +367,7 @@
 </ul>
 <br>
 <p>A key innovation of IC is that subnets act as separate consensus islands. Chain Key allows subnets to communicate securely and validate each other's messages without downloading other blocks. This allows IC to achieve high scalability and security while remaining lightweight and easy to validate.</p>
-<p>This unique Chain Key technology provides a powerful foundation for building the next generation of distributed applications.</p>
+<p>This unique <a href="../3.ChainKey/Chainkey.html">Chain Key</a> technology provides a powerful foundation for building the next generation of distributed applications.</p>
 <br>
 <h2 id="network-nervous-system-nns"><a class="header" href="#network-nervous-system-nns">Network Nervous System (NNS)</a></h2>
 <p>IC's decentralization is slightly different from Bitcoin and Ethereum. Its nodes do not join and leave as they please. Instead, to join or leave IC network, no third-party centralized agency's approval is needed. Before nodes join the IC network, they need to obtain approval through voting in the NNS. IC's underlying protocols have a built-in DAO for governance.</p>
@@ -382,7 +382,7 @@
 <div class="center-image">
     <img src="assets/1/image-20230708141930460.png" style="zoom: 60%;" />
 </div>
-<p>The NNS maintains a database called the <strong>registry</strong> to track the network topology of the IC, such as which replicas belong to which subnets, the public keys of the replicas, etc.</p>
+<p><a href="../5.NNS/NNS.html">The NNS</a> maintains a database called the <strong>registry</strong> to track the network topology of the IC, such as which replicas belong to which subnets, the public keys of the replicas, etc.</p>
 <br>
 <p>The DAO-governed IC network allows the IC to enjoy the benefits of permissioned networks in efficiency while retaining the advantages of decentralized networks under DAO governance. Moreover, the replicas running the IC protocol are hosted in geographically distributed and independently operated data centres, which also enhances the security and decentralization of the IC.</p>
 <h2 id="canister"><a class="header" href="#canister">Canister</a></h2>
@@ -404,7 +404,7 @@
     <img src="assets/1/image-20230708164544441.png" style="zoom: 80%;" />
 </div>
 <p>In addition,with integration on HTTP, Canisters could access to webpages outside IC without the use of Oracle!</p>
-<p>See <a href="">here</a> for more content about Canister.</p>
+<p>See <a href="../4.Canister/Canister.html">here</a> for more content about Canister.</p>
 <br>
 <h2 id="internet-identity"><a class="header" href="#internet-identity">Internet Identity</a></h2>
 <p>On the Internet, we usually use usernames and passwords to identify and authenticate identities, but these methods are difficult to manage and have many security vulnerabilities. To solve these problems, IC has created a more advanced and secure encrypted authentication method called <strong>Internet Identity</strong>, which can be used on Dapps in the IC ecosystem. When logging in to Dapps, no password is required, nor do you need to remember complicated private keys or recoverys to easily control your decentralized identity.</p>
@@ -426,7 +426,7 @@
     <img src="assets/1/image-20230717101308922.png" style="zoom:37%;" />
 </div>
 <p>As shown in the figure above. The recipient receives the blue public key, Delegation, the pink private key signed content, and the pink public key. Unlock the Delegation with the blue public key and find the pink public key inside, indicating that the blue private key has signed the pink public key. That is, the blue private key has granted permission, just like a general holding the emperor's tiger symbol to dispatch troops and generals. The tiger symbol represents the emperor's authorization.</p>
-<p>Since the domain names of each Dapp are different, the generated <a href="">pid</a> (Principal id) are also different. Pid is a user's identity identifier in a Dapp. This will be described in detail later.</p>
+<p>Since the domain names of each Dapp are different, the generated <a href="../7.ii/pid.html">pid</a> (Principal id) are also different. Pid is a user's identity identifier in a Dapp. This will be described in detail later.</p>
 <br>
 <p>An anchor is equivalent to a username, that is, the User number in the above figure. Each device saved by the user in ii is a private key. The user can add or delete devices, that is, the user can add or delete private keys. So if the user's phone is lost, it is equivalent to losing a private key. As long as you log in to anchor on other devices, you can delete the phone device.</p>
 <p>One thing ii does is to add the user's different devices and bind them to the anchor's corresponding Master key. This Master key is hosted on the Canister. As long as one device can be added, the devices saved in ii can be changed. The user does not need to contact the private key. The Master key can be understood as a total private key. As long as the device is bound to this total private key, there is no need to worry about losing the ii identity. If all are lost, only the recovery phrase can be recovered. If the recovery phrase is lost, there is no way to recover it. All lost 😝.</p>
@@ -440,7 +440,7 @@
 <li>When an anchor logs in to different Dapps, the identities are different. As for the user information corresponding to this identity, such as username, ii will not save it.</li>
 <li>When logging into Dapp on different devices with the same anchor, the identity is the same.</li>
 </ul>
-<p>More information about ii can be found <a href="">here</a>.</p>
+<p>More information about ii can be found <a href="../7.ii/ii.html">here</a>.</p>
 <h2 id="icp-tokenomics"><a class="header" href="#icp-tokenomics">ICP tokenomics</a></h2>
 <p>The IC network is governed by the Network Nervous System (NNS), and the governance token is called ICP. There is another token called Cycles, which is used to pay for the storage, transmission and calculation fees of Canisters on the IC network, similar to Ethereum's gas fee.</p>
 <p>Cycles are used to pay for the Canister (smart contract) operations. ICP can only be burned into Cycles in one direction and cannot be changed back to ICP. The exchange rate between ICP and Cycles is dynamically adjusted according to the ICP price to always maintain a stable exchange of a certain amount of Cycles. In this way, ICP will become less and less. As the number of IC network users increases, more people will buy ICP to run smart contracts, and the value of the IC network will continue to increase.</p>
