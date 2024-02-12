@@ -2183,7 +2183,7 @@ History repeats itself in a spiral ascent:</p>
 <div class="center-image">
     <img src="2.CoreProtocol/assets/executionlayer/image-20230706150853074.png" style="zoom: 50%;" />
 </div>
-<p>As shown in the figure above, for more details about Canisters, please refer to <strong>Chapter 4</strong>.</p>
+<p>As shown in the figure above, for more details about Canisters, please refer to <a href="2.CoreProtocol/../4.Canister/Canister.html">Chapter 4</a>.</p>
 <p>To manage the execution time of Canisters, the IC limits the number of instructions executed by each Canister. Each Canister has a fixed number of instructions in each round. At the end of a round of execution, the Canister's execution will pause and continue in the next round. To prevent Canisters from occupying too many resources, the maximum number of instructions that can be executed in a single call of each Canister is limited. If the limit is exceeded, the execution will be terminated, the state of the Canister will be rolled back, and the consumed Cycles will be deducted.</p>
 <p>The execution environment also limits the number of heap pages that a Canister can modify in each round. However, after a Canister exceeds the limit, the execution result will still be saved, just no subsequent operations will be performed. Only when the number of heap memory pages a Canister plans to modify is less than the limit will subsequent operations be performed.</p>
 <h2 id="scheduler"><a class="header" href="#scheduler">Scheduler</a></h2>
@@ -2240,7 +2240,7 @@ History repeats itself in a spiral ascent:</p>
 <p>When a Canister initiates a call to another Canister, the execution environment will deduct Cycles from the calling Canister's account to pay for the cost of the outgoing call message and the cost of the reply message that the callee will send. Since the size of the reply message is unknown, the maximum message size is deducted first, and excess Cycles are returned to the caller if the reply is short.</p>
 </li>
 <li>
-<p><strong>Storage fee</strong>: Canisters pay a fee to store data (including Wasm bytecode and state). The system reaches consensus on the &quot;current&quot; time after each round of consensus and then charges according to the number of rounds. For more details, please refer to the <strong>source code</strong>.</p>
+<p><strong>Storage fee</strong>: Canisters pay a fee to store data (including Wasm bytecode and state). The system reaches consensus on the &quot;current&quot; time after each round of consensus and then charges according to the number of rounds. For more details, please refer to the <a href="https://github.com/dfinity/ic/blob/master/rs/cycles_account_manager/src/lib.rs#L568">source code</a>.</p>
 </li>
 <li>
 <p><strong>Creating a Canister</strong>: When deploying a Canister online for the first time, you need to top up some Cycles for the Canister. The default is 3T cycles, with a minimum top-up of 0.01T.</p>
@@ -2270,7 +2270,7 @@ History repeats itself in a spiral ascent:</p>
 <p>After being frozen, the Canister will no longer receive and send messages, stop computing, and directly reject all requests. At this time, the Canister only consumes Cycles for storing data. After the Canister is frozen, topping up some Cycles to make the balance higher than the threshold can unfreeze it. If no Cycles are topped up within 30 days after being frozen, the Canister will be deleted from the subnet when the Cycles run out.</p>
 <p>In addition, if deducting Cycles for a certain operation will drop below the freeze threshold, the Canister will not be able to perform that operation.</p>
 <br>
-<p>Now that we have covered all four layers of the core protocol in IC, in the next chapter, let's take a look at IC's flagship capability: <a href="2.CoreProtocol/">Chain Key Cryptography</a>.</p>
+<p>Now that we have covered all four layers of the core protocol in IC, in the next chapter, let's take a look at IC's flagship capability: <a href="2.CoreProtocol/../3.ChainKey/Chainkey.html">Chain Key Cryptography</a>.</p>
 <br>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="introduction-3"><a class="header" href="#introduction-3">Introduction</a></h1>
 <ul>
@@ -3640,9 +3640,9 @@ pub const SNS_WASM_CANISTER_ID: CanisterId = CanisterId::from_u64(SNS_WASM_CANIS
 <h3 id="canister-memory-management"><a class="header" href="#canister-memory-management">Canister Memory Management</a></h3>
 <p>Canisters utilize two different types of memory. The first is heap memory, used as temporary data storage space. The second is stable memory, a larger pool for permanent data storage.</p>
 <p>One is <strong>heap memory</strong>, the memory heap exposed by WebAssembly, similar to the heap used by programs at runtime. All variables and data structures defined in high-level languages are stored in the Wasm heap, which is a <strong>4 GiB</strong> 32-bit address space. However, the heap is best suited only as temporary space since it can be wiped clean on each smart contract upgrade. Data layouts may also change. Thus, it is not recommended to persist important data long-term in heap memory.</p>
-<p>The other is <strong>stable memory</strong>, additional 64-bit addressable memory provided by the Canister, currently <strong>96 GiB</strong> in size. Developers must explicitly use stable memory via related APIs. Stable memory can be seen as persistent storage where developers can place data needing long-term retention. A common usage pattern is serializing heap state into bytes before and after upgrades and saving that to stable memory, then deserializing and loading it back in during recovery.</p>
+<p>The other is <strong>stable memory</strong>, additional 64-bit addressable memory provided by the Canister, currently <strong>400 GiB</strong> in size. Developers must explicitly use stable memory via related APIs. Stable memory can be seen as persistent storage where developers can place data needing long-term retention. A common usage pattern is serializing heap state into bytes before and after upgrades and saving that to stable memory, then deserializing and loading it back in during recovery.</p>
 <div class="center-image">
-<img src="4.Canister/assets/Canister/image-20230918233748532.png" alt="img" style="zoom:37%;" />
+<img src="4.Canister/assets/Canister/image-20240212223906760.png" alt="image-20240212223906760" style="zoom:37%;" />
 </div>
 <p>To enable orthogonal persistence and allow programs to resume after upgrades, Canisters employ some special mechanisms:</p>
 <ol>
