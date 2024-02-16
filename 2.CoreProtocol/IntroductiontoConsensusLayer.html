@@ -223,7 +223,7 @@
 <div class="center-image">
     <img src="assets/IntroductiontoConsensusLayer/IMG3.png" alt="IMG3" style="zoom:25%;" />
 </div>
-<p>Then if everyone's order is different, which order should be executed? It will use random number to decide! (IC's Random Beacon)</p>
+<p>Then if everyone's order is different, which order should be executed? It will use random number to decide! (IC's <a href="../6.InternetServices/RandomNumberOnChain.html">Random Beacon</a>)</p>
 <p>IC uses a verifiable random function (VRF) at the base layer. It can generate unpredictable random numbers, and everyone can verify that the random numbers are not made by human.</p>
 <p>VRF uses threshold BLS signature scheme. The threshold BLS signature algorithm uses DKG to distribute private key shares to replicas. This is a non-interactive distributed key generation protocol. DKG can distribute private key shares between members. There is no need for a trusted third-party, it does not depend on any member to distribute private key shares, avoiding single points of failure. Everyone uses the private key shares to sign information. Once the signature reaches the threshold, it can be aggregated into a complete signature. The signature process is non-interactive. Any third party can aggregate after receiving enough shares. Anyone can verify the signature with the unique public key. The public key is also recorded in the NNS registry.</p>
 <br>
@@ -263,7 +263,7 @@
 <p>At the end of each epoch, the consensus committee members for the next epoch are selected through the random beacon, and the current consensus committee members will all become random beacon committee members in the next epoch.</p>
 <p>The first block of the new epoch contains the list of consensus committee members and random beacon committee members for this epoch.</p>
 <br>
-<p>And at the beginning of the new epoch, the private key shares will be redistributed to the members. This process is called <a href="">Pro-active Resharing of Secrets</a>. There are two reasons for doing this:</p>
+<p>And at the beginning of the new epoch, the private key shares will be redistributed to the members. This process is called <a href="../3.ChainKey/Chainkey.html#resharing-protocol">Pro-active Resharing of Secrets</a>. There are two reasons for doing this:</p>
 <ul>
 <li>When the members of the subnet change, resharing can ensure that any new member will have new private key shares, and any member exiting the subnet will not have a new private key share.</li>
 <li>Even if a small amount of private key shares are leaked to attackers in each epoch, it will not threaten the consensus.</li>
@@ -272,7 +272,7 @@
 <p>The number of consensus committees is related to the total number of replica members in the subnet. To improve scalability, in small-scale networks, committee members can be all replicas. In large-scale networks, committee members are part of all replicas and constantly changing in each epoch.</p>
 <br>
 <p>The number of consensus committee members cannot be too large or too small. Too few are insecure, too many affect the consensus speed.</p>
-<p>So the relationship between the number of committees and the total number of members has a mathematical model to describe: When the total number of members in the subnet tends to infinity, the hypergeometric distribution tends to the binomial distribution, that is, non-replacement random sampling tends to replacement random sampling. Because the total number of replica members is infinite, there is no difference between replacement and non-replacement. If you are interested, you can read the introduction <a href="Relatedconcepts/HowToPickNumberInConsensus.html">here</a>.</p>
+<p>So the relationship between the number of committees and the total number of members has a mathematical model to describe: When the total number of members in the subnet tends to infinity, the hypergeometric distribution tends to the binomial distribution, that is, non-replacement random sampling tends to replacement random sampling. Because the total number of replica members is infinite, there is no difference between replacement and non-replacement. If you are interested, you can read the introduction <a href="./Relatedconcepts/HowToPickNumberInConsensus.html">here</a>.</p>
 <br>
 <p>Once the preparation is complete, blocks can be produced.</p>
 <br>
